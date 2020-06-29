@@ -30,7 +30,7 @@
       dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>Real Time Delphi</v-toolbar-title>
+      <v-toolbar-title>Fragebogen</v-toolbar-title>
     </v-app-bar>
 
     <v-content>
@@ -43,14 +43,25 @@
           justify="center"
         >
           <v-col>
-            <Gender />
-            <Age />
-            <Graduation />
-            <Rezension />
+            <Timer
+        :timer="formattedTime"
+        :state="timerState"
+        @start="start"
+        @pause="pause"
+        @stop="stop"
+            />
+            
+            <Stepper />
+            
+            
           </v-col>
         </v-row>
       </v-container>
     </v-content>
+     <v-content>
+      
+    </v-content>
+
     <v-footer
       color="indigo"
       app
@@ -61,23 +72,60 @@
 </template>
 
 <script>
-  import Gender from './components/Gender';
-  import Age from './components/Age';
-  import Graduation from './components/Graduation';
-  import Rezension from './components/Rezension';
+  import Timer from './components/Timer';
+  import Stepper from './components/Stepper';
 
   export default {
     components: {
-      Gender,
-      Age,
-      Graduation,
-      Rezension
+      Stepper,
+      Timer,
     },
     props: {
       source: String,
     },
-    data: () => ({
+    
+
+     data () {
+    return {
+      timerState: 'stopped',
+      currentTimer: 0,
+      formattedTime: "00:00:00",
+      ticker: undefined,
+      latestLap: "",
       drawer: null,
-    }),
+     
+    }
+  },
+  methods: {
+    start () {
+      if (this.timerState !== 'running') {
+        this.tick();
+        this.timerState = 'running';
+      }
+    },
+
+    pause () {
+      window.clearInterval(this.ticker);
+      this.timerState = 'paused';
+    },
+    stop () {
+      window.clearInterval(this.ticker)
+      this.currentTimer = 0;
+      this.formattedTime = "00:00:00";
+      this.timerState = "stopped";
+    },
+    tick () {
+      this.ticker = setInterval(() => {
+        this.currentTimer++;
+        this.formattedTime = this.formatTime(this.currentTimer);
+      }, 1000)
+    },
+    formatTime (seconds) {
+      let measuredTime = new Date(null);
+      measuredTime.setSeconds(seconds);
+      let MHSTime = measuredTime.toISOString().substr(11, 8);
+      return MHSTime;
+    }
+  }
   }
 </script>
