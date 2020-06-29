@@ -10,6 +10,7 @@
                     <v-radio label="Master Fachhochschule" value="master-fh"></v-radio>
                 </v-radio-group>
                 <v-text-field label="Sonstiges" placholder="Sonstiges" v-model="graduation" />
+                <v-text-field label="Welchen Studiengang studieren Sie" placholder="Studiengang" />
             </v-col>
         </v-row>
     </v-container>
