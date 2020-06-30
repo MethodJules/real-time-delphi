@@ -27,7 +27,7 @@
       <v-stepper-items>
         <v-stepper-content step="1">
           <v-card class="mb-12"  height="200px">
-            
+
             Vielen Dank,
             <br />Für Ihre Teilnahme an der Umfrage
             Der vorliegende Befragungsbogen bezieht sich auf den Besuch von OnlineVerkaufsplattformen, auf denen man sich über Produkte (wie z.B. Bücher)
@@ -71,22 +71,22 @@
 
         <v-stepper-content step="4">
           <v-card>
-      Sie möchten ein bestimmtes Buch online erwerben und besuchen dazu eine Online-Verkaufsplattform. 
+      Sie möchten ein bestimmtes Buch online erwerben und besuchen dazu eine Online-Verkaufsplattform.
       Sie wollen sich vor dem Kauf über das
-      Buch informieren und prüfen, ob es Ihnen wirklich gefallen könnte. Hierfür lesen Sie einige 
+      Buch informieren und prüfen, ob es Ihnen wirklich gefallen könnte. Hierfür lesen Sie einige
       Buchrezensionen von Kunden, die das Buch bereits gelesen haben.
-      Sie interessiert hauptsächlich, wie andere Kunden den Sprachstil und die 
-      Erzählperspektive im Buch bewerten. Der Sprachstil ist die Art und Weise, 
-      etwas mit Worten oder in geschriebener Form zu äußern. Unter Erzählperspektive versteht 
+      Sie interessiert hauptsächlich, wie andere Kunden den Sprachstil und die
+      Erzählperspektive im Buch bewerten. Der Sprachstil ist die Art und Weise,
+      etwas mit Worten oder in geschriebener Form zu äußern. Unter Erzählperspektive versteht
       man die Sicht, aus der ein Buch erzählt wird.
-      Daher suchen Sie gezielt nach diesen Informationen in den Rezensionen, um schnell und gezielt eine 
+      Daher suchen Sie gezielt nach diesen Informationen in den Rezensionen, um schnell und gezielt eine
       Kaufentscheidung treffen zu können. Sie
       haben wenig Zeit für das Lesen der Rezensionen und wollen schnellstmöglich diese Informationen finden.
       Im Folgenden sehen Sie die Produktbeschreibung eines Buches und eine Auswahl an Buchrezensionen:
       <br />1. Lesen Sie zunächst die Produktbeschreibung zum Buch aufmerksam durch.
-      <br />2. Markieren Sie schnellstmöglich in den Buchrezensionen die relevanten Textstellen, also die Textstellen, 
+      <br />2. Markieren Sie schnellstmöglich in den Buchrezensionen die relevanten Textstellen, also die Textstellen,
       in denen der Sprachstil und/oder die
-      Erzählperspektive angesprochen werden, mit einem Textmarker oder unterstreichen Sie die Textstellen. 
+      Erzählperspektive angesprochen werden, mit einem Textmarker oder unterstreichen Sie die Textstellen.
       Falls Sie aus Versehen falsche
       Textstellen markieren, streichen Sie diese einfach durch.
           </v-card>
@@ -100,9 +100,16 @@
             <v-btn color="primary" @click="e1 = 6">Weiter</v-btn>
         </v-stepper-content>
 
-        <v-stepper-content step="6">
+        <!-- <v-stepper-content step="6">
           <v-card>
           <Buch1 />
+            </v-card>
+            <v-btn color="primary" @click="e1 = 7">Weiter</v-btn>
+        </v-stepper-content> -->
+
+        <v-stepper-content step="6">
+          <v-card>
+          <Buch image_src="buch1.png" />
             </v-card>
             <v-btn color="primary" @click="e1 = 7">Weiter</v-btn>
         </v-stepper-content>
@@ -134,7 +141,7 @@
             </v-card>
             <v-btn color="primary" @click="e1 = 11">Weiter</v-btn>
             </v-stepper-content>
-            
+
             <v-stepper-content step="11">
           <v-card>
           <FragenTeil32 />
@@ -144,10 +151,10 @@
       </v-stepper-items>
     </v-stepper>
 
-  
 
 
-   
+
+
     <v-footer color="indigo" app>
       <span class="white--text">&copy; 2019</span>
     </v-footer>
@@ -160,7 +167,8 @@ import Gender from './Gender'
 import Graduation from './Graduation'
 import Question from './Question'
 import Rezension from './Rezension'
-import Buch1 from './Buch1'
+import Buch from './Buch'
+//import Buch1 from './Buch1'
 import Buch2 from './Buch2'
 import Buch3 from './Buch3'
 import Buch4 from './Buch4'
@@ -178,7 +186,8 @@ export default {
       ID,
       Gender,
       Graduation,
-      Buch1,
+      Buch,
+      //Buch1,
       Buch2,
       Buch3,
       Buch4,
