@@ -78,7 +78,7 @@
           <v-card>
           <v-col>
           <p>Bitte beantworten Sie die Fragen zum Hintergrund der Person</p>
-          <Question2 />
+         <Question />
         </v-col></v-card>
 
           <v-btn color="primary" @click="e1 = 5">Weiter</v-btn>
@@ -216,7 +216,6 @@ import Question from './Question'
 import Rezension from './Rezension'
 import FragenTeil3 from './FragenTeil3'
 import FragenTeil32 from './FragenTeil32'
-import Question2 from './Question2'
 
 export default {
   data() {
@@ -232,7 +231,6 @@ export default {
     Gender,
     Graduation,  
     Question,
-    Question2,
     FragenTeil3,
     FragenTeil32
   },
