@@ -46,13 +46,26 @@
         </v-stepper-content>
 
         <v-stepper-content step="2">
-          <v-card >
-            Uns interessiert Ihre ehrliche, persönliche Meinung. Die Befragung findet
-            anonym statt, es werden keine persönlichen Angaben verarbeitet.
-            <br />Einzelne
-            Fragebögen können nicht auf einzelne Personen zurückgeführt werden.
-          <ID />
-          </v-card>
+            <v-card>
+                Uns interessiert Ihre ehrliche, persönliche Meinung. Die Befragung findet
+                anonym statt, es werden keine persönlichen Angaben verarbeitet.
+                <br />Einzelne
+                Fragebögen können nicht auf einzelne Personen zurückgeführt werden.
+                <ID />
+                <Highlightable @share="onShare"
+                               @highlight="onHighlight">
+                    <text-highlight :queries="queries">
+                        Dies ist ein Testtext.
+                        Dieser Text kann makiert werden 
+                    </text-highlight>
+
+                    <p>
+                       Dieser Text kann nicht makiert werden 
+                    </p>
+     
+                </Highlightable>
+               
+            </v-card>
 
           <v-btn color="primary" @click="e1 = 3">Weiter</v-btn>
         </v-stepper-content>
@@ -174,11 +187,16 @@ import Buch3 from './Buch3'
 import Buch4 from './Buch4'
 import FragenTeil3 from './FragenTeil3'
 import FragenTeil32 from './FragenTeil32'
+import Highlightable from './Highlightable'
+import TextHighlight from 'vue-text-highlight';
+
 
 export default {
   data() {
     return {
-      e1: 1
+        e1: 1,
+        queries: ['die'],
+        description: 'Tropical birds scattered as Drake veered the Jeep'
     };
   },
   components: {
@@ -193,10 +211,21 @@ export default {
       Buch4,
       Question,
       FragenTeil3,
-      FragenTeil32
+      FragenTeil32,
+      Highlightable,
+      TextHighlight
   },
   props: {
     source: String
+  },
+  methods: {
+      onHighlight(text) {
+          this.queries.push(text);
+          alert(text);
+      }
   }
+  
+
 };
 </script>
+
