@@ -30,14 +30,13 @@
          <v-btn color="primary" @click="e1 = 2">Weiter</v-btn>
         </v-stepper-content>
 
-        <v-stepper-content step="2">
-          <v-card >
-            Uns interessiert Ihre ehrliche, persönliche Meinung. Die Befragung findet
-            anonym statt, es werden keine persönlichen Angaben verarbeitet.
-            <br />Einzelne
-            Fragebögen können nicht auf einzelne Personen zurückgeführt werden.
-          <ID />
-          </v-card>
+                <v-stepper-content step="2">
+                    <v-card>
+                        Uns interessiert Ihre ehrliche, persönliche Meinung. Die Befragung findet
+                        anonym statt, es werden keine persönlichen Angaben verarbeitet.
+                        <br />Einzelne
+                        Fragebögen können nicht auf einzelne Personen zurückgeführt werden.
+                        <ID />
 
           <v-btn color="primary" @click="e1 = 3">Weiter</v-btn>
           
@@ -71,8 +70,8 @@
           <Question />
         </v-col></v-card>
 
-          <v-btn color="primary" @click="e1 = 4">Weiter</v-btn>
-        </v-stepper-content>
+                    <v-btn color="primary" @click="e1 = 3">Weiter</v-btn>
+                </v-stepper-content>
 
          <v-stepper-content step="4">
           <v-card>
@@ -239,3 +238,11 @@ export default {
   }
 };
 </script>
+
+<style>
+
+    .highlightText {
+        background: yellow;
+    }
+
+</style>
