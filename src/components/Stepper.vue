@@ -1,18 +1,20 @@
 <template>
   <v-app >
-    //Stepper eins 
-    <v-stepper v-model="e1">
-      <v-stepper-header>
-        <v-stepper-step :complete="e1 > 1" step="1">Begrüßung/Einleitung</v-stepper-step>
-        <v-divider></v-divider>
-        <v-stepper-step :complete="e1 > 2" step="2">Datenschutz</v-stepper-step>        
-        <v-divider></v-divider>       
-        
-      </v-stepper-header>                              
-      <v-stepper-items>
-        <v-stepper-content step="1">
-          <v-card >
-            
+          <v-progress-linear
+      v-model="skill"
+      color="blue-grey"
+      height="25"
+    >
+    
+      <template v-slot="{ value }">
+        <strong>{{ Math.ceil(value+(e1-1)*8.33) }}%</strong>
+      </template>
+    </v-progress-linear>
+    <v-stepper v-model="e1">                                 
+      <v-stepper-items>     
+        <v-stepper-content step="1">    
+          <v-card >          
+    
             Vielen Dank,
             <br />Für Ihre Teilnahme an der Umfrage
             Der vorliegende Befragungsbogen bezieht sich auf den Besuch von OnlineVerkaufsplattformen, auf denen man sich über Produkte (wie z.B. Bücher)
@@ -27,16 +29,19 @@
             ehesten zutrifft.
           </v-card>
 
-         <v-btn color="primary" @click="e1 = 2">Weiter</v-btn>
+         <v-btn color="primary" @click="e1 = 2,start">Weiter</v-btn>
         </v-stepper-content>
 
-                <v-stepper-content step="2">
-                    <v-card>
-                        Uns interessiert Ihre ehrliche, persönliche Meinung. Die Befragung findet
-                        anonym statt, es werden keine persönlichen Angaben verarbeitet.
-                        <br />Einzelne
-                        Fragebögen können nicht auf einzelne Personen zurückgeführt werden.
-                        <ID />
+        <v-stepper-content step="2">        
+          <v-card >
+      
+            
+            Uns interessiert Ihre ehrliche, persönliche Meinung. Die Befragung findet
+            anonym statt, es werden keine persönlichen Angaben verarbeitet.
+            <br />Einzelne
+            Fragebögen können nicht auf einzelne Personen zurückgeführt werden.
+          <ID />
+          </v-card>
 
           <v-btn color="primary" @click="e1 = 3">Weiter</v-btn>
           
@@ -48,21 +53,16 @@
       <span class="white--text">&copy; 2019</span>
     </v-footer>
 
-    //Stepper 2
+    
       <v-app id="inspire">
       <v-stepper v-model="e1">
-       <v-stepper-header>
-       <v-stepper-step :complete="e1 > 3"  step="A1">:Hintergrund zur Person</v-stepper-step>
-        <v-divider></v-divider>
-         <v-stepper-step :complete="e1 > 4"  step="A2">Hintergrund zur Person Teil 2</v-stepper-step>
-          <v-divider></v-divider>
-            <v-stepper-step :complete="e1 > 5" step="A3">Simulation Einkauf auf einer Online-Verkaufsplattform</v-stepper-step>
-            <v-divider></v-divider>
-             </v-stepper-header>
+       
 
           <v-stepper-items>
           <v-stepper-content step="3">
+          
           <v-card>
+      
           <v-col>
           <p>Bitte beantworten Sie die Fragen zum Hintergrund der Person</p>
           <Gender />
@@ -70,10 +70,11 @@
           <Question />
         </v-col></v-card>
 
-                    <v-btn color="primary" @click="e1 = 3">Weiter</v-btn>
-                </v-stepper-content>
+          <v-btn color="primary" @click="e1 = 4">Weiter</v-btn>
+        </v-stepper-content>
 
          <v-stepper-content step="4">
+         
           <v-card>
           <v-col>
           <p>Bitte beantworten Sie die Fragen zum Hintergrund der Person</p>
@@ -84,6 +85,7 @@
         </v-stepper-content>
 
         <v-stepper-content step="5">
+     
           <v-card>
             <v-col>
       Sie möchten ein bestimmtes Buch online erwerben und besuchen dazu eine Online-Verkaufsplattform. 
@@ -108,6 +110,7 @@
 
         <v-btn color="primary" @click="e1 = 6">Weiter</v-btn>
           </v-stepper-content>
+        
 
            </v-stepper-items>
           </v-stepper>
@@ -116,21 +119,10 @@
       <span class="white--text">&copy; 2019</span>
     </v-footer>
                                
-  //Stepper 3
   
     <v-app id="inspire">
      <v-stepper v-model="e1">
-        <v-stepper-header>                     
-           <v-stepper-step :complete="e1 > 6" step="B1">Simulation Einkauf auf einer Online-Verkaufsplattform</v-stepper-step>
-               <v-divider></v-divider>
-                <v-stepper-step :complete="e1 >7" step="B2">Buch1</v-stepper-step>
-                 <v-divider></v-divider>
-                 <v-stepper-step :complete="e1 >8" step="B2">Buch2</v-stepper-step>
-                  <v-divider></v-divider>
-                   <v-stepper-step :complete="e1 >9" step="B3">Buch3</v-stepper-step>
-                   <v-divider></v-divider>
-                   <v-stepper-step :complete="e1 >10" step="B4">Buch4</v-stepper-step>
-                   </v-stepper-header>
+      
 
                     <v-stepper-items>
                     <v-stepper-content step="6">
@@ -143,12 +135,14 @@
                     
                  <v-stepper-content step="7">
           <v-card>
+            
           <Buch image_src="buch1.png" />
             </v-card>
             <v-btn color="primary" @click="e1 = 8">Weiter</v-btn>
         </v-stepper-content>
 
           <v-stepper-content step="8">
+            
           <v-card>
             <Buch image_src="buch2.png" />
             </v-card>
@@ -156,6 +150,7 @@
         </v-stepper-content>
 
           <v-stepper-content step="9">
+            
           <v-card>
           <Buch image_src="buch3.png" />
             </v-card>
@@ -163,22 +158,18 @@
         </v-stepper-content>
 
           <v-stepper-content step="10">
+            
           <v-card>
             <Buch image_src="buch4.png" />
             </v-card>
             <v-btn color="primary" @click="e1 = 11">Weiter</v-btn>
         </v-stepper-content>
      </v-stepper>
-      //Stepper 4
+      
   
     <v-app id="inspire">
      <v-stepper v-model="e1">
-        <v-stepper-header>                     
-           <v-stepper-step :complete="e1 > 11" step="C1">Teil3</v-stepper-step>
-               <v-divider></v-divider>
-                <v-stepper-step :complete="e1 >12" step="C2">Teil3_2</v-stepper-step>
-                 <v-divider></v-divider>
-                   </v-stepper-header>
+        
 
                     <v-stepper-items>
              <v-stepper-content step="11">
@@ -220,9 +211,12 @@ export default {
   data() {
     
     return {
-      e1: 1
+      e1: 1,
+      skill:0,
     };
   },
+
+  
   components: {
     Buch,
     Rezension,
@@ -238,11 +232,3 @@ export default {
   }
 };
 </script>
-
-<style>
-
-    .highlightText {
-        background: yellow;
-    }
-
-</style>
