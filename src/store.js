@@ -45,7 +45,7 @@ export default {
           Einzelne Fragebögen können nicht auf einzelne Personen zurückgeführt werden. \
           Um die Zusammengehörigkeit der Seiten des Befragungsbogens identifizieren zu können \
           und zugleich Ihre Anonymität zu schützen, ist zunächst eine ID herzuleiten. Die ID setzt sich aus den Antworten a) bis d) zusammen.",
-          question: "Dies ist eine Frage aus dem Store...?",
+          question: "Dies ist eine Frage aus dem Store.gfgjgjgjggj..?",
           answers: [
             {
                 label: "0 Jahre"

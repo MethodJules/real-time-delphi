@@ -3,7 +3,7 @@
         <v-col>
             <p>{{question}}</p>
             <v-radio-group v-model="selection">
-                <v-radio @change="logAnswer" v-for="answer in answers" :key="answer.label" :label=answer.label />
+                <v-radio @change="logAnswer" v-for="answer in answers" :key="answer.label" :label="answer.label" />
             </v-radio-group>
         </v-col>
     </v-container>
