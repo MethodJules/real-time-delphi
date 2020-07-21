@@ -2,7 +2,7 @@
     <v-container>
            
             <v-col>
-          <p>Wielange nutzen Sie schon ein Internetfähiges Endgerät(wie Tablet,Smartphone,Laptop,Desktop-PC?</p>
+          <p>Wie lange nutzen Sie schon ein Internetfähiges Endgerät(wie Tablet,Smartphone,Laptop,Desktop-PC?</p>
           <v-radio-group v-model="row">
               <v-radio label="0 Jahre" value="jahre0"></v-radio>
               <v-radio label="< 1 Jahr" value="jahre1"></v-radio>
