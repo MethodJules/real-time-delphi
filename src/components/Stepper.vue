@@ -54,11 +54,11 @@
                         <ID />
 
                         <Highlightable @share="onShare"
-                                       @highlight="onHighlight">
+                                       @highlight="onHighlight ">
                             <div v-html="test()"></div>
-                            <p>
+                            <div>
                                 {{text}}
-                            </p>
+                            </div>
                         </Highlightable>
 
                     </v-card>
