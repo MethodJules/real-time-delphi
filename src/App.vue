@@ -51,8 +51,8 @@
         @stop="stop"
             />
             
-            <Stepper />
-            
+            <!-- <Stepper /> -->
+            <DatenschutzPage />
             
           </v-col>
         </v-row>
@@ -73,11 +73,11 @@
 
 <script>
   import Timer from './components/Timer';
-  import Stepper from './components/Stepper';
-
+  // import Stepper from './components/Stepper';
+  import DatenschutzPage from './views/DatenschutzPage';
   export default {
     components: {
-      Stepper,
+      DatenschutzPage,
       Timer,
     },
     props: {
