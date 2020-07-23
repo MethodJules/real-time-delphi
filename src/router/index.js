@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+//import BegruessungPage from '../views/BegruessungPage.vue'
 
 Vue.use(VueRouter)
 
@@ -8,7 +8,7 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component:  () => import(/*webpackChunkName: "begruessung_home" */ '../views/BegruessungPage.vue')
   },
   {
     path: '/about',
@@ -26,7 +26,22 @@ Vue.use(VueRouter)
   {
     path: '/datenschutz',
     name: 'Datenschutz',
-    component: () => import(/*webpackChunkName: "begruessung" */ '../views/DatenschutzPage.vue')
+    component: () => import(/*webpackChunkName: "datenschutz" */ '../views/DatenschutzPage.vue')
+  },
+  {
+    path: '/hintergrund',
+    name: 'Hintergrund',
+    component: () => import(/*webpackChunkName: "hintergrund" */ '../views/HintergrundPage.vue')
+  },
+  {
+    path: '/buch',
+    name: 'Buch',
+    component: () => import(/*webpackChunkName: "buch" */ '../views/BuchPage.vue')
+  },
+  {
+    path: '/buchrezension',
+    name: 'Buchrezension',
+    component: () => import(/*webpackChunkName: "buchrezension" */ '../views/BuchrezensionPage.vue')
   }
 ]
 

@@ -1,11 +1,13 @@
 <template>
     <v-container>
+        <div :id="questionId">
         <v-col>
             <p>{{question}}</p>
             <v-radio-group v-model="selection">
-                <v-radio @change="logAnswer" v-for="answer in answers" :key="answer.label" :label="answer.label" />
+                <v-radio v-for="answer in answers" :key="answer.label" :label="answer.label" />
             </v-radio-group>
         </v-col>
+        </div>
     </v-container>
 </template>
 
@@ -13,29 +15,27 @@
 export default {
     data() {
         return{
-            //question: "Testfrage",
             selection: 0,
-            /*
-            answers: [
-                {
-                    label: "0 Jahre"
-                },
-                {
-                    label: "< 1 Jahr"
-                },
-                {
-                    label: "1-2 Jahre"
-                }
-            ],*/
         }       
     },
     props: {
+        questionId: Number,
         question: String,
-        answers: Array
+        answers: Array,
+
     },
     methods: {
         logAnswer() {
             console.log(this.selection)
+        },
+        writeData(val) {
+            console.log('Value: ' + val + ' id: ' + this.questionId)
+        }
+    },
+    watch: {
+        selection: function(val){
+            
+            this.writeData(val);
         }
     }
 }
