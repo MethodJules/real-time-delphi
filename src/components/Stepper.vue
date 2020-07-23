@@ -70,8 +70,13 @@
           <Question />
         </v-col></v-card>
 
-          <v-btn color="primary" @click="e1 = 4">Weiter</v-btn>
-        </v-stepper-content>
+                        <Highlightable @share="onShare"
+                                       @highlight="onHighlight ">
+                            <div v-html="test()"></div>
+                            <div>
+                                {{text}}
+                            </div>
+                        </Highlightable>
 
          <v-stepper-content step="4">
          

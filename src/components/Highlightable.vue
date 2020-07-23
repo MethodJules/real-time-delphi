@@ -4,18 +4,19 @@
         <div v-show="showMenu" class="menu" :style="{ left: `${x}px`, top: `${y}px`}" @mousedown.prevent="">
             <span class="item" @mousedown.prevent="handleAction('highlight')">Share</span>
             <span class="item" @mousedown.prevent="highlight()">Highlight</span> <!-- You can add more buttons here -->
-        
-        </div><!-- The insterted text should be displayed here --> 
-        <br /> 
+
+        </div><!-- The insterted text should be displayed here -->
+        <br />
         <div class="highlightContent">
             <slot />
         </div>
-        
+
     </div>
 </template>
 
 
 <script>
+
     export default {
         data() {           
             return {
@@ -23,14 +24,21 @@
                 y: 0,
                 showMenu: false,
                 selectedText: '',
-                text: ''
+                text: '',
+                
             }
         },
+
         computed: {
             highlightableEl() {
                 
                 return this.$slots.default[0].elm
 
+            },
+
+            count() {
+                alert("Test");
+                return this.$store.state.highlight.count;
             }
 
         },
@@ -45,21 +53,18 @@
         },
         methods: {
 
-
-
-
             onMouseup() {
                 
                 const selection = window.getSelection()
-                console.log("Test");
-                console.log(selection);
+ 
 
                 const selectionRange = selection.getRangeAt(0) // startNode is the element that the selection starts in
                 const startNode = selectionRange.startContainer.parentNode    // endNode is the element that the selection ends in
                 const endNode = selectionRange.endContainer.parentNode    // if the selected text is not part of the highlightableEl (i.e. <p>)    // OR    // if startNode !== endNode (i.e. the user selected multiple paragraphs)    // Then    // Don't show the menu (this selection is invalid)
 
-                if (startNode.parentNode.className !== "highlightContent" && startNode.parentNode.parentNode.className !== "highlightContent" || endNode.parentNode.className !== "highlightContent" && endNode.parentNode.parentNode.className !== "highlightContent") {
-                    alert("Test");
+                console.log(selectionRange);
+
+                if (startNode.parentNode.className !== "highlightContent" && startNode.parentNode.parentNode.className !== "highlightContent" || endNode.parentNode.className !== "highlightContent" && endNode.parentNode.parentNode.className !== "highlightContent") {               
                     this.showMenu = false
                     return
                 }
@@ -101,57 +106,123 @@
             },
 
             highlight() {
-                
+
                 var selection = window.getSelection();
 
+                this.$store.dispatch('highlight/addHighlight', selection.toString());
+               
+
+                const selectionRange = selection.getRangeAt(0)
+               
                 var lengthSelection = selection.toString().length;
 
                 console.log(lengthSelection);
-                    
+
                 var myAnchorNodeValue = window.getSelection().anchorNode.nodeValue;
-          
+
                 var myAnchorOffset = window.getSelection().anchorOffset
                 var myFocusOffset = window.getSelection().focusOffset
-
-               //  var start = myAnchorNodeValue.slice(myAnchorOffset);
-                /*
-                if (start.length <= lengthSelection) {
-
-                    console.log("Test");
-                } else {
-                    var check = start.substring(0, lengthSelection);
-                    alert(check);
-                }
-                */
-                var myFocusNodeLength = window.getSelection().focusNode.nodeValue.length;
-
-                if (window.getSelection().anchorNode.parentElement.className != "highlightText") {
-                    window.getSelection().anchorNode.nodeValue = myAnchorNodeValue.slice(0, myAnchorOffset) + "[Highlight]" + myAnchorNodeValue.slice(myAnchorOffset);
-                } else {
-                    window.getSelection().anchorNode.nodeValue = myAnchorNodeValue + "[delete]";
-                }
- 
                 var myFocusNodeValue = window.getSelection().focusNode.nodeValue;
 
-                if (window.getSelection().focusNode.nodeValue.length - myFocusNodeLength > 0) {
-                    myFocusOffset += window.getSelection().focusNode.nodeValue.length - myFocusNodeLength;
-                }
+                var startFront = true;
 
-                this.selectedText = {
-                    start: selection.anchorOffset,
-                    end: selection.focusOffset,
-                    text: selection.toString()
-                }
+                if (myAnchorNodeValue == myFocusNodeValue) {
+                    var text = myAnchorNodeValue.slice(myAnchorOffset, myFocusOffset);
+                    var text2 = myAnchorNodeValue.slice(myFocusOffset, myAnchorOffset);
 
-                if (window.getSelection().focusNode.parentElement.className != "highlightText") {
-                    window.getSelection().focusNode.nodeValue = myFocusNodeValue.slice(0, myFocusOffset) + "[/Highlight]" + myFocusNodeValue.slice(myFocusOffset);
+                    if (text == selection.toString()) {
+                        startFront = true;
+                    } else if (text2 == selection.toString()) {
+                        startFront = false;
+                    }
+                     
                 } else {
-                    window.getSelection().focusNode.nodeValue = "[deleteStart]" + myFocusNodeValue;
+                    var position = selection.anchorNode.compareDocumentPosition(selection.focusNode);
+                    if (position & Node.DOCUMENT_POSITION_FOLLOWING) {
+                        startFront = true;
+                    } else if (position & Node.DOCUMENT_POSITION_PRECEDING) {
+                        startFront = false;
+                    }
+
+                }
+               
+
+
+                if (startFront) {
+                    var myFocusNodeLength = window.getSelection().focusNode.nodeValue.length;
+
+                    if (window.getSelection().anchorNode.parentElement.className != "highlightText") {
+                        window.getSelection().anchorNode.nodeValue = myAnchorNodeValue.slice(0, myAnchorOffset) + "[Highlight]" + myAnchorNodeValue.slice(myAnchorOffset);
+                    } else {
+                        window.getSelection().anchorNode.nodeValue = myAnchorNodeValue + "[delete]";
+                    }
+
+                    myFocusNodeValue = window.getSelection().focusNode.nodeValue;
+
+                    if (window.getSelection().focusNode.nodeValue.length - myFocusNodeLength > 0) {
+                        myFocusOffset += window.getSelection().focusNode.nodeValue.length - myFocusNodeLength;
+                    }
+
+                    if (window.getSelection().focusNode.parentElement.className != "highlightText") {
+                        window.getSelection().focusNode.nodeValue = myFocusNodeValue.slice(0, myFocusOffset) + "[/Highlight]" + myFocusNodeValue.slice(myFocusOffset);
+                    } else {
+                        window.getSelection().focusNode.nodeValue = "[deleteStart]" + myFocusNodeValue;
+                    }
+
+                 
+
+                  
+                } else {
+
+                    var myAnchorNodeLength = window.getSelection().anchorNode.nodeValue.length;
+
+                    if (window.getSelection().focusNode.parentElement.className != "highlightText") {
+                        window.getSelection().focusNode.nodeValue = myFocusNodeValue.slice(0, myFocusOffset) + "[Highlight]" + myFocusNodeValue.slice(myFocusOffset);
+                    } else {
+                        window.getSelection().focusNode.nodeValue = myFocusNodeValue + "[delete]";
+                    }
+                    console.log(window.getSelection().focusNode.nodeValue);
+
+                        myAnchorNodeValue = window.getSelection().anchorNode.nodeValue;
+
+                    if (window.getSelection().anchorNode.nodeValue.length - myAnchorNodeLength > 0) {
+                        myAnchorOffset += window.getSelection().anchorNode.nodeValue.length - myAnchorNodeLength;
+                    }
+
+                    if (window.getSelection().anchorNode.parentElement.className != "highlightText") {
+                        window.getSelection().anchorNode.nodeValue = myAnchorNodeValue.slice(0, myAnchorOffset) + "[/Highlight]" + myAnchorNodeValue.slice(myAnchorOffset);
+                    } else {
+                        window.getSelection().anchorNode.nodeValue = "[deleteStart]" + myAnchorNodeValue;
+                    }
+
                 }
 
-                var newClassName = document.getElementsByClassName("highlightContent")[0].innerHTML.replace('[Highlight]', '<span class="highlightText">').replace('[/Highlight]', '</span>').replace('[delete]</span>', '').replace('<span class="highlightText">[deleteStart]', '');
+                
 
-                document.getElementsByClassName("highlightContent")[0].innerHTML = newClassName;
+                if (selectionRange.commonAncestorContainer.className != "highlightContent") {
+
+
+                    console.log(document.getElementsByClassName("highlightContent")[0].innerHTML);
+
+                    var newClassName = document.getElementsByClassName("highlightContent")[0].innerHTML.replace('[Highlight]', '<span class="highlightText">').replace('[/Highlight]', '</span>').replace('[delete]</span>', '').replace('<span class="highlightText">[deleteStart]', '');
+
+                    document.getElementsByClassName("highlightContent")[0].innerHTML = newClassName;
+
+                } else {
+
+                    var innerText = "[Startdiv]" + selectionRange.commonAncestorContainer.lastChild.innerText; 
+
+                    selectionRange.commonAncestorContainer.lastChild.innerText = innerText;
+
+                    console.log(document.getElementsByClassName("highlightContent")[0].innerHTML);
+
+                    newClassName = document.getElementsByClassName("highlightContent")[0].innerHTML.replace('[Highlight]', '<span class="highlightText">').replace('[/Highlight]', '</span>').replace('[delete]</span>', '').replace('<span class="highlightText">[deleteStart]', '').replace('[Startdiv]', '<span class="highlightText">');
+
+                    document.getElementsByClassName("highlightContent")[0].innerHTML = newClassName;
+
+                }
+
+            
 
                 
             }

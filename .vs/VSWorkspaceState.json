@@ -3,8 +3,10 @@
     "",
     "\\public",
     "\\src",
-    "\\src\\components"
+    "\\src\\plugins",
+    "\\src\\store",
+    "\\src\\store\\modules"
   ],
-  "SelectedNode": "\\src\\components\\Buch.vue",
+  "SelectedNode": "\\src\\store\\index.js",
   "PreviewInSolutionExplorer": false
 }
