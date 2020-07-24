@@ -10,7 +10,7 @@
     </v-container>    
 </template>
 <script>
-import store from '@/store.js';
+import store_x from '@/store_x.js';
 //import Question from '@/components/Question';
 import SelectQuestion from '@/components/SelectQuestion'
 export default {
@@ -20,7 +20,7 @@ export default {
     },
     data() {
         return {
-            datenschutzText: store.survey,
+            datenschutzText: store_x.survey,
             nutzung: null,
         }
     },

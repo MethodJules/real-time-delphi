@@ -109,9 +109,10 @@
 
                 var selection = window.getSelection();
 
+                //console.log(this.$store)
                 this.$store.dispatch('highlight/addHighlight', selection.toString());
                
-
+            
                 const selectionRange = selection.getRangeAt(0)
                
                 var lengthSelection = selection.toString().length;
@@ -232,6 +233,7 @@
 </script>
 
 <style scoped>
+   
 
     .highlight {
         position: relative;

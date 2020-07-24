@@ -16,3 +16,8 @@
    }
  }
 </script>
+<style>
+.highlightText {
+  background: yellow;
+}
+</style>
