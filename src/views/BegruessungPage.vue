@@ -39,7 +39,7 @@ export default {
                     console.log(data);
                     console.log(data[0].attributes.body.value)
                 })
-        }
+        },
     }
 }
 </script>
