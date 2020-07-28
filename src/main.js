@@ -4,7 +4,9 @@ import App from './App.vue'
 import vuetify from './plugins/vuetify';
 import router from './router'
 import store from './store';
+import APIService from './services/api.service';
 
+APIService.init(process.env.VUE_APP_ROOT_API)
 Vue.config.productionTip = false
 
 Vue.use(Vuex);

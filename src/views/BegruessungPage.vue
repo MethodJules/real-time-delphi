@@ -1,24 +1,19 @@
 <template>
 <v-container>
-    <h1>{{begruessungsText.title}}</h1>
-    <p>{{begruessungsText.body}}</p>
-    <div><span v-html="begruessungsText.html"></span></div>
-
-    <p>Bitte lesen Sie alle Anweisungen...</p>
-    <!-- <section class="begruessung">
-        <div>
-            <p>{{begruessungsText.text}}</p>
-            <router-link to="/datenschutz">Weiter</router-link>
-        </div>
-    </section> -->
+    <h1>{{node.title}}</h1>
+    <div><span v-html="node.html"></span></div>
     <v-btn to="/datenschutz">Weiter</v-btn>
+    <v-btn @click="callDrupalJSONApi">Fetch Data</v-btn>
 </v-container>
 </template>
 <script>
 //import store from '@/store.js';
+import APIService from '@/services/api.service'
+import axios from 'axios'
 export default {
     data() {
         return {
+            /*
             begruessungsText: {
                 title: 'Begleitbogen – Hinweise zur Durchführung',
                 body: 'Der vorliegende Befragungbogen bezieht sich auf den Besuch von Online-Verkaufsplattformen, auf denen man sich über \
@@ -26,13 +21,24 @@ export default {
                         Uns interessiert Ihre ehrliche, persönliche Meinung. Die Befragung findet anonym statt, \
                         es werden keine persönlichen Angaben verarbeitet. \
                         Einzelne Fragebögen können nicht auf einzelne Personen zurückgeführt werden.',
-                html: "<p> Der Befragungbogen umfasst drei Bereiche</p> \
+                html: "<p>Der Befragungbogen umfasst drei Bereiche</p> \
                         <ol> \
                             <li>Pre-Fragebogen</li> \
                             <li>Simulation Einkauf auf einer Online-Verkaufsplattform</li> \
                             <li>Post-Fragebogen</li> \
                         </ol>"
-            }
+            }*/
+            node: APIService.get(0)
+        }
+    },
+    methods: {
+        callDrupalJSONApi() {
+            axios.get('http://localhost:8080/web/jsonapi/node/article')
+                .then((response) => {
+                    const data = response.data.data;
+                    console.log(data);
+                    console.log(data[0].attributes.body.value)
+                })
         }
     }
 }

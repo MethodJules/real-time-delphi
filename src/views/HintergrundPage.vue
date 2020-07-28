@@ -1,26 +1,15 @@
 <template>
     <v-container>
-        <h1>Teil 1: Hintergrund zur Person</h1>
-        <p>Die folgenden Fragen helfen uns dabei Hintergrundinformationen zu Ihrer Person zu erheben. 
-            Bitte kreuzen Sie die für Sie zutreffenden Antworten an bzw. geben Sie eine Antwort.</p>
-        <v-radio-group v-model="geschlecht">
-            <v-radio label="Weiblich" value="w"></v-radio>
-            <v-radio label="Männlich" value="m"></v-radio>
-            <v-radio label="Anderes" value="a"></v-radio>
-        </v-radio-group>
+        <h1>{{node.title}}</h1>
+        <div><span v-html="node.html"></span></div>
+        <SelectQuestion :question="node.questions[0].label" :answers="node.questions[0].answeroptions" />
         <p>Bitte geben Sie ihr Alter an</p>
         <v-row>
             <v-col cols="12" sm="6" md="3">
                 <v-text-field label="Alter" v-model="alter"></v-text-field>
             </v-col>
         </v-row>
-        <p>Welchen höchsten beruflichen Ausbildungs- oder (Fach-)Hochschulabschluss haben Sie?</p>
-        <v-radio-group v-model="abschluss">
-            <v-radio label="Bachelor Universität" />
-            <v-radio label="Bachlor Fachhochschule" />
-            <v-radio label="Master Universität" />
-            <v-radio label="Master Fachhochschule" />
-        </v-radio-group>
+        <SelectQuestion :question="node.questions[2].label" :answers="node.questions[2].answeroptions" />
         <v-row>
             <v-col cols="12" sm="6" md="3">
                 <v-text-field label="Sonstiger Abschluss" />
@@ -106,7 +95,13 @@
 </template>
 
 <script>
+import APIService from '@/services/api.service'
+import SelectQuestion from '@/components/SelectQuestion'
+
 export default {
+    components: {
+        SelectQuestion
+    },
     data() {
         return {
             geschlecht: 'w',
@@ -122,7 +117,9 @@ export default {
             produkteinkauf: 0,
             produktrezensionen: 0,
             buechereinkauf: 0,
-            buchrezensionen: 0
+            buchrezensionen: 0,
+
+            node: APIService.get(5)
 
 
 
