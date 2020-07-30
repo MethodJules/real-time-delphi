@@ -1,11 +1,9 @@
 <template>
     <v-container>
         <div id="datenschutz">
-            <p><span v-html="node.html"></span></p>
-            <NumberQuestion :question="node.question" :label="node.label" />
-            <NumberQuestion :question="node2.question" :label="node2.label" />
-            <NumberQuestion :question="node3.question" :label="node3.label" />
-            <NumberQuestion :question="node4.question" :label="node4.label" />
+            <h2>{{node.title}}</h2>
+            <div><span v-html="node.html"></span></div>
+            <NumberQuestion v-for="question in node.questions" :question="question.question" :label="question.label" :key="question.label" />
             <v-btn to="/begruessung">Zurück</v-btn>
             <v-btn to="/hintergrund">Weiter</v-btn>
         </div>
@@ -23,22 +21,7 @@ export default {
     data() {
         return {
             node: APIService.get(1),
-            node2: APIService.get(2),
-            node3: APIService.get(3),
-            node4: APIService.get(4)
         }
-    },
-    methods: {
-        printValue() {
-            console.log(this.nutzung);
-        }
-    },
+    }
 }
 </script>
-
-<style scoped>
-#datentschutz {
-    margin: 0 auto;
-    background: red;
-}
-</style>

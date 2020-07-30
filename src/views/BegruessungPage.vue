@@ -1,6 +1,6 @@
 <template>
 <v-container>
-    <h1>{{node.title}}</h1>
+    <h2>{{node.title}}</h2>
     <div><span v-html="node.html"></span></div>
     <v-btn to="/datenschutz">Weiter</v-btn>
     <v-btn @click="callDrupalJSONApi">Fetch Data</v-btn>

@@ -2,6 +2,9 @@
   <div id="app">
     <v-app>
       <v-content>
+        <v-container>
+          <h1>Virtuelles Experiment von Rez@Kultur</h1>
+        </v-container>
         <router-view />
       </v-content>
     </v-app>
