@@ -1,16 +1,22 @@
 <template>
-<v-container>
-    <h2>{{node.title}}</h2>
-    <div><span v-html="node.html"></span></div>
-    <v-btn to="/datenschutz">Weiter</v-btn>
-    <v-btn @click="callDrupalJSONApi">Fetch Data</v-btn>
-</v-container>
+    <v-container>
+        <h2>{{node.title}}</h2>
+        <div><span v-html="node.html"></span></div>
+        <!-- <v-btn to="/datenschutz">Weiter</v-btn>-->
+        <Stopwatch timer="/datenschutz" needTimer="false"/>
+        <v-btn @click="callDrupalJSONApi">Fetch Data</v-btn>
+    </v-container>
 </template>
 <script>
 //import store from '@/store.js';
 import APIService from '@/services/api.service'
 import axios from 'axios'
+import Stopwatch from '@/components/Stopwatch'
 export default {
+    components: {
+        Stopwatch
+    },
+
     data() {
         return {
             /*

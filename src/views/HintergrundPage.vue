@@ -1,5 +1,6 @@
 <template>
     <v-container>
+
         <h2>{{node.title}}</h2>
         <div><span v-html="node.html"></span></div>
         <div v-for="question in node.questions" :key="question.question">
@@ -14,7 +15,9 @@
             </div>
         </div>
 
-        <v-btn>Zurück</v-btn><v-btn to="/buch">Weiter</v-btn>   
+        <v-btn>Zurück</v-btn>
+        <!--<v-btn to="/buch">Weiter</v-btn>  -->
+        <Stopwatch timer="/buch" needTimer="true" />
     </v-container>
 </template>
 
@@ -23,11 +26,13 @@ import APIService from '@/services/api.service'
 import SelectQuestion from '@/components/SelectQuestion'
 import NumberQuestion from '@/components/NumberQuestion'
 import TextQuestion from '@/components/TextQuestion'
+import Stopwatch from '@/components/Stopwatch'
 export default {
     components: {
         SelectQuestion,
         NumberQuestion,
-        TextQuestion
+        TextQuestion,
+        Stopwatch
     },
     data() {
         return {

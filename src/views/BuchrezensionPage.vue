@@ -37,6 +37,7 @@
 </template>
 <script>
 import Highlightable from '@/components/Highlightable';
+
 export default {
     data() {
         return {
