@@ -1,5 +1,20 @@
 <template>
     <v-container>
+              <div>
+
+    <v-progress-linear
+      v-model="skill"
+      color="blue-grey"
+      height="25"
+    >
+      <template v-slot="">
+        <strong>11%</strong>
+      </template>
+    </v-progress-linear>
+
+    <br>
+
+  </div>
         <div id="datenschutz">
             <h2>{{node.title}}</h2>
             <div><span v-html="node.html"></span></div>

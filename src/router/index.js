@@ -42,6 +42,31 @@ Vue.use(VueRouter)
     path: '/buchrezension',
     name: 'Buchrezension',
     component: () => import(/*webpackChunkName: "buchrezension" */ '../views/BuchrezensionPage.vue')
+  },
+  {
+    path: '/buchrezension2',
+    name: 'Buchrezension2',
+    component: () => import(/*webpackChunkName: "buchrezension2" */ '../views/Buchrezension2Page.vue')
+  },
+  {
+    path: '/buchrezension3',
+    name: 'Buchrezension3',
+    component: () => import(/*webpackChunkName: "buchrezension3" */ '../views/Buchrezension3Page.vue')
+  },
+  {
+    path: '/buchrezension4',
+    name: 'Buchrezension4',
+    component: () => import(/*webpackChunkName: "buchrezension4" */ '../views/Buchrezension4Page.vue')
+  },
+  {
+    path: '/fragenpage',
+    name: 'Fragenpage',
+    component: () => import(/*webpackChunkName: "fragenpage" */ '../views/FragenPage.vue')
+  },
+  {
+    path: '/endpage',
+    name: 'Endpage',
+    component: () => import(/*webpackChunkName: "endpage" */ '../views/EndPage.vue')
   }
 ]
 
