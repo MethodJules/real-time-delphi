@@ -1,10 +1,22 @@
 <template>
     <v-container>
-        <h2>{{node.title}}</h2>
+        <div id="personal_background">
+            <div v-for="node in nodes.data" :key="node.id">
+                <h2>{{node.attributes.title}}</h2>
+                <div v-if="node.attributes.body == null">
+                    <p>Bitte prüfen Sie ihre Daten. Es wurde kein Text verfasst.</p>
+                </div>
+                <div v-else>
+                    <div><span v-html="node.attributes.body.value"></span></div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- <h2>{{node.title}}</h2>
         <div><span v-html="node.html"></span></div>
         <div v-for="question in node.questions" :key="question.question">
             <div v-if="question.question_type == 'select'">
-                <SelectQuestion :question="question.question" :answers="question.answeroptions" />
+                <SelectQuestion :questionId="question.id" :question="question.question" :answers="question.answeroptions" />
             </div>
             <div v-if="question.question_type == 'number'">
                 <NumberQuestion :question="question.question" :label="question.label" />
@@ -12,22 +24,28 @@
             <div v-if="question.question_type == 'text'">
                 <TextQuestion :question="question.question" :label="question.label" />
             </div>
-        </div>
+        </div> -->
 
         <v-btn>Zurück</v-btn><v-btn to="/buch">Weiter</v-btn>   
     </v-container>
 </template>
 
 <script>
-import APIService from '@/services/api.service'
-import SelectQuestion from '@/components/SelectQuestion'
-import NumberQuestion from '@/components/NumberQuestion'
-import TextQuestion from '@/components/TextQuestion'
+import { mapState } from 'vuex'
+// import SelectQuestion from '@/components/SelectQuestion'
+// import NumberQuestion from '@/components/NumberQuestion'
+// import TextQuestion from '@/components/TextQuestion'
 export default {
     components: {
-        SelectQuestion,
-        NumberQuestion,
-        TextQuestion
+        //SelectQuestion,
+        //NumberQuestion,
+        //TextQuestion
+    },
+    computed: mapState({
+        nodes: state => state.personal_background.data
+    }),
+    created() {
+        this.$store.dispatch('personal_background/getDataFromDrupal')
     },
     data() {
         return {
@@ -45,11 +63,6 @@ export default {
             produktrezensionen: 0,
             buechereinkauf: 0,
             buchrezensionen: 0,
-
-            node: APIService.get(2)
-
-
-
         } 
     }
 }
