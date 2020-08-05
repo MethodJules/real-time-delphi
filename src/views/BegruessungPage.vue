@@ -3,7 +3,7 @@
         <h2>{{node.title}}</h2>
         <div><span v-html="node.html"></span></div>
         <!-- <v-btn to="/datenschutz">Weiter</v-btn>-->
-        <Stopwatch timer="/datenschutz" needTimer="false"/>
+        <Stopwatch to="/datenschutz" needTimer="false"/>
         <v-btn @click="callDrupalJSONApi">Fetch Data</v-btn>
     </v-container>
 </template>

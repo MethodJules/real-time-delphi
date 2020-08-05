@@ -1,10 +1,10 @@
 <template>
-        <v-btn :to="timer" @click="callTimer()">Weiter</v-btn>
+        <v-btn :to="to" @click="callTimer()">Weiter</v-btn>
 </template>
 
 <script>
     export default {
-        props: ['timer', 'needTimer'],
+        props: ['to', 'needTimer'],
 
         data() {
             return {

@@ -3,10 +3,13 @@
     "",
     "\\public",
     "\\src",
-    "\\src\\plugins",
+    "\\src\\components",
+    "\\src\\router",
+    "\\src\\services",
     "\\src\\store",
-    "\\src\\store\\modules"
+    "\\src\\store\\modules",
+    "\\src\\views"
   ],
-  "SelectedNode": "\\src\\store\\index.js",
+  "SelectedNode": "\\src\\store\\modules\\stopwatch.js",
   "PreviewInSolutionExplorer": false
 }
