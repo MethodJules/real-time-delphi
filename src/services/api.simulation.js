@@ -58,6 +58,7 @@ export default {
                 {
                     question: 'Bitte geben Sie ihr Geschlecht an.',
                     question_type: 'select',
+                    id: 0,
                     label: 'Bitte kreuzen Sie ihr Geschlecht an.',
                     answeroptions: [
                         {

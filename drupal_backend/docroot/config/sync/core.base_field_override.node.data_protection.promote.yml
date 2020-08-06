@@ -1,0 +1,22 @@
+uuid: a8738a2c-ee8a-4605-8dcb-9171ae59c51a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.data_protection
+id: node.data_protection.promote
+field_name: promote
+entity_type: node
+bundle: data_protection
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

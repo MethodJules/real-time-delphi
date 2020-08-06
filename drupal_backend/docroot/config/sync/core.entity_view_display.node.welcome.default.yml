@@ -1,0 +1,28 @@
+uuid: 4dfef9fe-8e81-4524-be57-5002aecde10e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.welcome.body
+    - node.type.welcome
+  module:
+    - text
+    - user
+id: node.welcome.default
+targetEntityType: node
+bundle: welcome
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

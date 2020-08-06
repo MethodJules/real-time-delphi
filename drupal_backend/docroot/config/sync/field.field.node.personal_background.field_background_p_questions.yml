@@ -1,0 +1,28 @@
+uuid: 0c891945-0132-41a9-844a-f1ce458f3368
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_background_p_questions
+    - node.type.personal_background
+    - node.type.question
+id: node.personal_background.field_background_p_questions
+field_name: field_background_p_questions
+entity_type: node
+bundle: personal_background
+label: Questions
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      question: question
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

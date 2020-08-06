@@ -1,0 +1,28 @@
+uuid: 161f2eda-8d3c-445c-906d-c22100c8f4bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.thank_you.body
+    - node.type.thank_you
+  module:
+    - text
+    - user
+id: node.thank_you.default
+targetEntityType: node
+bundle: thank_you
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

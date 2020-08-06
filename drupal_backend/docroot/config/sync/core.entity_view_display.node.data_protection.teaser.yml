@@ -1,0 +1,32 @@
+uuid: 46699804-f956-4f77-9776-8635380d01e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.data_protection.body
+    - field.field.node.data_protection.field_data_protection_questions
+    - node.type.data_protection
+  module:
+    - text
+    - user
+id: node.data_protection.teaser
+targetEntityType: node
+bundle: data_protection
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_data_protection_questions: true

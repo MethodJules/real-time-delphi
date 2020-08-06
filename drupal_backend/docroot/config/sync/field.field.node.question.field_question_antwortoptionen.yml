@@ -1,0 +1,19 @@
+uuid: 0f2d8b3b-3497-454e-a616-28e5ebc55001
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_question_antwortoptionen
+    - node.type.question
+id: node.question.field_question_antwortoptionen
+field_name: field_question_antwortoptionen
+entity_type: node
+bundle: question
+label: Antwortoptionen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: afe66aed-4770-4b3c-ab64-33edbd11def3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.thank_you
+id: node.thank_you.promote
+field_name: promote
+entity_type: node
+bundle: thank_you
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,23 @@
+uuid: fcc566f0-f20d-4991-a820-1389d4357186
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.thank_you
+  module:
+    - text
+id: node.thank_you.body
+field_name: body
+entity_type: node
+bundle: thank_you
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

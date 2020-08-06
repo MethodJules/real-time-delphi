@@ -1,0 +1,30 @@
+uuid: 888da3bf-ca22-42da-a705-aba5cbeb2872
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_question_question_type
+field_name: field_question_question_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: text
+      label: text
+    -
+      value: number
+      label: number
+    -
+      value: select
+      label: select
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

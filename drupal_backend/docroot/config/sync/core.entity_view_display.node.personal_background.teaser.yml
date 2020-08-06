@@ -1,0 +1,32 @@
+uuid: 45815009-4bb7-4f41-a74e-0aaeced93aed
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.personal_background.body
+    - field.field.node.personal_background.field_background_p_questions
+    - node.type.personal_background
+  module:
+    - text
+    - user
+id: node.personal_background.teaser
+targetEntityType: node
+bundle: personal_background
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_background_p_questions: true

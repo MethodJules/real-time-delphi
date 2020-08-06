@@ -1,0 +1,37 @@
+uuid: 71ac137f-af13-457b-8427-83a4ac160c19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.data_protection.body
+    - field.field.node.data_protection.field_data_protection_questions
+    - node.type.data_protection
+  module:
+    - text
+    - user
+id: node.data_protection.default
+targetEntityType: node
+bundle: data_protection
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_data_protection_questions:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

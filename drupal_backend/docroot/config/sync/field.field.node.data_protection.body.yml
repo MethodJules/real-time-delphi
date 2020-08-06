@@ -1,0 +1,23 @@
+uuid: fa0f9e2e-caab-4bcd-a99f-b0e3be4eaba1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.data_protection
+  module:
+    - text
+id: node.data_protection.body
+field_name: body
+entity_type: node
+bundle: data_protection
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
