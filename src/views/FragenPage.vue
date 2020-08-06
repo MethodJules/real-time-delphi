@@ -29,7 +29,7 @@
             </div>
         </div>
 
-        <v-btn>Zurück</v-btn><v-btn to="/end">Weiter</v-btn>   
+        <v-btn to="/endpage">Weiter</v-btn>   
     </v-container>
 </template>
 

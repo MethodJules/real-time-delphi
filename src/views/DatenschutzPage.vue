@@ -19,7 +19,6 @@
             <h2>{{node.title}}</h2>
             <div><span v-html="node.html"></span></div>
             <NumberQuestion v-for="question in node.questions" :question="question.question" :label="question.label" :key="question.label" />
-            <v-btn to="/begruessung">Zurück</v-btn>
             <v-btn to="/hintergrund">Weiter</v-btn>
         </div>
     </v-container>    
