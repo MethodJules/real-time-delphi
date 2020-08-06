@@ -211,7 +211,7 @@ export default {
             html: '<p>Bitte versetzten Sie sich in folgende Situation:</p><p>Sie möchten ein bestimmtes Buch online erwerben und besuchen \
             dazu eine Online-Verkaufsplattform. Sie wollen sich vor dem Kauf über das Buch informieren und prüfen, ob es Ihnen wirklich gefallen könnte \
             Hierfür lesen Sie einige Buchrezensionen...</p>',
-            img_src: 'https://picsum.photos/510/300?random',
+            img_src: 'buch_cover.png',
             buch: 'Worüber wir schweigen',
             questions: [
                 {

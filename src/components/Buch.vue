@@ -4,7 +4,7 @@
             <v-col>
 
 
-                <v-img :src="require(`@/assets/${image_src}`)" />
+                <v-img :src="require(`@/assets/${buch_cover}`)" />
             </v-col>
         </v-row>
     </v-container>
@@ -14,11 +14,11 @@
 export default {
     data () {
       return {
-        Buch1: null,
+        buch_cover: null,
       }
     },
     props: {
-     image_src: String
+     buch_cover: String
     }
 
 }
