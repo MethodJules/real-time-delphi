@@ -64,6 +64,11 @@ Vue.use(VueRouter)
     component: () => import(/*webpackChunkName: "fragenpage" */ '../views/FragenPage.vue')
   },
   {
+    path: '/fragen2page',
+    name: 'Fragen2page',
+    component: () => import(/*webpackChunkName: "fragen2page" */ '../views/Fragen2Page.vue')
+  },
+  {
     path: '/endpage',
     name: 'Endpage',
     component: () => import(/*webpackChunkName: "endpage" */ '../views/EndPage.vue')
