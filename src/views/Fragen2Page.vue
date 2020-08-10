@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <v-btn to="/fragen2page">Weiter</v-btn>   
+        <v-btn to="/endpage">Weiter</v-btn>   
     </v-container>
 </template>
 
