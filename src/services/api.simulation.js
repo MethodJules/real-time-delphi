@@ -228,6 +228,172 @@ export default {
                 }
             ]
             
-        }
+        },
+        {
+        nid: 8,
+        title: 'Teil 3: Fragen',
+        html: '<p>Bitte beantworten Sie die folgenden Fragen.</p>',
+        questions: [
+            {
+                question: '<p>Während ich die Buchrezensionen betrachtet habe, \
+                konnte ich die meisten Ablenkungen ausblenden.</p>',
+                question_type: 'select',
+                answeroptions: [
+                    {
+                        label: 'Stimme überhaupt nicht zu'
+                    },
+                    {
+                        label: 'Stimme teilweise nicht zu'
+                    },
+                    {
+                        label: 'Neutral'
+                    },
+                    {
+                        label: 'Stimme teilweise zu'
+                    }, 
+                    {
+                        label: 'Stimme voll zu'
+                    }
+                ]
+            },
+            {
+                question: '<p>Während ich die Buchrezensionen betrachtet habe, war ich in das,\
+                was ich tat vertieft.</p>',
+                question_type: 'select',
+                answeroptions: [
+                    {
+                        label: 'Stimme überhaupt nicht zu'
+                    },
+                    {
+                        label: 'Stimme teilweise nicht zu'
+                    },
+                    {
+                        label: 'Neutral'
+                    },
+                    {
+                        label: 'Stimme teilweise zu'
+                    }, 
+                    {
+                        label: 'Stimme voll zu'
+                    }
+                ]
+            },
+            {
+                question: '<p>Während ich die Buchrezensionen betrachtet habe, war ich in die Aufgabe vertieft,\
+                die ich gerade ausführte.</p>.',
+                question_type: 'select',
+                answeroptions: [
+                    {
+                        label: 'Stimme überhaupt nicht zu'
+                    },
+                    {
+                        label: 'Stimme teilweise nicht zu'
+                    },
+                    {
+                        label: 'Neutral'
+                    },
+                    {
+                        label: 'Stimme teilweise zu'
+                    }, 
+                    {
+                        label: 'Stimme voll zu'
+                    }
+                ]
+            },
+            {
+                question: '<p>Als ich die Buchrezensionen betrachtet habe, \
+                ließ ich mich sehr leicht durch andere Dinge ablenken. </p>',
+                question_type: 'select',
+                answeroptions: [
+                    {
+                        label: 'Stimme überhaupt nicht zu'
+                    },
+                    {
+                        label: 'Stimme teilweise nicht zu'
+                    },
+                    {
+                        label: 'Neutral'
+                    },
+                    {
+                        label: 'Stimme teilweise zu'
+                    }, 
+                    {
+                        label: 'Stimme voll zu'
+                    }
+                ]
+            },
+            {
+                question: '<p>Während ich die Buchrezensionen betrachtet habe,\
+                wurde meine Aufmerksamkeit nicht leicht gestört. </p>',
+                question_type: 'select',
+                answeroptions: [
+                    {
+                        label: 'Stimme überhaupt nicht zu'
+                    },
+                    {
+                        label: 'Stimme teilweise nicht zu'
+                    },
+                    {
+                        label: 'Neutral'
+                    },
+                    {
+                        label: 'Stimme teilweise zu'
+                    }, 
+                    {
+                        label: 'Stimme voll zu'
+                    }
+                ]
+            },
+            {
+                question: '<p>Während ich die Buchrezensionen betrachtet habe, \
+                wurde ich von den Personen im Raum gestört.</p>',
+                question_type: 'select',
+                answeroptions: [
+                    {
+                        label: 'Stimme überhaupt nicht zu'
+                    },
+                    {
+                        label: 'Stimme teilweise nicht zu'
+                    },
+                    {
+                        label: 'Neutral'
+                    },
+                    {
+                        label: 'Stimme teilweise zu'
+                    }, 
+                    {
+                        label: 'Stimme voll zu'
+                    }
+                ]
+            },
+            {
+                question: '<p>Während ich die Buchrezensionen betrachtet habe,\
+                konnte ich mich aufgrund von Störungen im\
+                Raum nicht auf die Aufgabe konzentrieren.</p>',
+                question_type: 'select',
+                answeroptions: [
+                    {
+                        label: 'Stimme überhaupt nicht zu'
+                    },
+                    {
+                        label: 'Stimme teilweise nicht zu'
+                    },
+                    {
+                        label: 'Neutral'
+                    },
+                    {
+                        label: 'Stimme teilweise zu'
+                    }, 
+                    {
+                        label: 'Stimme voll zu'
+                    }
+                ]
+            },
+        ]
+    },
+
+
+
+
     ]
 }
