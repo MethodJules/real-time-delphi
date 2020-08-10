@@ -15,28 +15,11 @@
     <br>
 
   </div>
-    <h1>Buchrezension 4 zum Buch "Gilde der Jäger - Engelskrieg"</h1>
+    <h1>Buchrezension 5 zum Buch "Gilde der Jäger - Engelskrieg"</h1>
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
     <v-row class="rezension" align="center">
         <v-col cols="4">
             <div class="icon"/>
-            <div class="icon"> <v-img src="../assets/rez_details.png" height="100" width="100"/></div>
-            <div class="icon"/>
-            <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
-            <div class="icon"/>
-        </v-col>
-        <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
-                <div>
-            <p>Dieses Buch endet mehr oder weniger mit einem großen Knall, vielen Veränderungen und Verlusten, aber auch Neuanfängen. Die Reihe könnte mit diesem Buch, durchaus auch enden, was ich nicht hoffe, aber es können auch durchaus auch wieder neue Stränge gesponnen werden. Es bleibt also interessant abzuwarten, ob und wenn wie es weitergeht.
-            </p>
-                </div>
-            </Highlightable>
-        </v-col>
-    </v-row>
-    <v-row class="rezension" align="center">
-        <v-col cols="4">
-            <div class="icon"/>
             <div class="icon"/>
             <div class="icon"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
             <div class="icon"/>
@@ -45,7 +28,7 @@
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div>
-            <p>Generell fand ich das Buch wieder sehr gut und spannend. 
+            <p>Eigentlich schreibe ich bei Serien keine Rezension mehr, aber hier muss ich einfach. Die Geschichte wird immer spannender und bildgewaltiger. Die Handlung ist der Hammer!!! Ich war glücklich, um kurz darauf zu Tode betrügt zu sein, wie Elena - aus dem gleichen Grund. 
             </p>
                 </div>
             </Highlightable>
@@ -53,45 +36,27 @@
     </v-row>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/>
             <div class="icon"/>
             <div class="icon"> <v-img src="../assets/rez_sprachstil.png" height="100" width="100"/></div>
             <div class="icon"/>
+            <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
             <div class="icon"/>
         </v-col>
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div>
-            <p>Was mich nur genervt hat, waren die doch ständigen Wiederholungen, wie z.B. mein Erzengel und durch dein Stück Herz bleib ich menschlich. Das kam gefühlt in jedem Kapitel mind. 3x vor und es nervte auf Dauer. Man liest das Buch ja und dann weiß man Bescheid, da muss ich ja nicht bei jedem Satz erinnert werden, so vergesslich bin ich dann doch nicht. 
+            <p>Daran erkennt man, wie gut der Schreibstil ist, wenn man in die Geschichte eintauchen kann, als ob man persönlich dabei ist. Ich hoffe auf eine schnellere Veröffentlichung des nächsten Buches, wie bisher.
             </p>
                 </div>
             </Highlightable>
         </v-col>
     </v-row>
-    <v-row class="rezension" align="center">
-        <v-col cols="4">
-            <div class="icon"/>
-            <div class="icon"/>
-            <div class="icon"> <v-img src="../assets/rez_details.png" height="100" width="100"/></div>
-            <div class="icon"/>
-            <div class="icon"/>
-        </v-col>
-        <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
-                <div>
-            <p>Und was mich noch störte, ist diese schnelle Genesung und Stärke bei Elena, gerade noch kann sie nicht alleine stehen und dann sieht sie sich im größten Kampf aller Zeiten mittendrin als starke Kämpferin, der Sprung war mir zu groß, das hätte man bestimmt anders lösen können. Sonst aber wie gewohnt ein gutes Buch, eine tolle Geschichte, die halt diesmal einige Schwächen hatte.
-            </p>
-                </div>
-            </Highlightable>
-        </v-col>
-    </v-row>
-            <br>
+        <br>
     <b>Legende:</b>
             <v-col cols="4">
-            <div class="icon"> <v-img src="../assets/rez_details.png" height="100" width="100"/></div>
-            <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
             <div class="icon"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
             <div class="icon"> <v-img src="../assets/rez_sprachstil.png" height="100" width="100"/></div>
+            <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
         </v-col>
         <br>
         <br>
@@ -99,7 +64,7 @@
         <br>
         <br>
 
-    <v-btn to="/buchrezension5">Weiter</v-btn>
+    <v-btn to="/fragenpage">Weiter</v-btn>
 </v-container>
 </template>
 <script>

@@ -19,7 +19,11 @@
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/><div class="icon"/><div class="icon"/><div class="icon"/><div class="icon"/>
+            <div class="icon"/>
+            <div class="icon"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
+            <div class="icon"/>
+            <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
+            <div class="icon"/>
         </v-col>
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
@@ -34,7 +38,11 @@
     </v-row>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/><div class="icon"/><div class="icon"/><div class="icon"/><div class="icon"/>
+            <div class="icon"/>
+            <div class="icon"> <v-img src="../assets/rez_sprachstil.png" height="100" width="100"/></div>
+            <div class="icon"/>
+            <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
+            <div class="icon"/>
         </v-col>
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
@@ -48,7 +56,11 @@
     </v-row>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/><div class="icon"/><div class="icon"/><div class="icon"/><div class="icon"/>
+            <div class="icon"/>
+            <div class="icon"/>
+            <div class="icon"> <v-img src="../assets/rez_verstand.png" height="100" width="100"/></div>
+            <div class="icon"/>
+            <div class="icon"/>
         </v-col>
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
@@ -61,7 +73,11 @@
     </v-row>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/><div class="icon"/><div class="icon"/><div class="icon"/><div class="icon"/>
+            <div class="icon"/>
+            <div class="icon"> <v-img src="../assets/rez_sprachstil.png" height="100" width="100"/></div>
+            <div class="icon"/>
+            <div class="icon"> <v-img src="../assets/rez_verstand.png" height="100" width="100"/></div>
+            <div class="icon"/>
         </v-col>
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
@@ -76,7 +92,11 @@
     </v-row>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/><div class="icon"/><div class="icon"/><div class="icon"/><div class="icon"/>
+            <div class="icon"/>
+            <div class="icon"/>
+            <div class="icon"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
+            <div class="icon"/>
+            <div class="icon"/>
         </v-col>
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
@@ -89,7 +109,11 @@
     </v-row>
         <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/><div class="icon"/><div class="icon"/><div class="icon"/><div class="icon"/>
+            <div class="icon"/>
+            <div class="icon"/>
+            <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
+            <div class="icon"/>
+            <div class="icon"/>
         </v-col>
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
@@ -101,6 +125,21 @@
             </Highlightable>
         </v-col>
     </v-row>
+
+        <br>
+    <b>Legende:</b>
+            <v-col cols="4">
+            <div class="icon"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
+            <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
+            <div class="icon"> <v-img src="../assets/rez_sprachstil.png" height="100" width="100"/></div>
+            <div class="icon"> <v-img src="../assets/rez_verstand.png" height="100" width="100"/></div>
+        </v-col>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
     <v-btn to="/buchrezension4">Weiter</v-btn>
 </v-container>
 </template>
@@ -145,9 +184,9 @@ export default {
 </script>
 <style scoped>
 .icon {
-    width: 50px;
-    height: 50px;
-    background-color: burlywood;
+    width: 100px;
+    height: 100px;
+    background-color: lightgrey;
     justify-content: center;
     margin: 5px;
     float: left;
@@ -156,6 +195,7 @@ export default {
 .rezension {
     border: 1px solid black;
     margin: 5px 0;
+    background-color: lightgrey;
 }
 
 
