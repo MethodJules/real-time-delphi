@@ -232,11 +232,11 @@ export default {
         {
         nid: 8,
         title: 'Teil 3: Fragen',
-        html: '<p>Bitte beantworten Sie die folgenden Fragen.</p>',
+        html: 'Bitte beantworten Sie die folgenden Fragen.',
         questions: [
             {
-                question: '<p>Während ich die Buchrezensionen betrachtet habe, \
-                konnte ich die meisten Ablenkungen ausblenden.</p>',
+                question: 'Während ich die Buchrezensionen betrachtet habe, \
+                konnte ich die meisten Ablenkungen ausblenden.',
                 question_type: 'select',
                 answeroptions: [
                     {
@@ -257,8 +257,8 @@ export default {
                 ]
             },
             {
-                question: '<p>Während ich die Buchrezensionen betrachtet habe, war ich in das,\
-                was ich tat vertieft.</p>',
+                question: 'Während ich die Buchrezensionen betrachtet habe, war ich in das,\
+                was ich tat vertieft.',
                 question_type: 'select',
                 answeroptions: [
                     {
@@ -279,8 +279,8 @@ export default {
                 ]
             },
             {
-                question: '<p>Während ich die Buchrezensionen betrachtet habe, war ich in die Aufgabe vertieft,\
-                die ich gerade ausführte.</p>.',
+                question: 'Während ich die Buchrezensionen betrachtet habe, war ich in die Aufgabe vertieft,\
+                die ich gerade ausführte..',
                 question_type: 'select',
                 answeroptions: [
                     {
@@ -301,8 +301,8 @@ export default {
                 ]
             },
             {
-                question: '<p>Als ich die Buchrezensionen betrachtet habe, \
-                ließ ich mich sehr leicht durch andere Dinge ablenken. </p>',
+                question: 'Als ich die Buchrezensionen betrachtet habe, \
+                ließ ich mich sehr leicht durch andere Dinge ablenken. ',
                 question_type: 'select',
                 answeroptions: [
                     {
@@ -323,8 +323,8 @@ export default {
                 ]
             },
             {
-                question: '<p>Während ich die Buchrezensionen betrachtet habe,\
-                wurde meine Aufmerksamkeit nicht leicht gestört. </p>',
+                question: 'Während ich die Buchrezensionen betrachtet habe,\
+                wurde meine Aufmerksamkeit nicht leicht gestört. ',
                 question_type: 'select',
                 answeroptions: [
                     {
@@ -345,8 +345,8 @@ export default {
                 ]
             },
             {
-                question: '<p>Während ich die Buchrezensionen betrachtet habe, \
-                wurde ich von den Personen im Raum gestört.</p>',
+                question: 'Während ich die Buchrezensionen betrachtet habe, \
+                wurde ich von den Personen im Raum gestört.',
                 question_type: 'select',
                 answeroptions: [
                     {
@@ -367,9 +367,172 @@ export default {
                 ]
             },
             {
-                question: '<p>Während ich die Buchrezensionen betrachtet habe,\
+                question: 'Während ich die Buchrezensionen betrachtet habe,\
                 konnte ich mich aufgrund von Störungen im\
-                Raum nicht auf die Aufgabe konzentrieren.</p>',
+                Raum nicht auf die Aufgabe konzentrieren.',
+                question_type: 'select',
+                answeroptions: [
+                    {
+                        label: 'Stimme überhaupt nicht zu'
+                    },
+                    {
+                        label: 'Stimme teilweise nicht zu'
+                    },
+                    {
+                        label: 'Neutral'
+                    },
+                    {
+                        label: 'Stimme teilweise zu'
+                    }, 
+                    {
+                        label: 'Stimme voll zu'
+                    }
+                ]
+            },
+        ]
+    },
+    {
+        nid: 9,
+        title: 'Teil 3: Fragen 2',
+        html: 'Bitte beantworten Sie die folgenden Fragen.',
+        questions: [
+            {
+                question: 'Während ich die Buchrezensionen betrachtet habe, habe ich mir Mühe gegeben, \
+                die Aufgabe zu bearbeiten.',
+                question_type: 'select',
+                answeroptions: [
+                    {
+                        label: 'Stimme überhaupt nicht zu'
+                    },
+                    {
+                        label: 'Stimme teilweise nicht zu'
+                    },
+                    {
+                        label: 'Neutral'
+                    },
+                    {
+                        label: 'Stimme teilweise zu'
+                    }, 
+                    {
+                        label: 'Stimme voll zu'
+                    }
+                ]
+            },
+            {
+                question: 'Während ich die Buchrezensionen betrachtet habe, war ich motiviert, die Aufgabe zu bearbeiten.',
+                question_type: 'select',
+                answeroptions: [
+                    {
+                        label: 'Stimme überhaupt nicht zu'
+                    },
+                    {
+                        label: 'Stimme teilweise nicht zu'
+                    },
+                    {
+                        label: 'Neutral'
+                    },
+                    {
+                        label: 'Stimme teilweise zu'
+                    }, 
+                    {
+                        label: 'Stimme voll zu'
+                    }
+                ]
+            },
+            {
+                question: 'Während ich die Buchrezensionen betrachtet habe, war ich bereit, \
+                mich mit der Aufgabe zu befassen.',
+                question_type: 'select',
+                answeroptions: [
+                    {
+                        label: 'Stimme überhaupt nicht zu'
+                    },
+                    {
+                        label: 'Stimme teilweise nicht zu'
+                    },
+                    {
+                        label: 'Neutral'
+                    },
+                    {
+                        label: 'Stimme teilweise zu'
+                    }, 
+                    {
+                        label: 'Stimme voll zu'
+                    }
+                ]
+            },
+            {
+                question: 'Wenn ich zukünftig auf Online-Verkaufsplattformen Bücher kaufen und mich vorab \
+                informieren möchte, würde ich eine Plattform mit der hier gezeigten Darstellungsart \
+                von Rezensionen nutzen. ',
+                question_type: 'select',
+                answeroptions: [
+                    {
+                        label: 'Stimme überhaupt nicht zu'
+                    },
+                    {
+                        label: 'Stimme teilweise nicht zu'
+                    },
+                    {
+                        label: 'Neutral'
+                    },
+                    {
+                        label: 'Stimme teilweise zu'
+                    }, 
+                    {
+                        label: 'Stimme voll zu'
+                    }
+                ]
+            },
+            {
+                question: 'Wenn ich zukünftig auf Online-Verkaufsplattformen Bücher kaufen und mich vorab \
+                informieren möchte, wäre die Nutzung einer Plattform mit der hier gezeigten Darstellungsart \
+                von Rezensionen für mich ansprechend. ',
+                question_type: 'select',
+                answeroptions: [
+                    {
+                        label: 'Stimme überhaupt nicht zu'
+                    },
+                    {
+                        label: 'Stimme teilweise nicht zu'
+                    },
+                    {
+                        label: 'Neutral'
+                    },
+                    {
+                        label: 'Stimme teilweise zu'
+                    }, 
+                    {
+                        label: 'Stimme voll zu'
+                    }
+                ]
+            },
+            {
+                question: 'Die Darstellungsweise der Rezension hat dazu beigetragen, \
+                dass ich die für mich relevanten Informationen ohne große Mühe auffinden konnte.',
+                question_type: 'select',
+                answeroptions: [
+                    {
+                        label: 'Stimme überhaupt nicht zu'
+                    },
+                    {
+                        label: 'Stimme teilweise nicht zu'
+                    },
+                    {
+                        label: 'Neutral'
+                    },
+                    {
+                        label: 'Stimme teilweise zu'
+                    }, 
+                    {
+                        label: 'Stimme voll zu'
+                    }
+                ]
+            },
+            {
+                question: 'Die Darstellungsweise der Rezension hat dazu beigetragen, \
+                dass es mir leicht gefallen ist, die für mich relevanten Informationen in der Rezension \
+                zu finden.',
                 question_type: 'select',
                 answeroptions: [
                     {
