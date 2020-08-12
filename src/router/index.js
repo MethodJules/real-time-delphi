@@ -59,10 +59,33 @@ Vue.use(VueRouter)
     component: () => import(/*webpackChunkName: "buchrezension4" */ '../views/Buchrezension4Page.vue')
   },
   {
-    path: '/buchrezension5',
-    name: 'Buchrezension5',
-    component: () => import(/*webpackChunkName: "buchrezension5" */ '../views/Buchrezension5Page.vue')
+    path: '/buchrezensionPageUnderline',
+    name: 'BuchrezensionPageUnderline',
+    component: () => import(/*webpackChunkName: "buchrezensionUnderline" */ '../views/BuchrezensionPageUnderline.vue')
   },
+  {
+    path: '/buchrezensionPage2Underline',
+    name: 'BuchrezensionPage2Underline',
+    component: () => import(/*webpackChunkName: "buchrezension2Underline" */ '../views/BuchrezensionPage2Underline.vue')
+  },
+  {
+    path: '/buchrezensionPage3Underline',
+    name: 'BuchrezensionPage3Underline',
+    component: () => import(/*webpackChunkName: "buchrezension3Underline" */ '../views/BuchrezensionPage3Underline.vue')
+  },
+  {
+    path: '/buchrezensionPage4Underline',
+    name: 'BuchrezensionPage4Underline',
+    component: () => import(/*webpackChunkName: "buchrezension4Underline" */ '../views/BuchrezensionPage4Underline.vue')
+  },
+  {
+    path: '/buchrezensionPage5Underline',
+    name: 'BuchrezensionPage5Underline',
+    component: () => import(/*webpackChunkName: "buchrezension5Underline" */ '../views/BuchrezensionPage5Underline.vue')
+  },
+
+
+
   {
     path: '/fragenpage',
     name: 'Fragenpage',
