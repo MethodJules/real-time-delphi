@@ -8,7 +8,8 @@
       height="25"
     >
       <template v-slot="">
-        <strong>33%</strong>
+      <v-progress-linear value="27"></v-progress-linear>
+        <strong>27%</strong>
       </template>
     </v-progress-linear>
 
