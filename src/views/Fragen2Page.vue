@@ -43,12 +43,12 @@ export default {
             teil3_4: 0,
             teil3_5: 0,
             teil3_6: 0,
-            teil3_7: 0,
+            
 
 
   
 
-            node: APIService.get(4)
+            node: APIService.get(5)
 
 
 
