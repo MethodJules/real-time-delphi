@@ -1,0 +1,164 @@
+<template>
+<v-container>
+          <div>
+
+    <v-progress-linear
+      v-model="skill"
+      color="blue-grey"
+      height="25"
+    >
+      <template v-slot="">
+          <v-progress-linear value="64"></v-progress-linear>
+        <strong>64%</strong>
+      </template>
+    </v-progress-linear>
+
+    <br>
+
+  </div>
+    <h1>Buchrezension 4 zum Buch "Gilde der Jäger - Engelskrieg"</h1>
+    <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
+    <v-row class="rezension" align="center">
+        <v-col cols="8">
+            <Highlightable @share="onShare" @highlight="onHighlight">
+                <div class="gelb green">
+            {{text}}
+                </div>
+            </Highlightable>
+        </v-col>
+    </v-row>
+    <v-row class="rezension" align="center">
+        <v-col cols="8">
+            <Highlightable @share="onShare" @highlight="onHighlight">
+                <div class="rot">
+            {{text1}}
+                </div>
+            </Highlightable>
+        </v-col>
+    </v-row>
+    <v-row class="rezension" align="center">
+        <v-col cols="8">
+            <Highlightable @share="onShare" @highlight="onHighlight">
+                <div class="blau">
+            {{text2}}
+                </div>
+            </Highlightable>
+        </v-col>
+    </v-row>
+    <v-row class="rezension" align="center">
+        <v-col cols="8">
+            <Highlightable @share="onShare" @highlight="onHighlight">
+                <div class="gelb">
+            {{text3}}
+                </div>
+            </Highlightable>
+        </v-col>
+    </v-row>
+        <v-row>
+    Legende:<div><span class="red">Emotionale Konsequenzen </span></div>
+    <div><span class="green">Bezug zu anderen Büchern</span></div>
+    <div><span class="yellow">Inhaltliche Details</span></div>
+   <div><span class="blue">Sprachstil und Erzählperspektive</span></div>
+    </v-row>
+
+    <v-btn to="/buchrezensionPage5Underline">Weiter</v-btn>
+    <!-- <v-btn to="/fragenpage">Weiter</v-btn> -->
+</v-container>
+</template>
+<script>
+import Highlightable from '@/components/Highlightable';
+export default {
+    data() {
+        return {
+            text: 'Dieses Buch endet mehr oder weniger mit einem großen Knall, vielen Veränderungen und Verlusten, aber auch Neuanfängen. Die Reihe könnte mit diesem Buch, durchaus auch enden, was ich nicht hoffe, aber es können auch durchaus auch wieder neue Stränge gesponnen werden. \
+            Es bleibt also interessant abzuwarten, ob und wenn wie es weitergeht.',
+            text1: 'Generell fand ich das Buch wieder sehr gut und spannend.',
+            text2: 'Was mich nur genervt hat, waren die doch ständigen Wiederholungen, \
+            wie z.B. mein Erzengel und durch dein Stück Herz bleib ich menschlich. \
+            Das kam gefühlt in jedem Kapitel mind. 3x vor und es nervte auf Dauer. \
+            Man liest das Buch ja und dann weiß man Bescheid, \
+            da muss ich ja nicht bei jedem Satz erinnert werden, so vergesslich bin ich dann doch nicht. ',
+            text3: 'Und was mich noch störte, ist diese schnelle Genesung und Stärke bei Elena, gerade noch kann sie nicht alleine stehen und dann sieht sie sich im größten Kampf aller Zeiten mittendrin als starke Kämpferin, der Sprung war mir zu groß, das hätte man bestimmt anders lösen können. \
+            Sonst aber wie gewohnt ein gutes Buch, eine tolle Geschichte, die halt diesmal einige Schwächen hatte.',
+            highlight: []
+        }
+    },
+    components: {
+        Highlightable
+    },
+    methods: {
+        onHighlight(text) {
+            this.highlight.push(text);
+        },
+        onShare(text) {
+            console.log(text);
+        },
+        test() {
+            if(this.highlight.length == 0) { //check if something is already highlighted
+                return this.text;
+            } else {
+                var test = this.text;
+                for (let high of this.highlight) {
+                    alert(high.start);
+                    var test1 = test.slice(0, high.start);
+                    var test2 = test.slice(high.start, high.end)
+                    var test3 = test.slice(high.end);
+
+                    test2 = test2.replace(test2, '<span class="highlightText">' + test2 + '</span>')
+                    test = test1 + test2 + test3;
+                }
+            }
+            return test;
+        }
+    }
+}
+</script>
+<style scoped>
+.rot {
+    text-decoration: underline;
+  -webkit-text-decoration-color: red;
+  text-decoration-color: red
+
+}
+.grün {
+    text-decoration: underline;
+  -webkit-text-decoration-color: green;
+  text-decoration-color: green
+
+}
+.blau {
+    text-decoration: underline;
+  -webkit-text-decoration-color: blue;
+  text-decoration-color: blue
+
+}
+.gelb {
+    text-decoration: underline;
+  -webkit-text-decoration-color: yellow;
+  text-decoration-color: yellow
+
+}
+.lila {
+    text-decoration: underline;
+  -webkit-text-decoration-color: purple;
+  text-decoration-color: purple
+
+}
+.icon {
+    width: 50px;
+    height: 50px;
+    background-color: burlywood;
+    justify-content: center;
+    margin: 5px;
+    float: left;
+}
+
+.rezension {
+    border: 1px solid black;
+    margin: 5px 0;
+    background-color: lightgrey;
+}
+
+
+
+</style>
