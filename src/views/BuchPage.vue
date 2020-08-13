@@ -35,7 +35,7 @@
         </div>
 
          <div v-if="Math.random() < 0.3">
-        <v-btn to="/buchrenzensionPageUnderline">Weiter</v-btn>
+        <v-btn to="/buchrezensionPageUnderline">Weiter</v-btn>
           </div>
         <div v-else-if="Math.random() > 0.7">
         <v-btn to="/buchrezension">Weiter</v-btn>
