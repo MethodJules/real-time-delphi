@@ -84,6 +84,32 @@ Vue.use(VueRouter)
     component: () => import(/*webpackChunkName: "buchrezension5Underline" */ '../views/BuchrezensionPage5Underline.vue')
   },
 
+  {
+    path: '/buchrezensionPageRaw',
+    name: 'BuchrezensionPageRaw',
+    component: () => import(/*webpackChunkName: "buchrezensionRaw" */ '../views/BuchrezensionPageRaw.vue')
+  },
+  {
+    path: '/buchrezensionPage2Raw',
+    name: 'BuchrezensionPage2Raw',
+    component: () => import(/*webpackChunkName: "buchrezension2Raw" */ '../views/BuchrezensionPage2Raw.vue')
+  },
+  {
+    path: '/buchrezensionPage3Raw',
+    name: 'BuchrezensionPage3Raw',
+    component: () => import(/*webpackChunkName: "buchrezension3Raw" */ '../views/BuchrezensionPage3Raw.vue')
+  },
+  {
+    path: '/buchrezensionPage4Raw',
+    name: 'BuchrezensionPage4Raw',
+    component: () => import(/*webpackChunkName: "buchrezension4Raw" */ '../views/BuchrezensionPage4Raw.vue')
+  },
+  {
+    path: '/buchrezensionPage5Raw',
+    name: 'BuchrezensionPage5Raw',
+    component: () => import(/*webpackChunkName: "buchrezension5Underline" */ '../views/BuchrezensionPage5Raw.vue')
+  },
+
 
 
   {
