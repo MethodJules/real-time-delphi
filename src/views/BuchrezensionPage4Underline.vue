@@ -21,8 +21,16 @@
     <v-row class="rezension" align="center">
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
-                <div class="gelb green">
-            {{text}}
+                 <div>
+                <div class="gelbgrün">
+                    {{text}}
+                </div>
+                <div class="gelbgrün">
+                    {{text01}}
+                </div>
+                <div class="gelbgrün">
+                    {{text02}}
+                </div>
                 </div>
             </Highlightable>
         </v-col>
@@ -70,8 +78,10 @@ import Highlightable from '@/components/Highlightable';
 export default {
     data() {
         return {
-            text: 'Dieses Buch endet mehr oder weniger mit einem großen Knall, vielen Veränderungen und Verlusten, aber auch Neuanfängen. Die Reihe könnte mit diesem Buch, durchaus auch enden, was ich nicht hoffe, aber es können auch durchaus auch wieder neue Stränge gesponnen werden. \
-            Es bleibt also interessant abzuwarten, ob und wenn wie es weitergeht.',
+            text: 'Dieses Buch endet mehr oder weniger mit einem großen Knall, vielen Veränderungen und Verlusten,',
+            text01:'aber auch Neuanfängen. Die Reihe könnte mit diesem Buch, durchaus auch enden, was ich nicht hoffe,',
+            text02:' aber es können auch durchaus auch wieder neue Stränge gesponnen werden. Es bleibt also interessant',
+            text03:'abzuwarten, ob und wenn wie es weitergeht.',
             text1: 'Generell fand ich das Buch wieder sehr gut und spannend.',
             text2: 'Was mich nur genervt hat, waren die doch ständigen Wiederholungen, \
             wie z.B. mein Erzengel und durch dein Stück Herz bleib ich menschlich. \
@@ -114,6 +124,14 @@ export default {
 }
 </script>
 <style scoped>
+
+.gelbgrün {
+    text-decoration: underline;
+  -webkit-text-decoration-color: yellow;
+  text-decoration-color: yellow;
+  border-bottom: 0.5px solid green;
+  
+}
 .rot {
     text-decoration: underline;
   -webkit-text-decoration-color: red;

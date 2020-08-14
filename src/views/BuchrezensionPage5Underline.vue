@@ -30,8 +30,13 @@
     <v-row class="rezension" align="center">
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
-                <div class="blue grün">
+                <div>
+                <div class="blaugrün">
                     {{text1}}
+                </div>
+                <div class="blaugrün">
+                    {{text11}}
+                </div>
                 </div>
             </Highlightable>
         </v-col>
@@ -55,8 +60,8 @@ export default {
             Die Handlung ist der Hammer!!! Ich war glücklich, um kurz darauf zu Tode betrügt zu sein, \
             wie Elena - aus dem gleichen Grund. ',
             text1: 'Daran erkennt man, wie gut der Schreibstil ist, wenn man in die Geschichte eintauchen kann, \
-            als ob man persönlich dabei ist. \
-            Ich hoffe auf eine schnellere Veröffentlichung des nächsten Buches, wie bisher.',
+            als ob man',
+            text11:'persönlich dabei ist. Ich hoffe auf eine schnellere Veröffentlichung des nächsten Buches, wie bisher.',
             highlight: []
         }
     },
@@ -90,6 +95,13 @@ export default {
 }
 </script>
 <style scoped>
+.blaugrün {
+    text-decoration: underline;
+  -webkit-text-decoration-color: blue;
+  text-decoration-color: blue;
+  border-bottom: 0.5px solid green;
+  
+}
 
 .rot {
     text-decoration: underline;

@@ -26,15 +26,23 @@
         
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
-                
                     <div>
             <p>Der Abschluss der Kaskade? 
                <br />
             </p>
             <div class="rot">
             {{text}}
-                </div>
-                    </div>
+            </div>
+            <div class="rot">
+            {{texti}}
+            </div>
+            <div class="rot">
+            {{texti1}}
+            </div>
+            <div class="rot">
+            {{texti2}}
+               </div> 
+             </div>
             </Highlightable>
         </v-col>
         
@@ -71,6 +79,7 @@
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div class="rot">
+                    
                     {{text4}}
                 </div>
             </Highlightable>
@@ -93,10 +102,10 @@ export default {
     data() {
         
         return {
-            text:' Der Welt steht mit der Kaskade ein Krieg bevor. \
-            Aber wie geht es jetzt bei Elena und Raphael weiter? \
-            Beim letzten Kampf wurde Elena tödlich verletzt und wie es scheint, \
-            tritt Kassandras Vorhersage ein. Aber wer Elena kennt, \
+            text:' Der Welt steht mit der Kaskade ein Krieg bevor.' ,
+            texti:'Aber wie geht es jetzt bei Elena und Raphael weiter?',
+            texti1:'Beim letzten Kampf wurde Elena tödlich verletzt und wie es scheint,',
+            texti2:'tritt Kassandras Vorhersage ein. Aber wer Elena kennt, \
             der weiß, dass nichts so kommt wie vorhergesagt. \
             Denn Elena glaubt an die Wandelbarkeit des Schicksals. \
             Die Charaktere sind glaube ich bereits allen bekannt.',
@@ -170,7 +179,9 @@ export default {
 .rot {
     text-decoration: underline;
   -webkit-text-decoration-color: red;
-  text-decoration-color: red
+  text-decoration-color: red;
+  border-bottom: 0.5px solid yellow;
+  
 
 }
 .grün {
