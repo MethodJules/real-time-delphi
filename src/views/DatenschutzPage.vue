@@ -22,15 +22,15 @@
             <NumberQuestion v-for="question in node.questions" :question="question.question" :label="question.label" :key="question.label" />
             <v-btn to="/hintergrund">Weiter</v-btn>
         </div>
-    </v-container>    
+    </v-container>
 </template>
 <script>
 import { mapState } from 'vuex'
-import TextQuestion from '@/components/TextQuestion'
+//import TextQuestion from '@/components/TextQuestion'
 import NumberQuestion from '@/components/NumberQuestion'
 export default {
     components: {
-        TextQuestion,
+        //TextQuestion,
         NumberQuestion
     },
     computed: mapState({
@@ -39,6 +39,6 @@ export default {
     created() {
         this.$store.dispatch('datenschutz/getDataFromDrupal')
     },
-    
+
 }
 </script>
