@@ -1,6 +1,6 @@
 <template>
 <v-container>
-    
+
           <div>
 
     <v-progress-linear
@@ -17,12 +17,12 @@
     <br>
 
   </div>
-  
+
     <h1>Buchrezension 1 zum Buch "Gilde der Jäger - Engelskrieg"</h1>
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
         <div>
     <v-row class="rezension" align="center">
-        
+
         <v-col cols="4">
             <div class="icon"/>
             <div class="icon"/>
@@ -31,16 +31,16 @@
             <div class="icon"/>
         </v-col>
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable class="highlight1" @share="onShare" @highlight="onHighlight">
                 <div>
-            <p>Der Abschluss der Kaskade? 
+            <p>Der Abschluss der Kaskade?
                <br />
             </p>
             {{text}}
                 </div>
             </Highlightable>
         </v-col>
-        
+
     </v-row>
     </div>
     <v-row class="rezension" align="center">
@@ -52,10 +52,10 @@
             <div class="icon"/>
         </v-col>
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable class="highlight2" @share="onShare" @highlight="onHighlight">
                 <div>
                     {{text1}}
-            
+
                 </div>
             </Highlightable>
         </v-col>
@@ -124,15 +124,15 @@
         <br>
 
     <v-btn to="/buchrezension2">Weiter</v-btn>
-    
-        
+
+
 </v-container>
 </template>
 <script>
 import Highlightable from '@/components/Highlightable';
 export default {
     data() {
-        
+
         return {
             text:' Der Welt steht mit der Kaskade ein Krieg bevor. Aber wie geht es jetzt bei Elena und Raphael weiter? Beim letzten Kampf wurde Elena tödlich verletzt und wie es scheint, tritt Kassandras Vorhersage ein. Aber wer Elena kennt, der weiß, dass nichts so kommt wie vorhergesagt. Denn Elena glaubt an die Wandelbarkeit des Schicksals.Die Charaktere sind glaube ich bereits allen bekannt.',
             text1: 'Wer die Reihe jetzt anfangen möchte, dem rate ich von Anfang an zu lesen, denn die Handlungen bauen auf einander auf und führen zum unweigerlich folgenden Knall. Denn der Krieg mit Lijuan lässt sich nicht mehr vermeiden. ',
