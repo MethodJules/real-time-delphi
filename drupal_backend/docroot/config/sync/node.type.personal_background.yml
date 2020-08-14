@@ -1,0 +1,18 @@
+uuid: 49555e61-0a27-42fa-a04e-dc03e32d0be3
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Personal Background'
+type: personal_background
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,37 @@
+uuid: bedf46a6-26b0-40d3-af63-4afa5ed2e28b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.personal_background.body
+    - field.field.node.personal_background.field_background_p_questions
+    - node.type.personal_background
+  module:
+    - text
+    - user
+id: node.personal_background.default
+targetEntityType: node
+bundle: personal_background
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_background_p_questions:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

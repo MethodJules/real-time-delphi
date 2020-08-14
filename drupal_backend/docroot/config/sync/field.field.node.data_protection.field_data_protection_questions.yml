@@ -1,0 +1,28 @@
+uuid: aa82ad04-f42d-43e2-bfa1-01c0f78dc3c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_protection_questions
+    - node.type.data_protection
+    - node.type.question
+id: node.data_protection.field_data_protection_questions
+field_name: field_data_protection_questions
+entity_type: node
+bundle: data_protection
+label: Questions
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      question: question
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

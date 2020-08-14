@@ -25,18 +25,20 @@
     </v-container>    
 </template>
 <script>
-import APIService from '@/services/api.service'
+import { mapState } from 'vuex'
+import TextQuestion from '@/components/TextQuestion'
 import NumberQuestion from '@/components/NumberQuestion'
-//import Question from '@/components/Question';
 export default {
     components: {
-        //Question
+        TextQuestion,
         NumberQuestion
     },
-    data() {
-        return {
-            node: APIService.get(1),
-        }
-    }
+    computed: mapState({
+        nodes: state => state.datenschutz.data
+    }),
+    created() {
+        this.$store.dispatch('datenschutz/getDataFromDrupal')
+    },
+    
 }
 </script>

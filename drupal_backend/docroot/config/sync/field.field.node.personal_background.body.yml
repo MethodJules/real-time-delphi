@@ -1,0 +1,23 @@
+uuid: 40c7bafd-faa2-40a2-b882-43a2ba2d8115
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.personal_background
+  module:
+    - text
+id: node.personal_background.body
+field_name: body
+entity_type: node
+bundle: personal_background
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

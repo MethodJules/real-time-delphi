@@ -1,0 +1,18 @@
+uuid: 96a4b7ed-db37-4588-9875-5f719d5f549f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Data Protection'
+type: data_protection
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

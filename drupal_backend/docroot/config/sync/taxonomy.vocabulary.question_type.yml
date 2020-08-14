@@ -1,0 +1,8 @@
+uuid: fc800862-7a8f-4952-b005-81dbc4617191
+langcode: en
+status: true
+dependencies: {  }
+name: 'Question Type'
+vid: question_type
+description: ''
+weight: 0

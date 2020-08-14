@@ -3,10 +3,9 @@
     "",
     "\\public",
     "\\src",
-    "\\src\\plugins",
-    "\\src\\store",
-    "\\src\\store\\modules"
+    "\\src\\components",
+    "\\src\\views"
   ],
-  "SelectedNode": "\\src\\store\\index.js",
+  "SelectedNode": "\\src\\views\\About.vue",
   "PreviewInSolutionExplorer": false
 }

@@ -1,6 +1,6 @@
 
 <template>
-    <div class="highlight">
+    <div @mouseover="hover = true" @mouseleave="hover=false" class="highlight">
         <div v-show="showMenu" class="menu" :style="{ left: `${x}px`, top: `${y}px`}" @mousedown.prevent="">
             <span class="item" @mousedown.prevent="handleAction('highlight')">Share</span>
             <span class="item" @mousedown.prevent="highlight()">Highlight</span> <!-- You can add more buttons here -->
@@ -25,6 +25,7 @@
                 showMenu: false,
                 selectedText: '',
                 text: '',
+                hover: false
                 
             }
         },
@@ -37,12 +38,11 @@
             },
 
             count() {
-                alert("Test");
+            
                 return this.$store.state.highlight.count;
             }
-
+    
         },
-
 
         mounted() {
             window.addEventListener('mouseup', this.onMouseup)
@@ -54,15 +54,14 @@
         methods: {
 
             onMouseup() {
-                
+                console.log(this.hover);
+
                 const selection = window.getSelection()
  
 
                 const selectionRange = selection.getRangeAt(0) // startNode is the element that the selection starts in
                 const startNode = selectionRange.startContainer.parentNode    // endNode is the element that the selection ends in
                 const endNode = selectionRange.endContainer.parentNode    // if the selected text is not part of the highlightableEl (i.e. <p>)    // OR    // if startNode !== endNode (i.e. the user selected multiple paragraphs)    // Then    // Don't show the menu (this selection is invalid)
-
-                console.log(selectionRange);
 
                 if (startNode.parentNode.className !== "highlightContent" && startNode.parentNode.parentNode.className !== "highlightContent" || endNode.parentNode.className !== "highlightContent" && endNode.parentNode.parentNode.className !== "highlightContent") {               
                     this.showMenu = false
@@ -73,31 +72,62 @@
                     this.showMenu = false
                     return             
                 }
+         
                 /*
                 if (!startNode.isSameNode(this.highlightableEl) || !startNode.isSameNode(endNode)) {
                     this.showMenu = false
                     return
                 }    // Get the x, y, and width of the selection
                 */
-                const { x, y, width } = selectionRange.getBoundingClientRect()    // If width === 0 (i.e. no selection)    // Then, hide the menu
+
+                if (this.hover) {
 
 
-                console.log(selectionRange.getBoundingClientRect());
+                    if (startNode.parentNode.parentNode.parentNode.classList.contains("highlight")) {
+                        var starthighlight = startNode.parentNode.parentNode.parentNode.classList[1];
+                    } else {
+                        starthighlight = startNode.parentNode.parentNode.classList[1];
+                    }
 
-                var highlightPosition = document.getElementsByClassName("highlight")[0].getBoundingClientRect();
+                    if (endNode.parentNode.parentNode.parentNode.classList.contains("highlight")) {
+                        var endhighlight = endNode.parentNode.parentNode.parentNode.classList[1];
+                    } else {
+                        endhighlight = endNode.parentNode.parentNode.classList[1];
+                    }
 
+                    if (starthighlight !== endhighlight) {
+                        this.showMenu = false
+                        return
+                    }
 
+                    const { x, y, width } = selectionRange.getBoundingClientRect()    // If width === 0 (i.e. no selection)    // Then, hide the menu
 
-                if (!width) {
-                    this.showMenu = false
-                    return
-                }    // Finally, if the selection is valid,    // set the position of the menu element,    // set selectedText to content of the selection    // then, show the menu
+                    console.log(selectionRange.getBoundingClientRect());
 
-                this.x = (x - highlightPosition.x) + (width / 2)
+                    if (startNode.parentNode.className == "highlightContent") {
+                        var highlightPosition = startNode.parentNode.parentNode.getBoundingClientRect();
+                    } else {
+                        highlightPosition = startNode.parentNode.parentNode.parentNode.getBoundingClientRect();
+                    }
 
-                this.y = (y - 10) - highlightPosition.y; 
-         
-                this.showMenu = true
+                    
+
+                    if (!width) {
+                        this.showMenu = false
+                        return
+                    }    // Finally, if the selection is valid,    // set the position of the menu element,    // set selectedText to content of the selection    // then, show the menu
+
+                    this.x = (x - highlightPosition.x) + (width / 2)
+
+                    this.y = (y - 10) - highlightPosition.y;
+
+                    this.showMenu = true
+                } else {
+                    this.showMenu = false;
+                }
+               
+
+              
             }, 
 
             handleAction(action) {
@@ -114,10 +144,6 @@
                
             
                 const selectionRange = selection.getRangeAt(0)
-               
-                var lengthSelection = selection.toString().length;
-
-                console.log(lengthSelection);
 
                 var myAnchorNodeValue = window.getSelection().anchorNode.nodeValue;
 
@@ -146,8 +172,6 @@
                     }
 
                 }
-               
-
 
                 if (startFront) {
                     var myFocusNodeLength = window.getSelection().focusNode.nodeValue.length;
@@ -169,10 +193,7 @@
                     } else {
                         window.getSelection().focusNode.nodeValue = "[deleteStart]" + myFocusNodeValue;
                     }
-
-                 
-
-                  
+         
                 } else {
 
                     var myAnchorNodeLength = window.getSelection().anchorNode.nodeValue.length;
@@ -198,29 +219,33 @@
 
                 }
 
-                
+                var hightlightLength = document.getElementsByClassName("highlightContent").length;
 
                 if (selectionRange.commonAncestorContainer.className != "highlightContent") {
 
+                    for (var i = 0; i < hightlightLength; i++) {
+                        var newClassName = document.getElementsByClassName("highlightContent")[i].innerHTML.replace('[Highlight]', '<span class="highlightText">').replace('[/Highlight]', '</span>').replace('[delete]</span>', '').replace('<span class="highlightText">[deleteStart]', '');
 
-                    console.log(document.getElementsByClassName("highlightContent")[0].innerHTML);
+                        document.getElementsByClassName("highlightContent")[i].innerHTML = newClassName;
+                    }
 
-                    var newClassName = document.getElementsByClassName("highlightContent")[0].innerHTML.replace('[Highlight]', '<span class="highlightText">').replace('[/Highlight]', '</span>').replace('[delete]</span>', '').replace('<span class="highlightText">[deleteStart]', '');
-
-                    document.getElementsByClassName("highlightContent")[0].innerHTML = newClassName;
+                    this.showMenu = false;
+                    
 
                 } else {
 
-                    var innerText = "[Startdiv]" + selectionRange.commonAncestorContainer.lastChild.innerText; 
+                    var innerText = "[Startdiv]" + selectionRange.commonAncestorContainer.lastChild.innerText;
 
                     selectionRange.commonAncestorContainer.lastChild.innerText = innerText;
 
-                    console.log(document.getElementsByClassName("highlightContent")[0].innerHTML);
+                    for (var j = 0; j < hightlightLength; j++) {
 
-                    newClassName = document.getElementsByClassName("highlightContent")[0].innerHTML.replace('[Highlight]', '<span class="highlightText">').replace('[/Highlight]', '</span>').replace('[delete]</span>', '').replace('<span class="highlightText">[deleteStart]', '').replace('[Startdiv]', '<span class="highlightText">');
+                        var newClassName2 = document.getElementsByClassName("highlightContent")[j].innerHTML.replace('[Highlight]', '<span class="highlightText">').replace('[/Highlight]', '</span>').replace('[delete]</span>', '').replace('<span class="highlightText">[deleteStart]', '').replace('[Startdiv]', '<span class="highlightText">');
 
-                    document.getElementsByClassName("highlightContent")[0].innerHTML = newClassName;
+                        document.getElementsByClassName("highlightContent")[j].innerHTML = newClassName2;
 
+                    }
+                    this.showMenu = false;
                 }
 
             
