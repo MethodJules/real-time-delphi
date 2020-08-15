@@ -3,7 +3,6 @@
               <div>
 
     <v-progress-linear
-      v-model="skill"
       color="blue-grey"
       height="25"
     >
@@ -25,20 +24,18 @@
     </v-container>
 </template>
 <script>
-import { mapState } from 'vuex'
-//import TextQuestion from '@/components/TextQuestion'
+import APIService from '@/services/api.service'
 import NumberQuestion from '@/components/NumberQuestion'
+//import Question from '@/components/Question';
 export default {
     components: {
-        //TextQuestion,
+        //Question
         NumberQuestion
     },
-    computed: mapState({
-        nodes: state => state.datenschutz.data
-    }),
-    created() {
-        this.$store.dispatch('datenschutz/getDataFromDrupal')
-    },
-
+    data() {
+        return {
+            node: APIService.get(1),
+        }
+    }
 }
 </script>

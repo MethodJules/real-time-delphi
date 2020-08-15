@@ -1,5 +1,5 @@
 import axios from 'axios'
-//import apiSim from './api.simulation'
+import apiSim from './api.simulation'
 
 const APIService = {
     init(baseUrl) {
@@ -8,9 +8,9 @@ const APIService = {
 
     get(resource) {
         //console.log(apiSim.survey)
-        //return apiSim.survey[resource];
+        return apiSim.survey[resource];
         //console.log(resource)
-        return axios.get(resource)
+        //return axios.get(resource)
     },
 
     /*
@@ -21,10 +21,10 @@ const APIService = {
                     //console.log(data[0]);
                     //console.log(data[0].attributes.title)
                     //console.log(data[0].attributes.body.value)
-                    
+
                 })
     },*/
-    
+
     post(resource, data) {
         return axios.post(resource, data)
     },

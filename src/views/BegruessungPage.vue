@@ -3,7 +3,6 @@
       <div>
 
     <v-progress-linear
-      v-model="skill"
       color="blue-grey"
       height="25"
     >
@@ -23,15 +22,22 @@
 </template>
 <script>
 //import store from '@/store.js';
-//import APIService from '@/services/api.service'
-import { mapState } from 'vuex'
+import APIService from '@/services/api.service'
+//import { mapState } from 'vuex'
 export default {
+    /*
     computed: mapState({
         nodes: state => state.begruessung.data
     }),
     created() {
         this.$store.dispatch('begruessung/getDataFromDrupal')
     },
-    
+    */
+   data() {
+     return {
+       node: APIService.get(0)
+     }
+   }
+
 }
 </script>

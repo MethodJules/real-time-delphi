@@ -3,7 +3,6 @@
               <div>
 
     <v-progress-linear
-      v-model="skill"
       color="blue-grey"
       height="25"
     >
@@ -28,28 +27,22 @@
             <div v-if="question.question_type == 'text'">
                 <TextQuestion :question="question.question" :label="question.label" />
             </div>
-        </div> -->
+        </div>
 
-        <v-btn to="/buch">Weiter</v-btn>   
+        <v-btn to="/buch">Weiter</v-btn>
     </v-container>
 </template>
 
 <script>
-import { mapState } from 'vuex'
-// import SelectQuestion from '@/components/SelectQuestion'
-// import NumberQuestion from '@/components/NumberQuestion'
-// import TextQuestion from '@/components/TextQuestion'
+import APIService from '@/services/api.service'
+import SelectQuestion from '@/components/SelectQuestion'
+import NumberQuestion from '@/components/NumberQuestion'
+import TextQuestion from '@/components/TextQuestion'
 export default {
     components: {
-        //SelectQuestion,
-        //NumberQuestion,
-        //TextQuestion
-    },
-    computed: mapState({
-        nodes: state => state.personal_background.data
-    }),
-    created() {
-        this.$store.dispatch('personal_background/getDataFromDrupal')
+        SelectQuestion,
+        NumberQuestion,
+        TextQuestion
     },
     data() {
         return {
@@ -67,7 +60,8 @@ export default {
             produktrezensionen: 0,
             buechereinkauf: 0,
             buchrezensionen: 0,
-        } 
+            node: APIService.get(2)
+        }
     }
 }
 </script>

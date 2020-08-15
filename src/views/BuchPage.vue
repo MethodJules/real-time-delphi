@@ -3,7 +3,6 @@
   <div>
 
     <v-progress-linear
-      v-model="skill"
       color="blue-grey"
       height="25"
     >
@@ -42,7 +41,7 @@
         </div>
         <div v-else> <v-btn to="/buchrezensionPageRaw">Weiter</v-btn>
         </div>
-        
+
     </v-container>
 </template>
 
