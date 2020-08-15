@@ -59,6 +59,11 @@ Vue.use(VueRouter)
     component: () => import(/*webpackChunkName: "buchrezension4" */ '../views/Buchrezension4Page.vue')
   },
   {
+    path: '/buchrezension5',
+    name: 'Buchrezension5',
+    component: () => import(/*webpackChunkName: "buchrezension4" */ '../views/Buchrezension5Page.vue')
+  },
+  {
     path: '/buchrezensionPageUnderline',
     name: 'BuchrezensionPageUnderline',
     component: () => import(/*webpackChunkName: "buchrezensionUnderline" */ '../views/BuchrezensionPageUnderline.vue')
