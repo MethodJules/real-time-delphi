@@ -34,6 +34,9 @@
             </Highlightable>
         </v-col>
     </v-row>
+    <div class="grafik1">
+    <v-img src="../assets/grafik_3.svg" />
+    </div>
     <v-row class="rezension" align="center">
         <v-col cols="4">
             <div class="icon"/>
@@ -121,7 +124,13 @@ export default {
     margin: 5px 0;
     background-color: lightgrey;
 }
-
+.grafik1 {
+    position: absolute;
+    width: 290px;
+    height: 110px;
+    left: 210px;
+    top: 335px;
+}
 
 
 </style>

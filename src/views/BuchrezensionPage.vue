@@ -42,6 +42,9 @@
         
     </v-row>
     </div>
+    <div class="grafik1">
+    <v-img src="../assets/grafik_1.svg" />
+    </div>
     <v-row class="rezension" align="center">
         <v-col cols="4">
             <div class="icon"/>
@@ -59,6 +62,9 @@
             </Highlightable>
         </v-col>
     </v-row>
+    <div class="grafik2">
+    <v-img src="../assets/grafik_1.svg" />
+    </div>
     <v-row class="rezension" align="center">
         <v-col cols="4">
             <div class="icon"/>
@@ -75,6 +81,9 @@
             </Highlightable>
         </v-col>
     </v-row>
+    <div class="grafik3">
+    <v-img src="../assets/grafik_1.svg" />
+    </div>
     <v-row class="rezension" align="center">
         <v-col cols="4">
             <div class="icon"/>
@@ -91,6 +100,9 @@
             </Highlightable>
         </v-col>
     </v-row>
+    <div class="grafik4">
+    <v-img src="../assets/grafik_1.svg" />
+    </div>
     <v-row class="rezension" align="center">
         <v-col cols="4">
             <div class="icon"/>
@@ -187,5 +199,33 @@ export default {
     border: 1px solid black;
     margin: 5px 0;
     background-color: lightgrey;
+}
+.grafik1 {
+    position: absolute;
+    width: 120px;
+    height: 110px;
+    left: 290px;
+    top: 345px;
+}
+.grafik2 {
+    position: absolute;
+    width: 120px;
+    height: 110px;
+    left: 290px;
+    top: 500px;
+}
+.grafik3 {
+    position: absolute;
+    width: 120px;
+    height: 110px;
+    left: 290px;
+    top: 660px;
+}
+.grafik4 {
+    position: absolute;
+    width: 170px;
+    height: 110px;
+    left: 265px;
+    top: 820px;
 }
 </style>
