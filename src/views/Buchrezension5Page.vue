@@ -27,7 +27,7 @@
             <div class="icon"/>
         </v-col>
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="1_Page5">
                 <div>
             <p>Eigentlich schreibe ich bei Serien keine Rezension mehr, aber hier muss ich einfach. Die Geschichte wird immer spannender und bildgewaltiger. Die Handlung ist der Hammer!!! Ich war glücklich, um kurz darauf zu Tode betrügt zu sein, wie Elena - aus dem gleichen Grund. 
             </p>
@@ -44,7 +44,7 @@
             <div class="icon"/>
         </v-col>
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="2_Page5">
                 <div>
             <p>Daran erkennt man, wie gut der Schreibstil ist, wenn man in die Geschichte eintauchen kann, als ob man persönlich dabei ist. Ich hoffe auf eine schnellere Veröffentlichung des nächsten Buches, wie bisher.
             </p>
