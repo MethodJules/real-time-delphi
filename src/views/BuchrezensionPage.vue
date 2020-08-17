@@ -51,7 +51,7 @@
             <div class="icon"/>
         </v-col>
         <v-col cols="8">
-            <Highlightable class="highlight2" @share="onShare" @highlight="onHighlight" id="2_Page1>
+            <Highlightable class="highlight2" @share="onShare" @highlight="onHighlight" id="2_Page1">
                 <div>
                     {{text1}}
 
@@ -68,7 +68,7 @@
             <div class="icon"/>
         </v-col>
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight" id="3_Page1>
+            <Highlightable @share="onShare" @highlight="onHighlight" id="3_Page1">
                 <div>
             {{text2}}
                 </div>
@@ -84,7 +84,7 @@
             <div class="icon"/>
         </v-col>
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight" id="4_Page1>
+            <Highlightable @share="onShare" @highlight="onHighlight" id="4_Page1">
                 <div>
             {{text3}}
                 </div>
@@ -100,7 +100,7 @@
             <div class="icon"/>
         </v-col>
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight" id="5_Page1>
+            <Highlightable @share="onShare" @highlight="onHighlight" id="5_Page1">
                 <div>
             {{text4}}
                 </div>
