@@ -19,7 +19,7 @@
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
     <v-row class="rezension" align="center">
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="1_under2">
                 <div>
             <p>Showdown
                <br />
@@ -33,7 +33,7 @@
     </v-row>
     <v-row class="rezension" align="center">
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="2_under2">
                 <div class="grau">
             {{text1}}
                 </div>
@@ -42,7 +42,7 @@
     </v-row>
     <v-row class="rezension" align="center">
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="3_under2">
                 <div class="gelb">
                     {{text2}}
                 </div>
@@ -51,7 +51,7 @@
     </v-row>
     <v-row class="rezension" align="center">
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="4_under2">
                 <div class="rot">
             {{text3}}
                 </div>
@@ -60,7 +60,7 @@
     </v-row>
     <v-row class="rezension" align="center">
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="5_under2">
                 <div class="grün">
             {{text4}}
                 </div>
@@ -69,7 +69,7 @@
     </v-row>
         <v-row class="rezension" align="center">
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="6_under2">
                 <div class="blau">
         {{text5}}
                 </div>
@@ -78,7 +78,7 @@
     </v-row>
         <v-row class="rezension" align="center">
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="7_under2">
                 <div class="rot">
                     {{text6}}
                 </div>
