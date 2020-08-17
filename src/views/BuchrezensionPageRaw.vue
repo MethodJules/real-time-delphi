@@ -24,7 +24,7 @@
 
 
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="1_raw1">
 
                     <div>
             <p>Der Abschluss der Kaskade?
@@ -41,7 +41,7 @@
     </div>
     <v-row class="rezension" align="center">
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="2_raw1">
                 <div>
                     {{text1}}
                 </div>
@@ -50,7 +50,7 @@
     </v-row>
     <v-row class="rezension" align="center">
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="3_raw1">
                 <div>
                     {{text2}}
                 </div>
@@ -59,7 +59,7 @@
     </v-row>
     <v-row class="rezension" align="center">
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="4_raw1">
                 <div>
                     {{text3}}
                 </div>
@@ -68,7 +68,7 @@
     </v-row>
     <v-row class="rezension" align="center">
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="5_raw1">
                 <div>
                     {{text4}}
                 </div>
