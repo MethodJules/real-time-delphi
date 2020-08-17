@@ -19,7 +19,7 @@
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
     <v-row class="rezension" align="center">
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="1_raw5">
                 <div>
                     {{text}}
                 </div>
@@ -28,7 +28,7 @@
     </v-row>
     <v-row class="rezension" align="center">
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="2_raw5">
                 <div>
                     {{text1}}
                 </div>
