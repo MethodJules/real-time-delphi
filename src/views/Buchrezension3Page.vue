@@ -27,7 +27,7 @@
             <div class="icon"/>
         </v-col>
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight" id="1_Page">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="1_Page3">
                 <div>
             <p>Wow Wow Wow
                <br />
@@ -46,7 +46,7 @@
             <div class="icon"/>
         </v-col>
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="2_Page3">
                 <div>
             <p>Nalini Singh schreibt so kompakt und fesselnd, dass ich das Buch kaum aus der Hand legen wollte. Ihr Schreibstil ist zwar flüssig, aber insgesamt ist die Story durchweg keine leichte Kost. Man kann diese Serie und vor allem diesen Band nicht einfach mal zwischendurch lesen, denn dafür ist der komplette rote Faden von Teil 1 an zu kompakt und zu vielfältig.
                Die Autorin schreibt auch so detailgetreu, dass ich mir alle Geschehnisse richtig gut vorstellen konnte.
@@ -64,7 +64,7 @@
             <div class="icon"/>
         </v-col>
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight"  id="3_Page3">
                 <div>
             <p>Zuerst denkt man, dass alles viel zu viel ist, zu viel was am Anfang auf einen einprasselt, aber zum Ende hin fügt sich wie immer alles zusammen und es wird verständlich. 
             </p>
@@ -81,7 +81,7 @@
             <div class="icon"/>
         </v-col>
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="4_Page3">
                 <div>
             <p>Ein paar kleine Episoden waren mir zu lang, aber Seiten weiter blättern war überhaupt nicht möglich, da einem sonst u.a. die spritzigen wortgewandten Dialoge entgangen wären. 
                Leider ist nicht immer gleich zu erkennen aus welcher Sicht wir alle Geschehnisse erleben. Der Wechsel von Elena zu Raphael geschieht teilweise im nächsten Satz, nicht mal Kapitel- oder Absatzweise.
@@ -100,7 +100,7 @@
             <div class="icon"/>
         </v-col>
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="5_Page3">
                 <div>
             <p>Dieser Teil war wieder einmal atemberaubend, spannend, wortgewandt, vielfältig, fesselnd, überraschend und auch gruselig. 
             </p>
@@ -117,7 +117,7 @@
             <div class="icon"/>
         </v-col>
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="6_Page3">
                 <div>
             <p>Ich denke wirklich, dass diejenigen, die bisher die Reihe schon begonnen haben, unbedingt weiterlesen müssen und diejenigen, an denen diese Serie vorbei gegangen ist, sollten unbedingt mit dem Lesen von „Engelskuss“ anfangen. 
                Für mich eine Reihe, die von den so unterschiedlichen, aber auch absolut stimmigen Charakteren lebt.
