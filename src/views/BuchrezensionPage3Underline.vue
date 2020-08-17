@@ -46,7 +46,7 @@
     </v-row>
     <v-row class="rezension" align="center">
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight id="4_under3"
+            <Highlightable @share="onShare" @highlight="onHighlight" id="4_under3"
                 <div class="rosa blue">
                     {{text3}}
                 </div>
