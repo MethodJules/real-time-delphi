@@ -27,7 +27,7 @@
             <div class="icon"/>
         </v-col>
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="1_Page">
                 <div>
             <p>Wow Wow Wow
                <br />
