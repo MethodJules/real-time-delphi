@@ -20,8 +20,8 @@
     <v-row class="rezension" align="center">
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
-                <div class="rot"> 
-                    {{text}}           
+                <div class="rot">
+                    {{text}}
                 </div>
             </Highlightable>
         </v-col>

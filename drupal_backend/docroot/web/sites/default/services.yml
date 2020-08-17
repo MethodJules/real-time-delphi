@@ -161,14 +161,23 @@ parameters:
   cors.config:
     enabled: true
     # Specify allowed headers, like 'x-allowed-header'.
-    allowedHeaders: ['content-type', 'authorization']
+    allowedHeaders: [
+      'x-csrf-token',
+      'authorization',
+      'content-type',
+      'accept',
+      'origin',
+      'x-requested-with',
+      'access-control-allow-origin',
+      'x-allowed-header',
+      '*']
     # Specify allowed request methods, specify ['*'] to allow all possible ones.
-    allowedMethods: ['GET', 'POST']
+    allowedMethods: ['*']
     # Configure requests allowed from specific origins.
-    allowedOrigins: ['http://localhost:8081']
+    allowedOrigins: ['*']
     # Sets the Access-Control-Expose-Headers header.
     exposedHeaders: false
     # Sets the Access-Control-Max-Age header.
     maxAge: false
     # Sets the Access-Control-Allow-Credentials header.
-    supportsCredentials: false
+    supportsCredentials: true

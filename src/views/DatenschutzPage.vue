@@ -23,10 +23,11 @@
                 Um die Zusammengehörigkeit der Seiten des Befragungsbogens identifizieren zu können
                 und zugleich Ihre Anonymität zu schützen, ist zunächst eine ID herzuleiten.
                 Die ID setzt sich aus den nachfolgenden Antworten zusammen.</p>
+            <v-form>
             <v-container>
               <v-col>
                 <p>Bitte geben Sie Ihren Geburtsmonat ein.</p>
-                <v-text-field label="Geburtsmonat" v-model="geburtsmonat" />
+                <v-text-field label="Geburtsmonat" v-model="geburtsmonat" required/>
               </v-col>
             </v-container>
             <v-container>
@@ -47,7 +48,15 @@
                 <v-text-field label="2. Buchstabe des Vornamens" v-model="zweiter_buchstabe" />
               </v-col>
             </v-container>
-            <v-btn to="/fragen2page">Weiter</v-btn>
+            <v-container>
+              <v-col>
+                <div class="code">
+                  <p>Generierter Code: {{identification_code}}</p>
+                </div>
+              </v-col>
+            </v-container>
+            </v-form>
+            <v-btn to="/fragen2page" @click="saveCode">Weiter</v-btn>
         </div>
     </v-container>
 </template>
@@ -66,8 +75,31 @@ export default {
             geburtsmonat: '',
             buchstabe_familienname: '',
             zahl: '',
-            zweiter_buchstabe: ''
+            zweiter_buchstabe: '',
+
         }
     },
+    methods: {
+
+      saveCode() {
+        this.$store.dispatch('code/saveCode', this.identification_code )
+      }
+    },
+    computed: {
+      identification_code: function() {
+        var code = this.geburtsmonat + this.buchstabe_familienname + this.zahl + this.zweiter_buchstabe
+        return code
+      }
+    }
 }
 </script>
+<style scoped>
+.code {
+  background-color: gray;
+  color: white;
+}
+
+.code p {
+  padding: 10px;
+}
+</style>

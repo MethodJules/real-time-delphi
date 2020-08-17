@@ -1,6 +1,6 @@
 <template>
 <v-container>
-    
+
           <div>
 
     <v-progress-linear
@@ -16,18 +16,18 @@
     <br>
 
   </div>
-  
+
     <h1>Buchrezension 1 zum Buch "Gilde der Jäger - Engelskrieg"</h1>
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
         <div>
     <v-row class="rezension" align="center">
-        
-        
+
+
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
-                
+
                     <div>
-            <p>Der Abschluss der Kaskade? 
+            <p>Der Abschluss der Kaskade?
                <br />
             </p>
             <div class="rot">
@@ -36,7 +36,7 @@
                     </div>
             </Highlightable>
         </v-col>
-        
+
     </v-row>
     </div>
     <v-row class="rezension" align="center">
@@ -82,15 +82,15 @@
    <div><span class="blue">Sprachstil und Erzählperspektive</span></div>
     </v-row>
     <v-btn to="/buchrezensionPage2Underline">Weiter</v-btn>
-    
-        
+
+
 </v-container>
 </template>
 <script>
 import Highlightable from '@/components/Highlightable';
 export default {
     data() {
-        
+
         return {
             text:' Der Welt steht mit der Kaskade ein Krieg bevor. \
             Aber wie geht es jetzt bei Elena und Raphael weiter? \

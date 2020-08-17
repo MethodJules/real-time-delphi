@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <v-btn to="/endpage">Weiter</v-btn>   
+        <v-btn to="/endpage" @click="sendData">Weiter</v-btn>
     </v-container>
 </template>
 
@@ -42,16 +42,22 @@ export default {
             teil3_4: 0,
             teil3_5: 0,
             teil3_6: 0,
-            
 
 
-  
+
+
 
             node: APIService.get(5)
 
 
 
-        } 
+        }
+    },
+    methods: {
+        sendData() {
+            console.log('Sende Daten...')
+            this.$store.dispatch('senddata/sendData')
+        }
     }
 }
 </script>

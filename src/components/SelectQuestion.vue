@@ -15,8 +15,8 @@
 export default {
     data() {
         return{
-            selection: 0,
-        }       
+            selection: '',
+        }
     },
     props: {
         questionId: Number,
@@ -29,12 +29,14 @@ export default {
             console.log(this.selection)
         },
         writeData(val) {
-            console.log('Value: ' + val + ' id: ' + this.questionId)
+            console.log('Question: ' + this.question + ' Answer: ' + val)
+            this.$store.dispatch('answers/addAnswer', { question: this.question, answer: val  })
+
         }
     },
     watch: {
         selection: function(val){
-            
+
             this.writeData(val);
         }
     }

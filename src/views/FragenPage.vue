@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <v-btn to="/fragen2page">Weiter</v-btn>   
+        <v-btn to="/fragen2page">Weiter</v-btn>
     </v-container>
 </template>
 
@@ -45,13 +45,13 @@ export default {
             teil3_7: 0,
 
 
-  
+
 
             node: APIService.get(4)
 
 
 
-        } 
+        }
     }
 }
 </script>
