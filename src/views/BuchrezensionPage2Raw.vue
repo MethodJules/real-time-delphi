@@ -85,11 +85,13 @@
             </Highlightable>
         </v-col>
     </v-row>
-    <v-btn to="/buchrezensionPage3Raw">Weiter</v-btn>
+    <Stopwatch to="/buchrezensionPage3Raw" needTimer="true" />
+    
 </v-container>
 </template>
 <script>
 import Highlightable from '@/components/Highlightable';
+import Stopwatch from '@/components/Stopwatch'
 export default {
     data() {
         return {
