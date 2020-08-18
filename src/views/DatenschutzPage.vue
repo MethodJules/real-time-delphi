@@ -56,7 +56,7 @@
               </v-col>
             </v-container>
             </v-form>
-            <v-btn to="/fragen2page" @click="saveCode">Weiter</v-btn>
+            <v-btn to="/hintergrund" @click="saveCode">Weiter</v-btn>
         </div>
     </v-container>
 </template>
