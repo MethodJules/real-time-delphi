@@ -39,10 +39,36 @@ const actions = {
         });
 
         //TODO: Highlights an das Backend schicken
-        let j = 1;
+        var j = 1;
 
         rootState.highlight.highlights.forEach(element => {
           //TODO: Ueber das highlight array iterieren
+          //console.log(element)
+          let highlight_text = element.text
+          let highlight_id = element.id
+          let code = rootState.code.code
+
+          var data = `{"data": {"type": "node--highlight", "attributes": {"title": "Highlight ${j}", "field_highlight_text": "${highlight_text}", "field_rezensions_id":"${highlight_id}", "field_answer_user_code":"${code}"}}}`
+          j++
+
+          var config = {
+            method: 'post',
+            url: 'http://localhost:8080/web/jsonapi/node/highlight',
+            headers: {
+              'Accept': 'application/vnd.api+json',
+              'Content-Type': 'application/vnd.api+json',
+              'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ='
+            },
+            data : data
+          };
+
+          axios(config)
+          .then(function (response) {
+            console.log(JSON.stringify(response.data));
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
         })
 
 

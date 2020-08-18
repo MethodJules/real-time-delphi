@@ -30,6 +30,10 @@
             }
         },
 
+        props: {
+            id: String
+        },
+
         computed: {
             highlightableEl() {
 
@@ -139,8 +143,8 @@
 
                 var selection = window.getSelection();
 
-                //console.log(this.$store)
-                this.$store.dispatch('highlight/addHighlight', selection.toString());
+                console.log(this.id)
+                this.$store.dispatch('highlight/addHighlight', {text: selection.toString(), id: this.id});
 
 
                 const selectionRange = selection.getRangeAt(0)
