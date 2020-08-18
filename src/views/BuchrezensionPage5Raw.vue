@@ -36,11 +36,12 @@
         </v-col>
     </v-row>
 
-    <v-btn to="/fragenpage">Weiter</v-btn>
+    <Stopwatch to="/fragenpage" needTimer="true" />
 </v-container>
 </template>
 <script>
 import Highlightable from '@/components/Highlightable';
+import Stopwatch from '@/components/Stopwatch'
 export default {
     data() {
         return {
