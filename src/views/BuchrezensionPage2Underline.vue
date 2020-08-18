@@ -93,11 +93,12 @@
     <div><span class="grey">Hintergrund zur eigenen Person</span></div>
     <div><span class="purple">Hintergrund zur eigenen Person</span></div>
     </v-row>
-    <v-btn to="/buchrezensionPage3Underline">Weiter</v-btn>
+    <Stopwatch to="/buchrezensionPage3Underline" needTimer="true" />
 </v-container>
 </template>
 <script>
 import Highlightable from '@/components/Highlightable';
+import Stopwatch from '@/components/Stopwatch'
 export default {
     data() {
         return {
