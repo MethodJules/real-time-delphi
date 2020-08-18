@@ -75,13 +75,14 @@
             </Highlightable>
         </v-col>
     </v-row>
-    <v-btn to="/buchrezensionPage2Raw">Weiter</v-btn>
+    <Stopwatch to="/buchrezensionPage2Raw" needTimer="true" />
 
 
 </v-container>
 </template>
 <script>
 import Highlightable from '@/components/Highlightable';
+import Stopwatch from '@/components/Stopwatch'
 export default {
     data() {
 
@@ -130,7 +131,8 @@ export default {
         }
     },
     components: {
-        Highlightable
+        Highlightable,
+        Stopwatch
     },
     methods: {
         onHighlight(text) {
