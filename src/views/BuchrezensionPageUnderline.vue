@@ -81,7 +81,7 @@
     <div><span class="yellow">Inhaltliche Details</span></div>
    <div><span class="blue">Sprachstil und Erzählperspektive</span></div>
     </v-row>
-    <v-btn to="/buchrezensionPage2Underline">Weiter</v-btn>
+    
     <Stopwatch to="/buchrezensionPage2Underline" needTimer="true" />
 
 
