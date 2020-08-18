@@ -19,11 +19,14 @@
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/>
+            
+            
             <div class="icon"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
-            <div class="icon"/>
+            
             <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
-            <div class="icon"/>
+            <div class="test"/>
+            <div class="test"/>
+            <div class="test"/>
         </v-col>
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
@@ -41,11 +44,9 @@
     </div>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/>
             <div class="icon"> <v-img src="../assets/rez_sprachstil.png" height="100" width="100"/></div>
-            <div class="icon"/>
             <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
-            <div class="icon"/>
+            <div class="test"/>
         </v-col>
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
@@ -62,8 +63,8 @@
     </div>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/>
-            <div class="icon"/>
+            
+            <div class="test"/>
             <div class="icon"> <v-img src="../assets/rez_verstand.png" height="100" width="100"/></div>
             <div class="icon"/>
             <div class="icon"/>
@@ -82,11 +83,9 @@
     </div>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/>
             <div class="icon"> <v-img src="../assets/rez_sprachstil.png" height="100" width="100"/></div>
-            <div class="icon"/>
             <div class="icon"> <v-img src="../assets/rez_verstand.png" height="100" width="100"/></div>
-            <div class="icon"/>
+            <div class="test"/>
         </v-col>
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
@@ -104,11 +103,11 @@
     </div>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/>
-            <div class="icon"/>
+           
+            <div class="test"/>
             <div class="icon"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
-            <div class="icon"/>
-            <div class="icon"/>
+            <div class="test"/>
+            <div class="test"/>
         </v-col>
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
@@ -124,11 +123,11 @@
     </div>
         <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/>
-            <div class="icon"/>
+            
+            <div class="test"/>
             <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
-            <div class="icon"/>
-            <div class="icon"/>
+            <div class="test"/>
+            <div class="test"/>
         </v-col>
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
@@ -203,7 +202,7 @@ export default {
     height: 100px;
     background-color: lightgrey;
     justify-content: center;
-    margin: 5px;
+    margin: 10px;
     float: left;
 }
 
@@ -212,39 +211,296 @@ export default {
     margin: 5px 0;
     background-color: lightgrey;
 }
+@media screen and (max-width: 576px) {
+    .test{ 
+    width: 1px;
+    height: 1px;
+    background-color: lightgrey;
+    justify-content: center;
+    margin: 10px;
+    float: left;
+
+    }
 .grafik1 {
-    position: absolute;
-    width: 260px;
-    height: 110px;
-    left: 225px;
-    top: 480px;
+        position: relative;
+    z-index: 5;
+    width: 135px;
+    height: 0px;
+    left: 0px;
+    top: -13px;
 }
 .grafik2 {
-    position: absolute;
-    width: 290px;
-    height: 110px;
-    left: 210px;
-    top: 780px;
+  position: relative;
+    z-index: 5;
+    width: 117px;
+    height: 0px;
+    left: 11px;
+    top: -70px;
 }
 .grafik3 {
-    position: absolute;
-    width: 97px;
-    height: 110px;
-    left: 305px;
-    top: 925px;
+    position: relative;
+    z-index: 5;
+    width: 121px;
+    height: 0px;
+    left: 0px;
+    top: -27px;
 }
 .grafik4 {
-    position: absolute;
-    width: 290px;
-    height: 110px;
-    left: 210px;
-    top: 625px;
+      position: relative;
+    z-index: 5;
+    width: 115px;
+    height: 0px;
+    left: 9px;
+    top: -120px;
 }
 .grafik5 {
-    position: absolute;
-    width: 290px;
-    height: 110px;
-    left: 210px;
-    top: 335px;
+        position: relative;
+    z-index: 5;
+    width: 135px;
+    height: 0px;
+    left: 0px;
+    top: -13px;
+}
+.grafik6 {
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -120px;
+}
+}
+@media screen and (min-width: 576px) {
+    .test{ 
+    width: 1px;
+    height: 1px;
+    background-color: lightgrey;
+    justify-content: center;
+    margin: 10px;
+    float: left;
+
+    }
+.grafik1 {
+    position: relative;
+    z-index: 5;
+    width: 135px;
+    height: 0px;
+    left: 12px;
+    top: -13px;
+}
+.grafik2 {
+  position: relative;
+    z-index: 5;
+    width: 117px;
+    height: 0px;
+    left: 21px;
+    top: -45px;
+}
+.grafik3 {
+    position: relative;
+    z-index: 5;
+    width: 121px;
+    height: 0px;
+    left: 28px;
+    top: -27px;
+}
+.grafik4 {
+    position: relative;
+    z-index: 5;
+    width: 115px;
+    height: 0px;
+    left: 35px;
+    top: -120px;
+}
+.grafik5 {
+        position: relative;
+    z-index: 5;
+    width: 135px;
+    height: 0px;
+    left: 0px;
+    top: -13px;
+}
+.grafik6 {
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -120px;
+}
+}
+@media screen and (min-width: 768px) {
+    .test {
+    width: 50px;
+    height: 50px;
+    background-color: lightgrey;
+    justify-content: center;
+    margin: 10px;
+    float: left;
+    }
+.grafik1 {
+    position: relative;
+    z-index: 5;
+    width: 200px;
+    height: 0px;
+    left: 30px;
+    top: -33px;
+}
+.grafik2 {
+    position: relative;
+    z-index: 5;
+    width: 189px;
+    height: 0px;
+    left: 33px;
+    top: -23px;
+}
+.grafik3 {
+    position: relative;
+    z-index: 5;
+    width: 151px;
+    height: 0px;
+    left: 60px;
+    top: -44px;
+}
+.grafik4 {
+    position: relative;
+    z-index: 5;
+    width: 189px;
+    height: 0px;
+    left: 33px;
+    top: -68px;
+}
+.grafik5 {
+    position: relative;
+    z-index: 5;
+    width: 189px;
+    height: 0px;
+    left: 33px;
+    top: -23px;
+}
+.grafik6 {
+    position: relative;
+    z-index: 5;
+    width: 250px;
+    height: 0px;
+    left: 155px;
+    top: 125px;
+}
+}
+@media screen and (min-width: 992px) {
+    .test {
+    width: 50px;
+    height: 50px;
+    background-color: lightgrey;
+    justify-content: center;
+    margin: 10px;
+    float: left;
+    }
+.grafik1 {
+    position: relative;
+    z-index: 5;
+    width: 215px;
+    height: 0px;
+    left: 25px;
+    top: -55px;
+}
+.grafik2 {
+    position: relative;
+    z-index: 5;
+    width: 220px;
+    height: 0px;
+    left: 20px;
+    top: -91px;
+}
+.grafik3 {
+    position: relative;
+    z-index: 5;
+    width: 165px;
+    height: 0px;
+    left: 52px;
+    top: -52px;
+}
+.grafik4 {
+    position: relative;
+    z-index: 5;
+    width: 215px;
+    height: 0px;
+    left: 21px;
+    top: -70px;
+}
+.grafik5 {
+    position: relative;
+    z-index: 5;
+    width: 215px;
+    height: 0px;
+    left: 25px;
+    top: -23px;
+}
+.grafik6 {
+    position: relative;
+    z-index: 5;
+    width: 250px;
+    height: 0px;
+    left: 155px;
+    top: 125px;
+}
+}
+@media screen and (min-width: 1200px) {
+    .test {
+    width: 50px;
+    height: 50px;
+    background-color: lightgrey;
+    justify-content: center;
+    margin: 10px;
+    float: left;
+    }
+.grafik1 {
+    position: relative;
+    z-index: 5;
+    width: 215px;
+    height: 0px;
+    left: 20px;
+    top: -46px;
+}
+.grafik2 {
+  position: relative;
+    z-index: 5;
+    width: 203px;
+    height: 0px;
+    left: 35px;
+    top: -43px;
+}
+.grafik3 {
+    position: relative;
+    z-index: 5;
+    width: 129px;
+    height: 0px;
+    left: 69px;
+    top: -31px;
+}
+.grafik4 {
+   position: relative;
+    z-index: 5;
+    width: 222px;
+    height: 0px;
+    left: 24px;
+    top: -94px;
+}
+.grafik5 {
+   position: relative;
+    z-index: 5;
+    width: 204px;
+    height: 0px;
+    left: 32px;
+    top: -51px;
+}
+.grafik6 {
+    position: relative;
+    z-index: 5;
+    width: 215px;
+    height: 0px;
+    left: 155px;
+    top: 125px;
+}
 }
 </style>

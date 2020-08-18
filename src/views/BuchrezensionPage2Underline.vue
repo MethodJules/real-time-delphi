@@ -3,6 +3,7 @@
           <div>
 
     <v-progress-linear
+      v-model="skill"
       color="blue-grey"
       height="25"
     >
@@ -18,7 +19,7 @@
     <h1>Buchrezension 2 zum Buch "Gilde der Jäger - Engelskrieg"</h1>
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
     <v-row class="rezension" align="center">
-        <v-col cols="8">
+        <v-col cols="12">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div>
             <p>Showdown
@@ -32,7 +33,7 @@
         </v-col>
     </v-row>
     <v-row class="rezension" align="center">
-        <v-col cols="8">
+        <v-col cols="12">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div class="grau">
             {{text1}}
@@ -41,7 +42,7 @@
         </v-col>
     </v-row>
     <v-row class="rezension" align="center">
-        <v-col cols="8">
+        <v-col cols="12">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div class="gelb">
                     {{text2}}
@@ -50,7 +51,7 @@
         </v-col>
     </v-row>
     <v-row class="rezension" align="center">
-        <v-col cols="8">
+        <v-col cols="12">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div class="rot">
             {{text3}}
@@ -59,7 +60,7 @@
         </v-col>
     </v-row>
     <v-row class="rezension" align="center">
-        <v-col cols="8">
+        <v-col cols="12">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div class="grün">
             {{text4}}
@@ -68,7 +69,7 @@
         </v-col>
     </v-row>
         <v-row class="rezension" align="center">
-        <v-col cols="8">
+        <v-col cols="12">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div class="blau">
         {{text5}}
@@ -77,7 +78,7 @@
         </v-col>
     </v-row>
         <v-row class="rezension" align="center">
-        <v-col cols="8">
+        <v-col cols="12">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div class="rot">
                     {{text6}}

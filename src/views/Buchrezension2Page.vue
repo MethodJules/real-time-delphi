@@ -229,46 +229,304 @@ export default {
     margin: 5px 0;
     background-color: lightgrey;
 }
+@media screen and (max-width: 576px) {
 .grafik1 {
-    position: absolute;
-    width: 105px;
-    height: 110px;
-    left: 300px;
-    top: 335px;
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -120px;
 }
 .grafik2 {
-    position: absolute;
-    width: 97px;
-    height: 110px;
-    left: 305px;
-    top: 475px;
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -120px;
 }
 .grafik3 {
-    position: absolute;
-    width: 97px;
-    height: 110px;
-    left: 305px;
-    top: 615px;
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -120px;
 }
 .grafik4 {
-    position: absolute;
-    width: 97px;
-    height: 110px;
-    left: 305px;
-    top: 755px;
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -120px;
 }
 .grafik5 {
-    position: absolute;
-    width: 97px;
-    height: 110px;
-    left: 305px;
-    top: 897px;
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -120px;
 }
 .grafik6 {
-    position: absolute;
-    width: 97px;
-    height: 110px;
-    left: 305px;
-    top: 1037px;
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -120px;
+}
+}
+@media screen and (min-width: 576px) {
+.grafik1 {
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -120px;
+}
+.grafik2 {
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -120px;
+}
+.grafik3 {
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -120px;
+}
+.grafik4 {
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -120px;
+}
+.grafik5 {
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -120px;
+}
+.grafik6 {
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -120px;
+}
+}
+@media screen and (min-width: 768px) {
+.grafik1 {
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -105px;
+}
+.grafik2 {
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -105px;
+}
+.grafik3 {
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -105px;
+}
+.grafik4 {
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -90px;
+}
+.grafik5 {
+     position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -90px;
+}
+.grafik6 {
+     position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -90px;
+}
+}
+@media screen and (min-width: 992px) {
+.grafik1 {
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -120px;
+}
+.grafik2 {
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -120px;
+}
+.grafik3 {
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -120px;
+}
+.grafik4 {
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -120px;
+}
+.grafik5 {
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -120px;
+}
+.grafik6 {
+   position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -120px;
+}
+}
+@media screen and (min-width: 1200px) {
+.grafik1 {
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -120px;
+}
+.grafik2 {
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -120px;
+}
+.grafik3 {
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -120px;
+}
+.grafik4 {
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -85px;
+}
+.grafik5 {
+   position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -85px
+}
+.grafik6 {
+        position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -110px;
+    top: -85px;
+}
+}
+@media screen and (min-width: 1300px) {
+.grafik1 {
+    position: relative;
+    z-index: 5;
+    width: 250px;
+    height: 0px;
+    left: 155px;
+    top: -120px;
+}
+.grafik2 {
+    position: relative;
+    z-index: 5;
+    width: 250px;
+    height: 0px;
+    left: 155px;
+    top: -120px;
+}
+.grafik3 {
+    position: relative;
+    z-index: 5;
+    width: 250px;
+    height: 0px;
+    left: 155px;
+    top: -120px;
+}
+.grafik4 {
+    position: relative;
+    z-index: 5;
+    width: 250px;
+    height: 0px;
+    left: 155px;
+    top: -125px;
+}
+.grafik5 {
+    position: relative;
+    z-index: 5;
+    width: 250px;
+    height: 0px;
+    left: 155px;
+    top: -125px;
+}
+.grafik6 {
+    position: relative;
+    z-index: 5;
+    width: 250px;
+    height: 0px;
+    left: 155px;
+    top: -125px;
+}
 }
 </style>

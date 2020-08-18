@@ -3,6 +3,7 @@
           <div>
 
     <v-progress-linear
+      v-model="skill"
       color="blue-grey"
       height="25"
     >
@@ -18,37 +19,30 @@
     <h1>Buchrezension 3 zum Buch "Gilde der Jäger - Engelskrieg"</h1>
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
     <v-row class="rezension" align="center">
+        
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div>
-                <div class="rotgrün">
+                    
+                <div class="rot green">
                     {{text}}
-                </div>
-                <div class="rotgrün">
-                    {{text01}}
-                </div>
+                </div> 
                 </div>
             </Highlightable>
         </v-col>
     </v-row>
     <v-row class="rezension" align="center">
-        <v-col cols="8">
+        <v-col cols="13">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div>
-                <div class="grünblau">
+                <div class="blau green">
                     {{text1}}
                 </div>
-                <div class="grünblau">
+                <div class="blau green">
                     {{text11}}
                 </div>
-                <div class="grünblau">
+                <div class="blau green">
                     {{text12}}
-                </div>
-                <div class="grünblau">
-                    {{text13}}
-                </div>
-                <div class="grünblau">
-                    {{text14}}
                 </div>
                 </div>
                 
@@ -56,7 +50,7 @@
         </v-col>
     </v-row>
     <v-row class="rezension" align="center">
-        <v-col cols="8">
+        <v-col cols="13">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div class="rosa">
                     {{text2}}
@@ -65,28 +59,19 @@
         </v-col>
     </v-row>
     <v-row class="rezension" align="center">
-        <v-col cols="8">
+        <v-col cols="13">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div>
-                <div class="rotblau">
+                <div class="rot blue">
                     {{text3}}
                 </div>
-                <div class="rotblau">
-                    {{text31}}
-                </div>
-                <div class="rotblau">
-                    {{text32}}
-                </div>
-                <div class="rotblau">
+                <div class="rot blue">
                     {{text33}}
                 </div>
-                <div class="rotblau">
-                    {{text34}}
-                </div>
-                 <div class="rotblau">
+                 <div class="rot blue">
                     {{text35}}
                 </div>
-                 <div class="rotblau">
+                 <div class="rot blue">
                     {{text36}}
                 </div>
                 </div>
@@ -94,7 +79,7 @@
         </v-col>
     </v-row>
     <v-row class="rezension" align="center">
-        <v-col cols="8">
+        <v-col cols="13">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div class="rot">
                     {{text4}}
@@ -103,7 +88,7 @@
         </v-col>
     </v-row>
         <v-row class="rezension" align="center">
-        <v-col cols="8">
+        <v-col cols="13">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div class="grün">
                     {{text5}}
@@ -125,22 +110,22 @@ import Highlightable from '@/components/Highlightable';
 export default {
     data() {
         return {
-            text: 'Wow Wow Wow ...',
-            text01:'wie sehr ich diese Reihe liebe und auch bei Band 12 wurde ich nicht enttäuscht.',
-            text1: 'Nalini Singh schreibt so kompakt und fesselnd, dass ich das Buch kaum aus der Hand legen wollte.',
-            text11:'Ihr Schreibstil ist zwar flüssig, aber insgesamt ist die Story durchweg keine leichte Kost.',
-            text12:'Man kann diese Serie und vor allem diesen Band nicht einfach mal zwischendurch lesen,',
-            text13:'denn dafür ist der komplette rote Faden von Teil 1 an zu kompakt und zu vielfältig.',
-            text14:'Die Autorin schreibt auch so detailgetreu, dass ich mir alle Geschehnisse richtig gut vorstellen konnte.',
+            text: 'Wow Wow Wow ... wie sehr ich diese Reihe liebe und auch bei Band 12 wurde ich nicht enttäuscht.',
+            text1: 'Nalini Singh schreibt so kompakt und fesselnd, dass ich das Buch kaum aus der Hand legen wollte. \
+            Ihr Schreibstil ist zwar flüssig, aber insgesamt ist die ',
+            text11:'Story durchweg keine leichte Kost. Man kann diese Serie und vor allem diesen Band nicht einfach mal zwischendurch lesen \
+            ,denn dafür ist der komplette',
+            text12:'rote Faden von Teil 1 an zu kompakt und zu vielfältig. Die Autorin schreibt auch so detailgetreu, \
+            dass ich mir alle Geschehnisse richtig gut vorstellen konnte.',
             text2: 'Zuerst denkt man, dass alles viel zu viel ist, zu viel was am Anfang auf einen einprasselt, \
             aber zum Ende hin fügt sich wie immer alles zusammen und es wird verständlich.',
-            text3: 'Ein paar kleine Episoden waren mir zu lang,',
-            text31:'aber Seiten weiter blättern war überhaupt nicht möglich,',
-            text32:'da einem sonst u.a. die spritzigen wortgewandten Dialoge entgangen wären.',
-            text33:'Leider ist nicht immer gleich zu erkennen aus welcher Sicht wir alle Geschehnisse erleben.',
-            text34:'Der Wechsel von Elena zu Raphael geschieht teilweise im nächsten Satz,',
-            text35:'nicht mal Kapitel- oder Absatzweise. Aber das ist meiner Meinung nach wirklich nur ein i-Tüpfelchen,',
-            text36:'was die Story leichter lesen lassen würde. ',
+            text3: 'Ein paar kleine Episoden waren mir zu lang, aber Seiten weiter blättern war überhaupt nicht möglich,\
+            da einem sonst u.a. die spritzigen wortgewandten Dialoge ',
+            text33:'entgangen wären. Leider ist nicht immer gleich zu erkennen aus welcher Sicht wir alle Geschehnisse erleben.\
+            Der Wechsel von Elena zu Raphael geschieht ',
+            text35:'teilweise im nächsten Satz, nicht mal Kapitel- oder Absatzweise. Aber das ist meiner Meinung nach wirklich nur ein i-Tüpfelchen,\
+            was die Story leichter lesen ',
+            text36:'lassen würde.',
             text4: 'Dieser Teil war wieder einmal atemberaubend, spannend, \
             wortgewandt, vielfältig, fesselnd, überraschend und auch gruselig. ',
             text5: 'Ich denke wirklich, dass diejenigen, \

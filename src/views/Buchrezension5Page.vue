@@ -19,8 +19,7 @@
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/>
-            <div class="icon"/>
+            <div class="test"/>
             <div class="icon"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
             <div class="icon"/>
             <div class="icon"/>
@@ -39,9 +38,7 @@
     </div>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/>
             <div class="icon"> <v-img src="../assets/rez_sprachstil.png" height="100" width="100"/></div>
-            <div class="icon"/>
             <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
             <div class="icon"/>
         </v-col>
@@ -131,6 +128,97 @@ export default {
     left: 210px;
     top: 335px;
 }
+@media screen and (max-width: 576px) {
+    .test{ 
+    width: 1px;
+    height: 1px;
+    background-color: lightgrey;
+    justify-content: center;
+    margin: 10px;
+    float: left;
 
+    }
+.grafik1 {
+     position: relative;
+    z-index: 5;
+    width: 139px;
+    height: 0px;
+    left: 6px;
+    top: -96px;
+}
+}
+@media screen and (min-width: 576px) {
+    .test{ 
+    width: 1px;
+    height: 1px;
+    background-color: lightgrey;
+    justify-content: center;
+    margin: 10px;
+    float: left;
 
+    }
+.grafik1 {
+   position: relative;
+    z-index: 5;
+    width: 139px;
+    height: 0px;
+    left: 6px;
+    top: -96px;
+}
+}
+@media screen and (min-width: 768px) {
+    .test {
+    width: 50px;
+    height: 50px;
+    background-color: lightgrey;
+    justify-content: center;
+    margin: 10px;
+    float: left;
+    }
+.grafik1 {
+    position: relative;
+    z-index: 5;
+    width: 200px;
+    height: 0px;
+    left: 30px;
+    top: -63px;
+}
+}
+@media screen and (min-width: 1200px) {
+    .test {
+    width: 50px;
+    height: 50px;
+    background-color: lightgrey;
+    justify-content: center;
+    margin: 10px;
+    float: left;
+    }
+.grafik1 {
+    position: relative;
+    z-index: 5;
+    width: 215px;
+    height: 0px;
+    left: 15px;
+    top: -77px;
+}
+}
+@media screen and (min-width: 1300px) {
+   .test {
+    width: 50px;
+    height: 50px;
+    background-color: lightgrey;
+    justify-content: center;
+    margin: 10px;
+    float: left;
+    }
+.grafik1 {
+    position: relative;
+    z-index: 5;
+    width: 215px;
+    height: 0px;
+    left: 17px;
+    top: -31px;
+}
+}
 </style>
+

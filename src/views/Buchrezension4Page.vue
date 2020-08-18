@@ -19,9 +19,8 @@
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/>
+          
             <div class="icon"> <v-img src="../assets/rez_details.png" height="100" width="100"/></div>
-            <div class="icon"/>
             <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
             <div class="icon"/>
         </v-col>
@@ -39,8 +38,7 @@
     </div>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/>
-            <div class="icon"/>
+            <div class="test"/>
             <div class="icon"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
             <div class="icon"/>
             <div class="icon"/>
@@ -59,8 +57,8 @@
     </div>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/>
-            <div class="icon"/>
+            
+            <div class="test"/>
             <div class="icon"> <v-img src="../assets/rez_sprachstil.png" height="100" width="100"/></div>
             <div class="icon"/>
             <div class="icon"/>
@@ -79,8 +77,8 @@
     </div>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/>
-            <div class="icon"/>
+           
+            <div class="test"/>
             <div class="icon"> <v-img src="../assets/rez_details.png" height="100" width="100"/></div>
             <div class="icon"/>
             <div class="icon"/>
@@ -165,25 +163,176 @@ export default {
     margin: 5px 0;
     background-color: lightgrey;
 }
+@media screen and (max-width: 576px) {
+    .test{ 
+    width: 1px;
+    height: 1px;
+    background-color: lightgrey;
+    justify-content: center;
+    margin: 10px;
+    float: left;
+
+    }
 .grafik1 {
-    position: absolute;
-    width: 260px;
-    height: 110px;
-    left: 225px;
-    top: 335px;
+     position: relative;
+    z-index: 5;
+    width: 139px;
+    height: 0px;
+    left: 6px;
+    top: -96px;
 }
 .grafik2 {
-    position: absolute;
-    width: 97px;
-    height: 110px;
-    left: 305px;
-    top: 475px;
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -90px;
+    top: -177px;
 }
 .grafik3 {
-    position: absolute;
-    width: 97px;
-    height: 110px;
-    left: 305px;
-    top: 620px;
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -90px;
+    top: -177px;
+}
+}
+@media screen and (min-width: 576px) {
+    .test{ 
+    width: 1px;
+    height: 1px;
+    background-color: lightgrey;
+    justify-content: center;
+    margin: 10px;
+    float: left;
+
+    }
+.grafik1 {
+   position: relative;
+    z-index: 5;
+    width: 139px;
+    height: 0px;
+    left: 6px;
+    top: -96px;
+}
+.grafik2 {
+    position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -90px;
+    top: -180px;
+}
+.grafik3 {
+   position: relative;
+    z-index: 5;
+    width: 330px;
+    height: 0px;
+    left: -90px;
+    top: -180px;
+}
+}
+@media screen and (min-width: 768px) {
+    .test {
+    width: 50px;
+    height: 50px;
+    background-color: lightgrey;
+    justify-content: center;
+    margin: 10px;
+    float: left;
+    }
+.grafik1 {
+    position: relative;
+    z-index: 5;
+    width: 200px;
+    height: 0px;
+    left: 30px;
+    top: -63px;
+}
+.grafik2 {
+    position: relative;
+    z-index: 5;
+    width: 189px;
+    height: 0px;
+    left: 33px;
+    top: -93px;
+}
+.grafik3 {
+    position: relative;
+    z-index: 5;
+    width: 189px;
+    height: 0px;
+    left: 33px;
+    top: -93px;
+}
+}
+@media screen and (min-width: 1200px) {
+    .test {
+    width: 50px;
+    height: 50px;
+    background-color: lightgrey;
+    justify-content: center;
+    margin: 10px;
+    float: left;
+    }
+.grafik1 {
+    position: relative;
+    z-index: 5;
+    width: 215px;
+    height: 0px;
+    left: 15px;
+    top: -77px;
+}
+.grafik2 {
+  position: relative;
+    z-index: 5;
+    width: 203px;
+    height: 0px;
+    left: 27px;
+    top: -106px;
+}
+.grafik3 {
+    position: relative;
+    z-index: 5;
+    width: 203px;
+    height: 0px;
+    left: 27px;
+    top: -106px;
+}
+}
+@media screen and (min-width: 1300px) {
+   .test {
+    width: 50px;
+    height: 50px;
+    background-color: lightgrey;
+    justify-content: center;
+    margin: 10px;
+    float: left;
+    }
+.grafik1 {
+    position: relative;
+    z-index: 5;
+    width: 215px;
+    height: 0px;
+    left: 17px;
+    top: -31px;
+}
+.grafik2 {
+  position: relative;
+    z-index: 5;
+    width: 203px;
+    height: 0px;
+    left: 34px;
+    top: -106px;
+}
+.grafik3 {
+    position: relative;
+    z-index: 5;
+    width: 203px;
+    height: 0px;
+    left: 34px;
+    top: -106px;
+}
 }
 </style>

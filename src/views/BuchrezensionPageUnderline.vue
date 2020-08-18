@@ -4,6 +4,7 @@
           <div>
 
     <v-progress-linear
+      v-model="skill"
       color="blue-grey"
       height="25"
     >
@@ -23,7 +24,7 @@
     <v-row class="rezension" align="center">
         
         
-        <v-col cols="8">
+        <v-col cols="13">
             <Highlightable @share="onShare" @highlight="onHighlight">
                     <div>
             <p>Der Abschluss der Kaskade? 
@@ -32,15 +33,6 @@
             <div class="rot">
             {{text}}
             </div>
-            <div class="rot">
-            {{texti}}
-            </div>
-            <div class="rot">
-            {{texti1}}
-            </div>
-            <div class="rot">
-            {{texti2}}
-               </div> 
              </div>
             </Highlightable>
         </v-col>
@@ -48,7 +40,7 @@
     </v-row>
     </div>
     <v-row class="rezension" align="center">
-        <v-col cols="8">
+        <v-col cols="13">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div class="grün">
                     {{text1}}
@@ -57,7 +49,7 @@
         </v-col>
     </v-row>
     <v-row class="rezension" align="center">
-        <v-col cols="8">
+        <v-col cols="13">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div class="gelb">
                     {{text2}}
@@ -66,7 +58,7 @@
         </v-col>
     </v-row>
     <v-row class="rezension" align="center">
-        <v-col cols="8">
+        <v-col cols="13">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div class="blau">
                     {{text3}}
@@ -75,7 +67,7 @@
         </v-col>
     </v-row>
     <v-row class="rezension" align="center">
-        <v-col cols="8">
+        <v-col cols="13">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div class="rot">
                     
@@ -101,10 +93,10 @@ export default {
     data() {
         
         return {
-            text:' Der Welt steht mit der Kaskade ein Krieg bevor.' ,
-            texti:'Aber wie geht es jetzt bei Elena und Raphael weiter?',
-            texti1:'Beim letzten Kampf wurde Elena tödlich verletzt und wie es scheint,',
-            texti2:'tritt Kassandras Vorhersage ein. Aber wer Elena kennt, \
+            text:' Der Welt steht mit der Kaskade ein Krieg bevor. \
+            Aber wie geht es jetzt bei Elena und Raphael weiter? \
+            Beim letzten Kampf wurde Elena tödlich verletzt und wie es scheint \
+            tritt Kassandras Vorhersage ein. Aber wer Elena kennt \
             der weiß, dass nichts so kommt wie vorhergesagt. \
             Denn Elena glaubt an die Wandelbarkeit des Schicksals. \
             Die Charaktere sind glaube ich bereits allen bekannt.',
@@ -179,7 +171,7 @@ export default {
     text-decoration: underline;
   -webkit-text-decoration-color: red;
   text-decoration-color: red;
-  border-bottom: 0.5px solid yellow;
+ 
   
 
 }

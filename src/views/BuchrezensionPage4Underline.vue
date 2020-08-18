@@ -3,6 +3,7 @@
           <div>
 
     <v-progress-linear
+      v-model="skill"
       color="blue-grey"
       height="25"
     >
@@ -18,16 +19,16 @@
     <h1>Buchrezension 4 zum Buch "Gilde der Jäger - Engelskrieg"</h1>
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
     <v-row class="rezension" align="center">
-        <v-col cols="8">
+        <v-col cols="13">
             <Highlightable @share="onShare" @highlight="onHighlight">
                  <div>
-                <div class="gelbgrün">
+                <div class="gelb green">
                     {{text}}
                 </div>
-                <div class="gelbgrün">
+                <div class="gelb green">
                     {{text01}}
                 </div>
-                <div class="gelbgrün">
+                <div class="gelb green">
                     {{text02}}
                 </div>
                 </div>
@@ -35,7 +36,7 @@
         </v-col>
     </v-row>
     <v-row class="rezension" align="center">
-        <v-col cols="8">
+        <v-col cols="13">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div class="rot">
             {{text1}}
@@ -44,7 +45,7 @@
         </v-col>
     </v-row>
     <v-row class="rezension" align="center">
-        <v-col cols="8">
+        <v-col cols="13">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div class="blau">
             {{text2}}
@@ -53,7 +54,7 @@
         </v-col>
     </v-row>
     <v-row class="rezension" align="center">
-        <v-col cols="8">
+        <v-col cols="13">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div class="gelb">
             {{text3}}
@@ -77,10 +78,11 @@ import Highlightable from '@/components/Highlightable';
 export default {
     data() {
         return {
-            text: 'Dieses Buch endet mehr oder weniger mit einem großen Knall, vielen Veränderungen und Verlusten,',
-            text01:'aber auch Neuanfängen. Die Reihe könnte mit diesem Buch, durchaus auch enden, was ich nicht hoffe,',
-            text02:' aber es können auch durchaus auch wieder neue Stränge gesponnen werden. Es bleibt also interessant',
-            text03:'abzuwarten, ob und wenn wie es weitergeht.',
+            text: 'Dieses Buch endet mehr oder weniger mit einem großen Knall, vielen Veränderungen und Verlusten,\
+            aber auch Neuanfängen. Die Reihe könnte mit diesem Buch,',
+            text01:' durchaus auch enden, was ich nicht hoffe, aber es können auch durchaus auch wieder neue Stränge \
+            gesponnen werden. Es bleibt also interessant abzuwarten,',
+            text02:'ob und wenn wie es weitergeht.',
             text1: 'Generell fand ich das Buch wieder sehr gut und spannend.',
             text2: 'Was mich nur genervt hat, waren die doch ständigen Wiederholungen, \
             wie z.B. mein Erzengel und durch dein Stück Herz bleib ich menschlich. \

@@ -3,6 +3,7 @@
           <div>
 
     <v-progress-linear
+      v-model="skill"
       color="blue-grey"
       height="25"
     >
@@ -18,7 +19,7 @@
     <h1>Buchrezension 5 zum Buch "Gilde der Jäger - Engelskrieg"</h1>
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
     <v-row class="rezension" align="center">
-        <v-col cols="8">
+        <v-col cols="13">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div class="rot"> 
                     {{text}}           
@@ -27,13 +28,13 @@
         </v-col>
     </v-row>
     <v-row class="rezension" align="center">
-        <v-col cols="8">
+        <v-col cols="13">
             <Highlightable @share="onShare" @highlight="onHighlight">
                 <div>
-                <div class="blaugrün">
+                <div class="blau green">
                     {{text1}}
                 </div>
-                <div class="blaugrün">
+                <div class="blau green">
                     {{text11}}
                 </div>
                 </div>
@@ -59,8 +60,8 @@ export default {
             Die Handlung ist der Hammer!!! Ich war glücklich, um kurz darauf zu Tode betrügt zu sein, \
             wie Elena - aus dem gleichen Grund. ',
             text1: 'Daran erkennt man, wie gut der Schreibstil ist, wenn man in die Geschichte eintauchen kann, \
-            als ob man',
-            text11:'persönlich dabei ist. Ich hoffe auf eine schnellere Veröffentlichung des nächsten Buches, wie bisher.',
+            als ob man persönlich dabei ist. Ich hoffe auf eine schnellere',
+            text11:' Veröffentlichung des nächsten Buches, wie bisher.',
             highlight: []
         }
     },
