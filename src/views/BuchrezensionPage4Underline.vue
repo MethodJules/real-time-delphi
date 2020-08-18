@@ -59,13 +59,13 @@
     <div><span class="yellow">Inhaltliche Details</span></div>
    <div><span class="blue">Sprachstil und Erzählperspektive</span></div>
     </v-row>
-
-    <v-btn to="/buchrezensionPage5Underline">Weiter</v-btn>
-    <!-- <v-btn to="/fragenpage">Weiter</v-btn> -->
+    <Stopwatch to="/buchrezensionPage5Underline" needTimer="true" />
+    
 </v-container>
 </template>
 <script>
 import Highlightable from '@/components/Highlightable';
+import Stopwatch from '@/components/Stopwatch'
 export default {
     data() {
         return {
