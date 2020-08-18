@@ -77,11 +77,12 @@
     <div><span class="blue">Sprachstil und Erzählperspektive</span></div>
     <div><span class="pink lighten-1">Verständlichkeit</span></div>
     </v-row>
-    <v-btn to="/buchrezensionPage4Underline">Weiter</v-btn>
+    <Stopwatch to="/buchrezensionPage4Underline" needTimer="true" />
 </v-container>
 </template>
 <script>
 import Highlightable from '@/components/Highlightable';
+import Stopwatch from '@/components/Stopwatch'
 export default {
     data() {
         return {
