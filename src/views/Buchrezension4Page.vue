@@ -27,7 +27,7 @@
             <div class="icon"/>
         </v-col>
         <v-col cols="8">
-            <#able @share="onShare" @highlight="onHighlight" id="1_Page4">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="1_Page4">
                 <div>
             <p>Dieses Buch endet mehr oder weniger mit einem großen Knall, vielen Veränderungen und Verlusten, aber auch Neuanfängen. Die Reihe könnte mit diesem Buch, durchaus auch enden, was ich nicht hoffe, aber es können auch durchaus auch wieder neue Stränge gesponnen werden. Es bleibt also interessant abzuwarten, ob und wenn wie es weitergeht.
             </p>
@@ -46,7 +46,7 @@
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight" id="2_Page4">
                 <div>
-            <p>Generell fand ich das Buch wieder sehr gut und spannend. 
+            <p>Generell fand ich das Buch wieder sehr gut und spannend.
             </p>
                 </div>
             </Highlightable>
@@ -63,7 +63,7 @@
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight" id="3_Page4">
                 <div>
-            <p>Was mich nur genervt hat, waren die doch ständigen Wiederholungen, wie z.B. mein Erzengel und durch dein Stück Herz bleib ich menschlich. Das kam gefühlt in jedem Kapitel mind. 3x vor und es nervte auf Dauer. Man liest das Buch ja und dann weiß man Bescheid, da muss ich ja nicht bei jedem Satz erinnert werden, so vergesslich bin ich dann doch nicht. 
+            <p>Was mich nur genervt hat, waren die doch ständigen Wiederholungen, wie z.B. mein Erzengel und durch dein Stück Herz bleib ich menschlich. Das kam gefühlt in jedem Kapitel mind. 3x vor und es nervte auf Dauer. Man liest das Buch ja und dann weiß man Bescheid, da muss ich ja nicht bei jedem Satz erinnert werden, so vergesslich bin ich dann doch nicht.
             </p>
                 </div>
             </Highlightable>
@@ -100,11 +100,12 @@
         <br>
         <br>
 
-    <v-btn to="/buchrezension5">Weiter</v-btn>
+    <Stopwatch to="/buchrezension5" needTimer="true" />
 </v-container>
 </template>
 <script>
-import Highlightable from '@/components/Highlightable';
+import Highlightable from '@/components/Highlightable'
+import Stopwatch from '@/components/Stopwatch'
 export default {
     data() {
         return {
@@ -113,7 +114,8 @@ export default {
         }
     },
     components: {
-        Highlightable
+        Highlightable,
+        Stopwatch
     },
     methods: {
         onHighlight(text) {

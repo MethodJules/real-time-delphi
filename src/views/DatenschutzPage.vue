@@ -56,18 +56,20 @@
               </v-col>
             </v-container>
             </v-form>
-            <v-btn to="/hintergrund" @click="saveCode">Weiter</v-btn>
+            <Stopwatch to="/hintergrund" needTimer="true" />
         </div>
     </v-container>
 </template>
 <script>
 import APIService from '@/services/api.service'
+import Stopwatch from '@/components/Stopwatch'
 //import NumberQuestion from '@/components/NumberQuestion'
 //import Question from '@/components/Question';
 export default {
     components: {
         //Question
         //NumberQuestion
+        Stopwatch
     },
     data() {
         return {

@@ -48,7 +48,7 @@
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight" id="2_Page2">
                 <div>
-            <p>Das Cover gefällt mir hier sehr gut. Also legte ich los zu lesen…. 
+            <p>Das Cover gefällt mir hier sehr gut. Also legte ich los zu lesen….
             </p>
                 </div>
             </Highlightable>
@@ -65,7 +65,7 @@
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight" id="3_Page2">
                 <div>
-            <p>Erzengel Raphael und seine Gildejägerin Elena hier nun schon zum 12ten mal in einer tollen Story vereint. Gemeinsame Kämpfe – alles verändert sich. 
+            <p>Erzengel Raphael und seine Gildejägerin Elena hier nun schon zum 12ten mal in einer tollen Story vereint. Gemeinsame Kämpfe – alles verändert sich.
             </p>
                 </div>
             </Highlightable>
@@ -82,7 +82,7 @@
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight" id="4_Page2">
                 <div>
-            <p>Ich mag alles an diesem Buch – die spürbare Romantik, die Liebe zwischen den beiden und die Fantasy der Autorin begeistert mich immer wieder. 
+            <p>Ich mag alles an diesem Buch – die spürbare Romantik, die Liebe zwischen den beiden und die Fantasy der Autorin begeistert mich immer wieder.
             </p>
                 </div>
             </Highlightable>
@@ -99,7 +99,7 @@
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight" id="5_Page2">
                 <div>
-            <p>Habe nicht alle Bände der Reihe gelesen und somit hatte ich am Beginn kurz Schwierigkeiten wieder in die Story rein zu finden was aber nach ein paar Seiten schon der Fall war. 
+            <p>Habe nicht alle Bände der Reihe gelesen und somit hatte ich am Beginn kurz Schwierigkeiten wieder in die Story rein zu finden was aber nach ein paar Seiten schon der Fall war.
             </p>
                 </div>
             </Highlightable>
@@ -116,7 +116,7 @@
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight" id="6_Page2">
                 <div>
-            <p>Nalini Singh hat mich auch hier wieder überzeugt und ihr Schreibstil ist flüssig. Ab und an war es mir aber doch etwas zu anstrengend zu lesen und ich hab das Buch kurz unterbrochen. Es ist nichts für mal zwischendurch. Man muss dabei bleiben um in die Story wirklich abtauchen zu können.  
+            <p>Nalini Singh hat mich auch hier wieder überzeugt und ihr Schreibstil ist flüssig. Ab und an war es mir aber doch etwas zu anstrengend zu lesen und ich hab das Buch kurz unterbrochen. Es ist nichts für mal zwischendurch. Man muss dabei bleiben um in die Story wirklich abtauchen zu können.
             </p>
                 </div>
             </Highlightable>
@@ -133,7 +133,7 @@
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight" id="7_Page2">
                 <div>
-            <p>Fazit: Spannender 12. Teil der Reihe. 
+            <p>Fazit: Spannender 12. Teil der Reihe.
             </p>
                 </div>
             </Highlightable>
@@ -155,11 +155,12 @@
         <br>
         <br>
 
-    <v-btn to="/buchrezension3">Weiter</v-btn>
+    <Stopwatch to="/buchrezension3" needTimer="true" />
 </v-container>
 </template>
 <script>
-import Highlightable from '@/components/Highlightable';
+import Highlightable from '@/components/Highlightable'
+import Stopwatch from '@/components/Stopwatch'
 export default {
     data() {
         return {
@@ -168,7 +169,8 @@ export default {
         }
     },
     components: {
-        Highlightable
+        Highlightable,
+        Stopwatch
     },
     methods: {
         onHighlight(text) {

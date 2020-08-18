@@ -17,12 +17,13 @@
   </div>
     <h2>{{node.title}}</h2>
     <div><span v-html="node.html"></span></div>
-    <v-btn to="/datenschutz">Weiter</v-btn>
+    <Stopwatch to="/datenschutz" needTimer="false" />
 </v-container>
 </template>
 <script>
 //import store from '@/store.js';
 import APIService from '@/services/api.service'
+import Stopwatch from '@/components/Stopwatch'
 //import { mapState } from 'vuex'
 export default {
     /*
@@ -33,6 +34,9 @@ export default {
         this.$store.dispatch('begruessung/getDataFromDrupal')
     },
     */
+   components: {
+     Stopwatch
+   },
    data() {
      return {
        node: APIService.get(0)

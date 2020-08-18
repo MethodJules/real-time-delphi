@@ -33,13 +33,13 @@
             <SelectQuestion :question="question.question" :answers="question.answeroptions" />
         </div>
 
-         <div v-if="Math.random() < 0.3">
-        <v-btn to="/buchrezensionPageUnderline">Weiter</v-btn>
-          </div>
-        <div v-else-if="Math.random() > 0.7">
-        <v-btn to="/buchrezension">Weiter</v-btn>
+        <div v-if="Math.random() < 0.3">
+          <Stopwatch to="/buchrezensionPageUnderline" needTimer="true" />
         </div>
-        <div v-else> <v-btn to="/buchrezensionPageRaw">Weiter</v-btn>
+        <div v-else-if="Math.random() > 0.7">
+          <Stopwatch to="/buchrezension" needTimer="true"/>
+        </div>
+          <div v-else> <Stopwatch to="/buchrezensionPageRaw" needTimer="true" />
         </div>
 
     </v-container>
@@ -48,10 +48,12 @@
 <script>
 import APIService from '@/services/api.service'
 import SelectQuestion from '@/components/SelectQuestion'
+import Stopwatch from '@/components/Stopwatch'
 
 export default {
     components: {
-        SelectQuestion
+        SelectQuestion,
+        Stopwatch
     },
     data() {
         return {

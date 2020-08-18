@@ -66,7 +66,7 @@
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight"  id="3_Page3">
                 <div>
-            <p>Zuerst denkt man, dass alles viel zu viel ist, zu viel was am Anfang auf einen einprasselt, aber zum Ende hin fügt sich wie immer alles zusammen und es wird verständlich. 
+            <p>Zuerst denkt man, dass alles viel zu viel ist, zu viel was am Anfang auf einen einprasselt, aber zum Ende hin fügt sich wie immer alles zusammen und es wird verständlich.
             </p>
                 </div>
             </Highlightable>
@@ -83,9 +83,9 @@
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight" id="4_Page3">
                 <div>
-            <p>Ein paar kleine Episoden waren mir zu lang, aber Seiten weiter blättern war überhaupt nicht möglich, da einem sonst u.a. die spritzigen wortgewandten Dialoge entgangen wären. 
+            <p>Ein paar kleine Episoden waren mir zu lang, aber Seiten weiter blättern war überhaupt nicht möglich, da einem sonst u.a. die spritzigen wortgewandten Dialoge entgangen wären.
                Leider ist nicht immer gleich zu erkennen aus welcher Sicht wir alle Geschehnisse erleben. Der Wechsel von Elena zu Raphael geschieht teilweise im nächsten Satz, nicht mal Kapitel- oder Absatzweise.
-               Aber das ist meiner Meinung nach wirklich nur ein i-Tüpfelchen, was die Story leichter lesen lassen würde. 
+               Aber das ist meiner Meinung nach wirklich nur ein i-Tüpfelchen, was die Story leichter lesen lassen würde.
             </p>
                 </div>
             </Highlightable>
@@ -102,7 +102,7 @@
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight" id="5_Page3">
                 <div>
-            <p>Dieser Teil war wieder einmal atemberaubend, spannend, wortgewandt, vielfältig, fesselnd, überraschend und auch gruselig. 
+            <p>Dieser Teil war wieder einmal atemberaubend, spannend, wortgewandt, vielfältig, fesselnd, überraschend und auch gruselig.
             </p>
                 </div>
             </Highlightable>
@@ -119,7 +119,7 @@
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight" id="6_Page3">
                 <div>
-            <p>Ich denke wirklich, dass diejenigen, die bisher die Reihe schon begonnen haben, unbedingt weiterlesen müssen und diejenigen, an denen diese Serie vorbei gegangen ist, sollten unbedingt mit dem Lesen von „Engelskuss“ anfangen. 
+            <p>Ich denke wirklich, dass diejenigen, die bisher die Reihe schon begonnen haben, unbedingt weiterlesen müssen und diejenigen, an denen diese Serie vorbei gegangen ist, sollten unbedingt mit dem Lesen von „Engelskuss“ anfangen.
                Für mich eine Reihe, die von den so unterschiedlichen, aber auch absolut stimmigen Charakteren lebt.
             </p>
                 </div>
@@ -141,11 +141,12 @@
         <br>
         <br>
 
-    <v-btn to="/buchrezension4">Weiter</v-btn>
+    <Stopwatch to="/buchrezension4" needTimer="true" />
 </v-container>
 </template>
 <script>
 import Highlightable from '@/components/Highlightable';
+import Stopwatch from '@/components/Stopwatch'
 export default {
     data() {
         return {
@@ -154,7 +155,8 @@ export default {
         }
     },
     components: {
-        Highlightable
+        Highlightable,
+        Stopwatch
     },
     methods: {
         onHighlight(text) {

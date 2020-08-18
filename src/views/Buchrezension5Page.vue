@@ -29,7 +29,7 @@
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight" id="1_Page5">
                 <div>
-            <p>Eigentlich schreibe ich bei Serien keine Rezension mehr, aber hier muss ich einfach. Die Geschichte wird immer spannender und bildgewaltiger. Die Handlung ist der Hammer!!! Ich war glücklich, um kurz darauf zu Tode betrügt zu sein, wie Elena - aus dem gleichen Grund. 
+            <p>Eigentlich schreibe ich bei Serien keine Rezension mehr, aber hier muss ich einfach. Die Geschichte wird immer spannender und bildgewaltiger. Die Handlung ist der Hammer!!! Ich war glücklich, um kurz darauf zu Tode betrügt zu sein, wie Elena - aus dem gleichen Grund.
             </p>
                 </div>
             </Highlightable>
@@ -65,11 +65,12 @@
         <br>
         <br>
 
-    <v-btn to="/fragenpage">Weiter</v-btn>
+    <Stopwatch to="/fragenpage" needTimer="true" />
 </v-container>
 </template>
 <script>
-import Highlightable from '@/components/Highlightable';
+import Highlightable from '@/components/Highlightable'
+import Stopwatch from '@/components/Stopwatch'
 export default {
     data() {
         return {
@@ -78,7 +79,8 @@ export default {
         }
     },
     components: {
-        Highlightable
+        Highlightable,
+        Stopwatch
     },
     methods: {
         onHighlight(text) {

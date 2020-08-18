@@ -29,7 +29,7 @@
             </div>
         </div>
 
-        <v-btn to="/buch">Weiter</v-btn>
+        <Stopwatch to="/buch" needTimer="true"/>
     </v-container>
 </template>
 
@@ -38,11 +38,13 @@ import APIService from '@/services/api.service'
 import SelectQuestion from '@/components/SelectQuestion'
 import NumberQuestion from '@/components/NumberQuestion'
 import TextQuestion from '@/components/TextQuestion'
+import Stopwatch from '@/components/Stopwatch'
 export default {
     components: {
         SelectQuestion,
         NumberQuestion,
-        TextQuestion
+        TextQuestion,
+        Stopwatch
     },
     data() {
         return {
