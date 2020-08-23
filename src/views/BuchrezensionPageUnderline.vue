@@ -1,10 +1,9 @@
 <template>
 <v-container>
-    
+
           <div>
 
     <v-progress-linear
-      v-model="skill"
       color="blue-grey"
       height="25"
     >
@@ -17,31 +16,32 @@
     <br>
 
   </div>
-  
+
     <h1>Buchrezension 1 zum Buch "Gilde der Jäger - Engelskrieg"</h1>
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
         <div>
     <v-row class="rezension" align="center">
-        
-        
-        <v-col cols="13">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+
+
+        <v-col cols="8">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="1_under1">
+
                     <div>
-            <p>Der Abschluss der Kaskade? 
+            <p>Der Abschluss der Kaskade?
                <br />
             </p>
             <div class="rot">
             {{text}}
-            </div>
-             </div>
+                </div>
+                    </div>
             </Highlightable>
         </v-col>
-        
+
     </v-row>
     </div>
     <v-row class="rezension" align="center">
-        <v-col cols="13">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+        <v-col cols="8">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="2_under1">
                 <div class="grün">
                     {{text1}}
                 </div>
@@ -49,8 +49,8 @@
         </v-col>
     </v-row>
     <v-row class="rezension" align="center">
-        <v-col cols="13">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+        <v-col cols="8">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="3_under1">
                 <div class="gelb">
                     {{text2}}
                 </div>
@@ -58,8 +58,8 @@
         </v-col>
     </v-row>
     <v-row class="rezension" align="center">
-        <v-col cols="13">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+        <v-col cols="8">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="4_under1">
                 <div class="blau">
                     {{text3}}
                 </div>
@@ -67,10 +67,9 @@
         </v-col>
     </v-row>
     <v-row class="rezension" align="center">
-        <v-col cols="13">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+        <v-col cols="8">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="5_under1">
                 <div class="rot">
-                    
                     {{text4}}
                 </div>
             </Highlightable>
@@ -82,21 +81,23 @@
     <div><span class="yellow">Inhaltliche Details</span></div>
    <div><span class="blue">Sprachstil und Erzählperspektive</span></div>
     </v-row>
-    <v-btn to="/buchrezensionPage2Underline">Weiter</v-btn>
     
-        
+    <Stopwatch to="/buchrezensionPage2Underline" needTimer="true" />
+
+
 </v-container>
 </template>
 <script>
 import Highlightable from '@/components/Highlightable';
+import Stopwatch from '@/components/Stopwatch'
 export default {
     data() {
-        
+
         return {
             text:' Der Welt steht mit der Kaskade ein Krieg bevor. \
             Aber wie geht es jetzt bei Elena und Raphael weiter? \
-            Beim letzten Kampf wurde Elena tödlich verletzt und wie es scheint \
-            tritt Kassandras Vorhersage ein. Aber wer Elena kennt \
+            Beim letzten Kampf wurde Elena tödlich verletzt und wie es scheint, \
+            tritt Kassandras Vorhersage ein. Aber wer Elena kennt, \
             der weiß, dass nichts so kommt wie vorhergesagt. \
             Denn Elena glaubt an die Wandelbarkeit des Schicksals. \
             Die Charaktere sind glaube ich bereits allen bekannt.',
@@ -137,7 +138,8 @@ export default {
         }
     },
     components: {
-        Highlightable
+        Highlightable,
+        Stopwatch
     },
     methods: {
         onHighlight(text) {
@@ -170,9 +172,7 @@ export default {
 .rot {
     text-decoration: underline;
   -webkit-text-decoration-color: red;
-  text-decoration-color: red;
- 
-  
+  text-decoration-color: red
 
 }
 .grün {

@@ -3,7 +3,6 @@
           <div>
 
     <v-progress-linear
-      v-model="skill"
       color="blue-grey"
       height="25"
     >
@@ -19,8 +18,8 @@
     <h1>Buchrezension 2 zum Buch "Gilde der Jäger - Engelskrieg"</h1>
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
     <v-row class="rezension" align="center">
-        <v-col cols="12">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+        <v-col cols="8">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="1_under2">
                 <div>
             <p>Showdown
                <br />
@@ -33,8 +32,8 @@
         </v-col>
     </v-row>
     <v-row class="rezension" align="center">
-        <v-col cols="12">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+        <v-col cols="8">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="2_under2">
                 <div class="grau">
             {{text1}}
                 </div>
@@ -42,8 +41,8 @@
         </v-col>
     </v-row>
     <v-row class="rezension" align="center">
-        <v-col cols="12">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+        <v-col cols="8">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="3_under2">
                 <div class="gelb">
                     {{text2}}
                 </div>
@@ -51,8 +50,8 @@
         </v-col>
     </v-row>
     <v-row class="rezension" align="center">
-        <v-col cols="12">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+        <v-col cols="8">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="4_under2">
                 <div class="rot">
             {{text3}}
                 </div>
@@ -60,8 +59,8 @@
         </v-col>
     </v-row>
     <v-row class="rezension" align="center">
-        <v-col cols="12">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+        <v-col cols="8">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="5_under2">
                 <div class="grün">
             {{text4}}
                 </div>
@@ -69,8 +68,8 @@
         </v-col>
     </v-row>
         <v-row class="rezension" align="center">
-        <v-col cols="12">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+        <v-col cols="8">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="6_under2">
                 <div class="blau">
         {{text5}}
                 </div>
@@ -78,8 +77,8 @@
         </v-col>
     </v-row>
         <v-row class="rezension" align="center">
-        <v-col cols="12">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+        <v-col cols="8">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="7_under2">
                 <div class="rot">
                     {{text6}}
                 </div>
@@ -94,11 +93,12 @@
     <div><span class="grey">Hintergrund zur eigenen Person</span></div>
     <div><span class="purple">Hintergrund zur eigenen Person</span></div>
     </v-row>
-    <v-btn to="/buchrezensionPage3Underline">Weiter</v-btn>
+    <Stopwatch to="/buchrezensionPage3Underline" needTimer="true" />
 </v-container>
 </template>
 <script>
 import Highlightable from '@/components/Highlightable';
+import Stopwatch from '@/components/Stopwatch'
 export default {
     data() {
         return {
@@ -121,7 +121,8 @@ export default {
         }
     },
     components: {
-        Highlightable
+        Highlightable,
+        Stopwatch
     },
     methods: {
         onHighlight(text) {
