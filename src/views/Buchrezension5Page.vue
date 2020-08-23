@@ -19,7 +19,8 @@
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="test"/>
+            <div class="icon"/>
+            <div class="icon"/>
             <div class="icon"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
             <div class="icon"/>
             <div class="icon"/>
@@ -38,7 +39,9 @@
     </div>
     <v-row class="rezension" align="center">
         <v-col cols="4">
+            <div class="icon"/>
             <div class="icon"> <v-img src="../assets/rez_sprachstil.png" height="100" width="100"/></div>
+            <div class="icon"/>
             <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
             <div class="icon"/>
         </v-col>
@@ -52,17 +55,16 @@
         </v-col>
     </v-row>
         <br>
-    <b>Legende:</b>
-            <v-col cols="4">
-            <div class="icon"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
-            <div class="icon"> <v-img src="../assets/rez_sprachstil.png" height="100" width="100"/></div>
-            <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
+        <div class="legend" align="right">
+        <v-row  align="center">
+            <v-col cols="12">
+            <b>Legende:</b>
+            <div class="icon2"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
+            <div class="icon2"> <v-img src="../assets/rez_sprachstil.png" height="100" width="100"/></div>
+            <div class="icon2"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
         </v-col>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        </v-row>
+        </div>
 
     <v-btn to="/fragenpage">Weiter</v-btn>
 </v-container>
@@ -110,16 +112,21 @@ export default {
 .icon {
     width: 100px;
     height: 100px;
-    background-color: lightgrey;
+    background-color: rgb(247, 247, 247);
     justify-content: center;
     margin: 5px;
     float: left;
 }
-
+.icon2 {
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    margin: 5px;
+    float: right;
+}
 .rezension {
-    border: 1px solid black;
     margin: 5px 0;
-    background-color: lightgrey;
+    background-color: rgb(247, 247, 247);
 }
 .grafik1 {
     position: absolute;

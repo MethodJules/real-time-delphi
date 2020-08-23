@@ -122,19 +122,18 @@
     </v-row>
 
     <br>
-    <b>Legende:</b>
-            <v-col cols="4">
-            <div class="icon"> <v-img src="../assets/rez_details.png" height="100" width="100"/></div>
-            <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
-            <div class="icon"> <v-img src="../assets/rez_sprachstil.png" height="100" width="100"/></div>
-            <div class="icon"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
-        </v-col>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
+        <div class="legend" align="right">
+        <v-row  align="center">
+            <v-col cols="12">
+            <b>Legende:</b>
+            <div class="icon2"> <v-img src="../assets/rez_details.png" height="100" width="100"/></div>
+            <div class="icon2"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
+            <div class="icon2"> <v-img src="../assets/rez_sprachstil.png" height="100" width="100"/></div>
+            <div class="icon2"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
+            </v-col>
+        </v-row>
+        </div>
+        
     <v-btn to="/buchrezension2">Weiter</v-btn>
     
         
@@ -191,15 +190,21 @@ export default {
 .icon {
     width: 100px;
     height: 100px;
-    background-color: lightgrey;
+    background-color: rgb(247, 247, 247);
     justify-content: center;
     margin: 5px;
     float: left;
 }
+.icon2 {
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    margin: 5px;
+    float: right;
+}
 .rezension {
-    border: 1px solid black;
     margin: 5px 0;
-    background-color: lightgrey;
+    background-color: rgb(247, 247, 247);
 }
 @media screen and (max-width: 576px) {
 .grafik1 {

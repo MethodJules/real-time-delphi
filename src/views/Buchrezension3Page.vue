@@ -21,12 +21,11 @@
         <v-col cols="4">
             
             
+            <div class="icon"/>
             <div class="icon"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
-            
-            <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
-            <div class="test"/>
-            <div class="test"/>
-            <div class="test"/>
+            <div class="icon"/>
+           <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
+            <div class="icon"/>
         </v-col>
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
@@ -44,9 +43,11 @@
     </div>
     <v-row class="rezension" align="center">
         <v-col cols="4">
+            <div class="icon"/>
             <div class="icon"> <v-img src="../assets/rez_sprachstil.png" height="100" width="100"/></div>
+            <div class="icon"/>
             <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
-            <div class="test"/>
+            <div class="icon"/>
         </v-col>
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
@@ -64,7 +65,8 @@
     <v-row class="rezension" align="center">
         <v-col cols="4">
             
-            <div class="test"/>
+            <div class="icon"/>
+            <div class="icon"/>
             <div class="icon"> <v-img src="../assets/rez_verstand.png" height="100" width="100"/></div>
             <div class="icon"/>
             <div class="icon"/>
@@ -83,9 +85,11 @@
     </div>
     <v-row class="rezension" align="center">
         <v-col cols="4">
+            <div class="icon"/>
             <div class="icon"> <v-img src="../assets/rez_sprachstil.png" height="100" width="100"/></div>
+            <div class="icon"/>
             <div class="icon"> <v-img src="../assets/rez_verstand.png" height="100" width="100"/></div>
-            <div class="test"/>
+            <div class="icon"/>
         </v-col>
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
@@ -103,11 +107,11 @@
     </div>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-           
-            <div class="test"/>
+           <div class="icon"/>
+            <div class="icon"/>
             <div class="icon"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
-            <div class="test"/>
-            <div class="test"/>
+            <div class="icon"/>
+            <div class="icon"/>
         </v-col>
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
@@ -123,11 +127,11 @@
     </div>
         <v-row class="rezension" align="center">
         <v-col cols="4">
-            
-            <div class="test"/>
+            <div class="icon"/>
+            <div class="icon"/>
             <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
-            <div class="test"/>
-            <div class="test"/>
+            <div class="icon"/>
+            <div class="icon"/>
         </v-col>
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight">
@@ -141,18 +145,17 @@
     </v-row>
 
         <br>
-    <b>Legende:</b>
-            <v-col cols="4">
-            <div class="icon"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
-            <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
-            <div class="icon"> <v-img src="../assets/rez_sprachstil.png" height="100" width="100"/></div>
-            <div class="icon"> <v-img src="../assets/rez_verstand.png" height="100" width="100"/></div>
+        <div class="legend" align="right">
+        <v-row  align="center">
+            <v-col cols="12">
+            <b>Legende:</b>
+            <div class="icon2"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
+            <div class="icon2"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
+            <div class="icon2"> <v-img src="../assets/rez_sprachstil.png" height="100" width="100"/></div>
+            <div class="icon2"> <v-img src="../assets/rez_verstand.png" height="100" width="100"/></div>
         </v-col>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        </v-row>
+        </div>
 
     <v-btn to="/buchrezension4">Weiter</v-btn>
 </v-container>
@@ -200,27 +203,24 @@ export default {
 .icon {
     width: 100px;
     height: 100px;
-    background-color: lightgrey;
+    background-color: rgb(247, 247, 247);
     justify-content: center;
-    margin: 10px;
+    margin: 5px;
     float: left;
 }
-
+.icon2 {
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    margin: 5px;
+    float: right;
+}
 .rezension {
-    border: 1px solid black;
     margin: 5px 0;
-    background-color: lightgrey;
+    background-color: rgb(247, 247, 247);
 }
 @media screen and (max-width: 576px) {
-    .test{ 
-    width: 1px;
-    height: 1px;
-    background-color: lightgrey;
-    justify-content: center;
-    margin: 10px;
-    float: left;
 
-    }
 .grafik1 {
         position: relative;
     z-index: 5;
