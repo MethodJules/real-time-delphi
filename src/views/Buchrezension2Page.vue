@@ -3,6 +3,7 @@
           <div>
 
     <v-progress-linear
+      v-model="skill"
       color="blue-grey"
       height="25"
     >
@@ -19,14 +20,12 @@
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/>
-            <div class="icon"/>
+
             <div class="icon"> <v-img src="../assets/rez_hintergrund.png" height="100" width="100"/></div>
-            <div class="icon"/>
-            <div class="icon"/>
+
         </v-col>
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="1_Page2">
                 <div>
             <p>Showdown
                <br />
@@ -36,121 +35,127 @@
             </Highlightable>
         </v-col>
     </v-row>
-    <div class="grafik1">
-    <v-img src="../assets/grafik_1.svg" />
+        <div class="grafik1">
+        <v-img src="../assets/grafik_strichsenk.svg" />
+    </div>
+    <div class="dreieck1">
+        <v-img src="../assets/grafik_dreieck.svg" />
     </div>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/>
-            <div class="icon"/>
+
             <div class="icon"> <v-img src="../assets/rez_erscheinung.png" height="100" width="100"/></div>
-            <div class="icon"/>
-            <div class="icon"/>
+
         </v-col>
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="2_Page2">
                 <div>
-            <p>Das Cover gefällt mir hier sehr gut. Also legte ich los zu lesen…. 
+            <p>Das Cover gefällt mir hier sehr gut. Also legte ich los zu lesen….
             </p>
                 </div>
             </Highlightable>
         </v-col>
     </v-row>
-    <div class="grafik2">
-    <v-img src="../assets/grafik_1.svg" />
+        <div class="grafik2">
+        <v-img src="../assets/grafik_strichsenk.svg" />
+    </div>
+    <div class="dreieck2">
+        <v-img src="../assets/grafik_dreieck.svg" />
     </div>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/>
-            <div class="icon"/>
+
             <div class="icon"> <v-img src="../assets/rez_details.png" height="100" width="100"/></div>
-            <div class="icon"/>
-            <div class="icon"/>
+
         </v-col>
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="3_Page2">
                 <div>
-            <p>Erzengel Raphael und seine Gildejägerin Elena hier nun schon zum 12ten mal in einer tollen Story vereint. Gemeinsame Kämpfe – alles verändert sich. 
+            <p>Erzengel Raphael und seine Gildejägerin Elena hier nun schon zum 12ten mal in einer tollen Story vereint. Gemeinsame Kämpfe – alles verändert sich.
             </p>
                 </div>
             </Highlightable>
         </v-col>
     </v-row>
-    <div class="grafik3">
-    <v-img src="../assets/grafik_1.svg" />
+        <div class="grafik3">
+        <v-img src="../assets/grafik_strichsenk.svg" />
+    </div>
+    <div class="dreieck3">
+        <v-img src="../assets/grafik_dreieck.svg" />
     </div>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/>
-            <div class="icon"/>
+
             <div class="icon"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
-            <div class="icon"/>
-            <div class="icon"/>
+
         </v-col>
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="4_Page2">
                 <div>
-            <p>Ich mag alles an diesem Buch – die spürbare Romantik, die Liebe zwischen den beiden und die Fantasy der Autorin begeistert mich immer wieder. 
+            <p>Ich mag alles an diesem Buch – die spürbare Romantik, die Liebe zwischen den beiden und die Fantasy der Autorin begeistert mich immer wieder.
             </p>
                 </div>
             </Highlightable>
         </v-col>
     </v-row>
-    <div class="grafik4">
-    <v-img src="../assets/grafik_1.svg" />
+        <div class="grafik4">
+        <v-img src="../assets/grafik_strichsenk.svg" />
+    </div>
+    <div class="dreieck4">
+        <v-img src="../assets/grafik_dreieck.svg" />
     </div>
     <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/>
-            <div class="icon"/>
+
             <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
-            <div class="icon"/>
-            <div class="icon"/>
+
         </v-col>
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="5_Page2">
                 <div>
-            <p>Habe nicht alle Bände der Reihe gelesen und somit hatte ich am Beginn kurz Schwierigkeiten wieder in die Story rein zu finden was aber nach ein paar Seiten schon der Fall war. 
+            <p>Habe nicht alle Bände der Reihe gelesen und somit hatte ich am Beginn kurz Schwierigkeiten wieder in die Story rein zu finden was aber nach ein paar Seiten schon der Fall war.
             </p>
                 </div>
             </Highlightable>
         </v-col>
     </v-row>
-    <div class="grafik5">
-    <v-img src="../assets/grafik_1.svg" />
+        <div class="grafik5">
+        <v-img src="../assets/grafik_strichsenk.svg" />
+    </div>
+    <div class="dreieck5">
+        <v-img src="../assets/grafik_dreieck.svg" />
     </div>
         <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/>
-            <div class="icon"/>
+
             <div class="icon"> <v-img src="../assets/rez_sprachstil.png" height="100" width="100"/></div>
-            <div class="icon"/>
-            <div class="icon"/>
+
         </v-col>
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="6_Page2">
                 <div>
-            <p>Nalini Singh hat mich auch hier wieder überzeugt und ihr Schreibstil ist flüssig. Ab und an war es mir aber doch etwas zu anstrengend zu lesen und ich hab das Buch kurz unterbrochen. Es ist nichts für mal zwischendurch. Man muss dabei bleiben um in die Story wirklich abtauchen zu können.  
+            <p>Nalini Singh hat mich auch hier wieder überzeugt und ihr Schreibstil ist flüssig. Ab und an war es mir aber doch etwas zu anstrengend zu lesen und ich hab das Buch kurz unterbrochen. Es ist nichts für mal zwischendurch. Man muss dabei bleiben um in die Story wirklich abtauchen zu können.
             </p>
                 </div>
             </Highlightable>
         </v-col>
     </v-row>
-    <div class="grafik6">
-    <v-img src="../assets/grafik_1.svg" />
+        <div class="grafik6">
+        <v-img src="../assets/grafik_strichsenk.svg" />
+    </div>
+    <div class="dreieck6">
+        <v-img src="../assets/grafik_dreieck.svg" />
     </div>
         <v-row class="rezension" align="center">
         <v-col cols="4">
-            <div class="icon"/>
-            <div class="icon"/>
+
             <div class="icon"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
-            <div class="icon"/>
-            <div class="icon"/>
+
         </v-col>
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="7_Page2">
                 <div>
-            <p>Fazit: Spannender 12. Teil der Reihe. 
+            <p>Fazit: Spannender 12. Teil der Reihe.
             </p>
                 </div>
             </Highlightable>
@@ -171,11 +176,12 @@
         </v-row>
         </div>
 
-    <v-btn to="/buchrezension3">Weiter</v-btn>
+    <Stopwatch to="/buchrezension3" needTimer="true" />
 </v-container>
 </template>
 <script>
-import Highlightable from '@/components/Highlightable';
+import Highlightable from '@/components/Highlightable'
+import Stopwatch from '@/components/Stopwatch'
 export default {
     data() {
         return {
@@ -184,7 +190,8 @@ export default {
         }
     },
     components: {
-        Highlightable
+        Highlightable,
+        Stopwatch
     },
     methods: {
         onHighlight(text) {
@@ -284,253 +291,549 @@ export default {
 }
 }
 @media screen and (min-width: 576px) {
+.icon {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(247, 247, 247);
+    justify-content: center;
+    margin: 5px;
+    float: left;
+    top: 0px;
+    left: 40px;
+}
 .grafik1 {
     position: relative;
     z-index: 5;
-    width: 330px;
+    width: 116px;
     height: 0px;
-    left: -110px;
-    top: -120px;
+    left: 41px;
+    top: -39px;
 }
 .grafik2 {
     position: relative;
     z-index: 5;
-    width: 330px;
+    width: 116px;
     height: 0px;
-    left: -110px;
-    top: -120px;
+    left: 41px;
+    top: -28px;
 }
 .grafik3 {
     position: relative;
     z-index: 5;
-    width: 330px;
+    width: 126px;
     height: 0px;
-    left: -110px;
-    top: -120px;
+    left: 36px;
+    top: -40px;
 }
 .grafik4 {
     position: relative;
     z-index: 5;
-    width: 330px;
+    width: 126px;
     height: 0px;
-    left: -110px;
-    top: -120px;
+    left: 36px;
+    top: -40px;
 }
 .grafik5 {
     position: relative;
     z-index: 5;
-    width: 330px;
+    width: 192px;
     height: 0px;
-    left: -110px;
-    top: -120px;
+    left: 1px;
+    top: -41px;
 }
 .grafik6 {
     position: relative;
     z-index: 5;
-    width: 330px;
+    width: 171px;
     height: 0px;
-    left: -110px;
-    top: -120px;
+    left: 13px;
+    top: -76px;
+}
+.dreieck1 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 58px;
+    top: 21px;
+}
+.dreieck2 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 58px;
+    top: 28px;
+}
+.dreieck3 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 58px;
+    top: 28px;
+}
+.dreieck4 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 58px;
+    top: 28px;
+}
+.dreieck5 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 58px;
+    top: 64px;
+}
+.dreieck6 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 58px;
+    top: 16px;
 }
 }
 @media screen and (min-width: 768px) {
+.icon {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(247, 247, 247);
+    justify-content: center;
+    margin: 5px;
+    float: left;
+    top: 0px;
+    left: 70px;
+}
 .grafik1 {
     position: relative;
     z-index: 5;
-    width: 330px;
+    width: 90px;
     height: 0px;
-    left: -110px;
-    top: -105px;
+    left: 86px;
+    top: -27px;
 }
 .grafik2 {
     position: relative;
     z-index: 5;
-    width: 330px;
+    width: 90px;
     height: 0px;
-    left: -110px;
-    top: -105px;
+    left: 85px;
+    top: -27px;
 }
 .grafik3 {
     position: relative;
     z-index: 5;
-    width: 330px;
+    width: 90px;
     height: 0px;
-    left: -110px;
-    top: -105px;
+    left: 85px;
+    top: -27px;
 }
 .grafik4 {
     position: relative;
     z-index: 5;
-    width: 330px;
+    width: 90px;
     height: 0px;
-    left: -110px;
-    top: -90px;
+    left: 85px;
+    top: -27px;
 }
 .grafik5 {
-     position: relative;
+    position: relative;
     z-index: 5;
-    width: 330px;
+    width: 126px;
     height: 0px;
-    left: -110px;
-    top: -90px;
+    left: 66px;
+    top: -28px;
 }
 .grafik6 {
-     position: relative;
+    position: relative;
     z-index: 5;
-    width: 330px;
+    width: 126px;
     height: 0px;
-    left: -110px;
-    top: -90px;
+    left: 66px;
+    top: -52px;
+}
+.dreieck1 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 88px;
+    top: 21px;
+}
+.dreieck2 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 88px;
+    top: 16px;
+}
+.dreieck3 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 88px;
+    top: 16px;
+}
+.dreieck4 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 88px;
+    top: 16px;
+}
+.dreieck5 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 88px;
+    top: 40px;
+}
+.dreieck6 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 88px;
+    top: 16px;
 }
 }
 @media screen and (min-width: 992px) {
+.icon {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(247, 247, 247);
+    justify-content: center;
+    margin: 5px;
+    float: left;
+    top: 0px;
+    left: 100px;
+}
 .grafik1 {
     position: relative;
     z-index: 5;
-    width: 330px;
+    width: 90px;
     height: 0px;
-    left: -110px;
-    top: -120px;
+    left: 116px;
+    top: -27px;
 }
 .grafik2 {
     position: relative;
     z-index: 5;
-    width: 330px;
+    width: 90px;
     height: 0px;
-    left: -110px;
-    top: -120px;
+    left: 115px;
+    top: -27px;
 }
 .grafik3 {
     position: relative;
     z-index: 5;
-    width: 330px;
+    width: 90px;
     height: 0px;
-    left: -110px;
-    top: -120px;
+    left: 115px;
+    top: -27px;
 }
 .grafik4 {
     position: relative;
     z-index: 5;
-    width: 330px;
+    width: 90px;
     height: 0px;
-    left: -110px;
-    top: -120px;
+    left: 115px;
+    top: -27px;
 }
 .grafik5 {
     position: relative;
     z-index: 5;
-    width: 330px;
+    width: 103px;
     height: 0px;
-    left: -110px;
-    top: -120px;
+    left: 108px;
+    top: -27px;
 }
 .grafik6 {
-   position: relative;
+    position: relative;
     z-index: 5;
-    width: 330px;
+    width: 103px;
     height: 0px;
-    left: -110px;
-    top: -120px;
+    left: 109px;
+    top: -40px;
+}
+.dreieck1 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 118px;
+    top: 21px;
+}
+.dreieck2 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 118px;
+    top: 16px;
+}
+.dreieck3 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 118px;
+    top: 16px;
+}
+.dreieck4 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 118px;
+    top: 16px;
+}
+.dreieck5 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 118px;
+    top: 29px;
+}
+.dreieck6 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 118px;
+    top: 16px;
 }
 }
 @media screen and (min-width: 1200px) {
+.icon {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(247, 247, 247);
+    justify-content: center;
+    margin: 5px;
+    float: left;
+    top: 0px;
+    left: 100px;
+}
 .grafik1 {
     position: relative;
     z-index: 5;
-    width: 330px;
+    width: 90px;
     height: 0px;
-    left: -110px;
-    top: -120px;
+    left: 116px;
+    top: -27px;
 }
 .grafik2 {
     position: relative;
     z-index: 5;
-    width: 330px;
+    width: 90px;
     height: 0px;
-    left: -110px;
-    top: -120px;
+    left: 115px;
+    top: -27px;
 }
 .grafik3 {
     position: relative;
     z-index: 5;
-    width: 330px;
+    width: 90px;
     height: 0px;
-    left: -110px;
-    top: -120px;
+    left: 115px;
+    top: -27px;
 }
 .grafik4 {
     position: relative;
     z-index: 5;
-    width: 330px;
+    width: 90px;
     height: 0px;
-    left: -110px;
-    top: -85px;
+    left: 115px;
+    top: -27px;
 }
 .grafik5 {
-   position: relative;
+    position: relative;
     z-index: 5;
-    width: 330px;
+    width: 103px;
     height: 0px;
-    left: -110px;
-    top: -85px
+    left: 108px;
+    top: -27px;
 }
 .grafik6 {
-        position: relative;
+    position: relative;
     z-index: 5;
-    width: 330px;
+    width: 103px;
     height: 0px;
-    left: -110px;
-    top: -85px;
+    left: 109px;
+    top: -40px;
+}
+.dreieck1 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 118px;
+    top: 21px;
+}
+.dreieck2 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 118px;
+    top: 16px;
+}
+.dreieck3 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 118px;
+    top: 16px;
+}
+.dreieck4 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 118px;
+    top: 16px;
+}
+.dreieck5 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 118px;
+    top: 29px;
+}
+.dreieck6 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 118px;
+    top: 16px;
 }
 }
 @media screen and (min-width: 1300px) {
+.icon {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(247, 247, 247);
+    justify-content: center;
+    margin: 5px;
+    float: left;
+    top: 0px;
+    left: 150px;
+}
 .grafik1 {
     position: relative;
     z-index: 5;
-    width: 250px;
+    width: 90px;
     height: 0px;
-    left: 155px;
-    top: -120px;
+    left: 166px;
+    top: -27px;
 }
 .grafik2 {
     position: relative;
     z-index: 5;
-    width: 250px;
+    width: 90px;
     height: 0px;
-    left: 155px;
-    top: -120px;
+    left: 165px;
+    top: -27px;
 }
 .grafik3 {
     position: relative;
     z-index: 5;
-    width: 250px;
+    width: 90px;
     height: 0px;
-    left: 155px;
-    top: -120px;
+    left: 165px;
+    top: -27px;
 }
 .grafik4 {
     position: relative;
     z-index: 5;
-    width: 250px;
+    width: 90px;
     height: 0px;
-    left: 155px;
-    top: -125px;
+    left: 165px;
+    top: -27px;
 }
 .grafik5 {
     position: relative;
     z-index: 5;
-    width: 250px;
+    width: 90px;
     height: 0px;
-    left: 155px;
-    top: -125px;
+    left: 165px;
+    top: -27px;
 }
 .grafik6 {
     position: relative;
     z-index: 5;
-    width: 250px;
+    width: 90px;
     height: 0px;
-    left: 155px;
-    top: -125px;
+    left: 165px;
+    top: -27px;
+}
+.dreieck1 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 168px;
+    top: 21px;
+}
+.dreieck2 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 168px;
+    top: 16px;
+}
+.dreieck3 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 168px;
+    top: 16px;
+}
+.dreieck4 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 168px;
+    top: 16px;
+}
+.dreieck5 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 168px;
+    top: 16px;
+}
+.dreieck6 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 168px;
+    top: 16px;
 }
 }
 </style>
+
