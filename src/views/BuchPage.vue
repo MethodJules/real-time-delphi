@@ -33,10 +33,10 @@
             <SelectQuestion :question="question.question" :answers="question.answeroptions" />
         </div>
 
-         <div v-if="Math.random() < 0.3">
+         <div v-if="Math.random() < 0.33">
         <v-btn to="/buchrezensionPageUnderline">Weiter</v-btn>
           </div>
-        <div v-else-if="Math.random() > 0.7">
+        <div v-else-if="Math.random() > 0.67">
         <v-btn to="/buchrezension">Weiter</v-btn>
         </div>
         <div v-else> <v-btn to="/buchrezensionPageRaw">Weiter</v-btn>
