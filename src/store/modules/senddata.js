@@ -2,10 +2,10 @@ import axios from 'axios'
 
 
 const actions = {
-    sendData({rootState }) {
+    sendData({ rootState }) {
         console.log('ACTION')
         //collect all data
-        //console.log(rootState.answers)
+        console.log(rootState)
         //Iteriert ueber alle gegebenen Antworten
         //TODO: Antworten an das Backen schicken und eine ID mitsenden, damit ein Bneutzer identifiziert werden kann
         let i = 1;
@@ -39,16 +39,16 @@ const actions = {
         });
 
         //TODO: Highlights an das Backend schicken
-        var j = 1;
+        let j = 1;
 
         rootState.highlight.highlights.forEach(element => {
           //TODO: Ueber das highlight array iterieren
           //console.log(element)
           let highlight_text = element.text
           let highlight_id = element.id
-          let code = rootState.code.code
+          let code2 = rootState.code.code
 
-          var data = `{"data": {"type": "node--highlight", "attributes": {"title": "Highlight ${j}", "field_highlight_text": "${highlight_text}", "field_rezensions_id":"${highlight_id}", "field_answer_user_code":"${code}"}}}`
+          var data = `{"data": {"type": "node--highlight", "attributes": {"title": "Highlight ${j}", "field_highlight_text": "${highlight_text}", "field_rezensions_id":"${highlight_id}", "field_answer_user_code":"${code2}"}}}`
           j++
 
           var config = {

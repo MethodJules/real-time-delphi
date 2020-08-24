@@ -51,12 +51,17 @@
             <v-container>
               <v-col>
                 <div class="code">
-                  <p>Generierter Code: {{identification_code}}</p>
+                  <p>Bitte bestätigen Sie einmal den generierten Code</p>
+                  <p>{{identification_code}}</p>
+                  <v-btn @click="commitGeneratedCode">Bestätigen</v-btn>
                 </div>
               </v-col>
             </v-container>
             </v-form>
-            <Stopwatch to="/hintergrund" needTimer="true" />
+            <!-- <Stopwatch to="/hintergrund" needTimer="true" /> -->
+            <div v-if="codeCommit">
+              <Stopwatch to="/buchrezensionPage5Underline" needTimer="true" @click="saveCode"/>
+            </div>
         </div>
     </v-container>
 </template>
@@ -78,11 +83,16 @@ export default {
             buchstabe_familienname: '',
             zahl: '',
             zweiter_buchstabe: '',
+            codeCommit: false,
 
         }
     },
     methods: {
 
+      commitGeneratedCode() {
+        this.codeCommit = true;
+        this.saveCode();
+      },
       saveCode() {
         this.$store.dispatch('code/saveCode', this.identification_code )
       }
