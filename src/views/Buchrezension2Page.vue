@@ -166,12 +166,12 @@
         <v-row  align="center">
             <v-col cols="12">
             <b>Legende:</b>
-            <div class="icon2"> <v-img src="../assets/rez_hintergrund.png" height="100" width="100"/></div>
-            <div class="icon2"> <v-img src="../assets/rez_erscheinung.png" height="100" width="100"/></div>
-            <div class="icon2"> <v-img src="../assets/rez_details.png" height="100" width="100"/></div>
             <div class="icon2"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
+            <div class="icon2"> <v-img src="../assets/rez_hintergrund.png" height="100" width="100"/></div>
             <div class="icon2"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
             <div class="icon2"> <v-img src="../assets/rez_sprachstil.png" height="100" width="100"/></div>
+            <div class="icon2"> <v-img src="../assets/rez_details.png" height="100" width="100"/></div>
+            <div class="icon2"> <v-img src="../assets/rez_erscheinung.png" height="100" width="100"/></div>
         </v-col>
         </v-row>
         </div>

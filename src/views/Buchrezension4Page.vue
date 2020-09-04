@@ -106,9 +106,9 @@
         <v-row  align="center">
             <v-col cols="12">
             <b>Legende:</b>
-            <div class="icon2"> <v-img src="../assets/rez_details.png" height="100" width="100"/></div>
             <div class="icon2"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
             <div class="icon2"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
+            <div class="icon2"> <v-img src="../assets/rez_details.png" height="100" width="100"/></div>
             <div class="icon2"> <v-img src="../assets/rez_sprachstil.png" height="100" width="100"/></div>
         </v-col>
         </v-row>
@@ -626,6 +626,86 @@ export default {
     height: 0px;
     left: 168px;
     top: 28px;
+}
+}
+@media screen and (min-width: 1920px) {
+.icon {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(247, 247, 247);
+    justify-content: center;
+    margin: 5px;
+    float: left;
+    top: 0px;
+    left: 150px;
+}
+.icon3 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(247, 247, 247);
+    justify-content: center;
+    margin: 15px;
+    float: left;
+    top: 0px;
+    left: 75px;
+}
+.grafik1 {
+    position: relative;
+    z-index: 5;
+    width: 139px;
+    height: 0px;
+    left: 143px;
+    top: -39px;
+}
+.grafik2 {
+    position: relative;
+    z-index: 5;
+    width: 80px;
+    height: 0px;
+    left: 170px;
+    top: -11px;
+}
+.grafik3 {
+    position: relative;
+    z-index: 5;
+    width: 101px;
+    height: 0px;
+    left: 159px;
+    top: -27px;
+}
+.grafik4 {
+    position: relative;
+    z-index: 5;
+    width: 113px;
+    height: 0px;
+    left: 153px;
+    top: -30px;
+}
+.dreieck1 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 168px;
+    top: 16px;
+}
+.dreieck2 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 168px;
+    top: 17px;
+}
+.dreieck3 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 168px;
+    top: 17px;
 }
 }
 </style>

@@ -73,7 +73,7 @@ export default {
                     ]
                 },
                 {
-                    question: 'Bitte geben Sie ihr Alter an',
+                    question: 'Bitte geben Sie ihr Alter an.',
                     question_type: 'number',
                     label: 'Alter (in Jahren)',
 
@@ -101,19 +101,7 @@ export default {
                     ]
                 },
                 {
-                    question: 'Welchen Abschluss streben Sie an?',
-                    question_type: 'select',
-                    answeroptions: [
-                        {
-                            label: 'Bachelor'
-                        }, 
-                        {
-                            label: 'Master'
-                        }
-                    ]
-                },
-                {
-                    question: 'Welchen Studiengang studieren Sie?',
+                    question: 'Welchen Beruf üben Sie momentan aus?',
                     question_type: 'text',
                     label: 'Studiengang'
                 },
@@ -172,7 +160,7 @@ export default {
                     ]
                 },
                 {
-                    question: 'Sind Sie vertraut mit dem Internet?',
+                    question: 'Sind Sie vertraut mit dem Surfen im Internet?',
                     question_type: 'select',
                     answeroptions: [
                         {
@@ -201,9 +189,72 @@ export default {
                         },
                         {
                             label: 'Mindestens 1x in 5 Monaten'
+                        },
+                        {
+                            label: 'Mindestens 1x in 6 Monaten'
+                        },
+                        {
+                            label: 'Höchstens alle halbe Jahre, eher seltener'
+                        },
+                        {
+                            label: 'nie'
                         }
                     ]
-                }
+                },
+            {    
+                question: 'Lesen Sie Kundenproduktrezensionen auf Online-Verkaufsplattformen, wenn sie planen, ein Produkt zu kaufen? (Kundenproduktrezensionen sind von Kunden verfasste Texte, in denen Kunden ihre Meinung über Produkte teilen.)',
+                question_type: 'select',
+                answeroptions: [
+                    {
+                        label: 'Ja'
+                    },
+                    {
+                        label: 'Nein'
+                    }
+                ]
+            },
+            {
+                question: 'Wie oft kaufen Sie typischerweise Bücher auf Online-Verkaufsplattformen?',
+                question_type: 'select',
+                answeroptions: [
+                    {
+                        label: 'Mindestens 1x im Monat'
+                    },
+                    {
+                        label: 'Mindestens 1x in 2 Monaten'
+                    },
+                    {
+                        label: 'Mindestens 1x in 3 Monaten'
+                    },
+                    {
+                        label: 'Mindestens 1x in 4 Monaten'
+                    },
+                    {
+                        label: 'Mindestens 1x in 5 Monaten'
+                    },
+                    {
+                        label: 'Mindestens 1x in 6 Monaten'
+                    },
+                    {
+                        label: 'Höchstens alle halbe Jahre, eher seltener'
+                    },
+                    {
+                        label: 'nie'
+                    }
+                ]
+            },
+            {
+                question: 'Lesen Sie Buchrezensionen von anderen Kunden auf Online-Verkaufsplattformen, wenn Sie planen, ein Buch zu kaufen? (Buchrezensionen sind von Kunden verfasste Texte, in denen Kunden ihre Meinung über Bücher teilen.)',
+                question_type: 'select',
+                answeroptions: [
+                    {
+                        label: 'Ja'
+                    },
+                    {
+                        label: 'Nein'
+                    }
+                ]
+            } 
             ]
         },
         {
@@ -553,6 +604,18 @@ export default {
                     }
                 ]
             },
+            {
+                question: 'War Ihnen die hier gezeigte Darstellungsart von Rezensionen zuvor bekannt?',
+                question_type: 'select',
+                answeroptions: [
+                    {
+                        label: 'Ja'
+                    },
+                    {
+                        label: 'Nein'
+                    }
+                ]
+            }
         ]
     },
 
