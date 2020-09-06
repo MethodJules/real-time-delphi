@@ -131,6 +131,11 @@ Vue.use(VueRouter)
     path: '/endpage',
     name: 'Endpage',
     component: () => import(/*webpackChunkName: "endpage" */ '../views/EndPage.vue')
+  },
+  {
+    path: '/simulation',
+    name: 'Simulation',
+    component: () => import(/*webpackChunkName: "endpage" */ '../views/Simulation.vue')
   }
 ]
 
