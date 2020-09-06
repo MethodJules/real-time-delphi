@@ -105,6 +105,7 @@ export default {
                     var test1 = test.slice(0, high.start);
                     var test2 = test.slice(high.start, high.end)
                     var test3 = test.slice(high.end);
+
                     test2 = test2.replace(test2, '<span class="highlightText">' + test2 + '</span>')
                     test = test1 + test2 + test3;
                 }

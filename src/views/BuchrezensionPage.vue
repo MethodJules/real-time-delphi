@@ -107,7 +107,7 @@
         </v-col>
     </v-row>
            <div class="grafik4">
-    <v-img src="../assets/grafik_strichsenk.svg" />
+    <v-img src="../assets/grafik_strichsenk_1.svg" />
         </div>
         <div class="dreieck4">
             <v-img src="../assets/grafik_dreieck.svg" />
@@ -372,34 +372,34 @@ export default {
 .grafik1 {
     position: relative;
     z-index: 5;
-    width: 293px;
+    width: 368px;
     height: 0px;
-    left: -58px;
-    top: -114px;
+    left: -98px;
+    top: -140px;
 }
 .grafik2 {
     position: relative;
     z-index: 5;
-    width: 367px;
+    width: 476px;
     height: 0px;
-    left: -98px;
+    left: -155px;
     top: -59px;
 }
 .grafik3 {
     position: relative;
     z-index: 5;
-    width: 393px;
+    width: 533px;
     height: 0px;
-    left: -111px;
-    top: -155px;
+    left: -186px;
+    top: -217px;
 }
 .grafik4 {
     position: relative;
     z-index: 5;
-    width: 699px;
+    width: 902px;
     height: 0px;
-    left: -273px;
-    top: -74px;
+    left: -380px;
+    top: -86px;
 }
 .dreieck1 {
     position: relative;
@@ -415,7 +415,7 @@ export default {
     width: 89px;
     height: 0px;
     left: 52px;
-    top: 140px;
+    top: 200px;
 }
 .dreieck3 {
     position: relative;
@@ -423,7 +423,7 @@ export default {
     width: 89px;
     height: 0px;
     left: 52px;
-    top: 56px;
+    top: 69px;
 }
 .dreieck4 {
     position: relative;
@@ -431,7 +431,7 @@ export default {
     width: 89px;
     height: 0px;
     left: 52px;
-    top: 308px;
+    top: 404px;
 }
 }
 @media screen and (min-width: 768px) {
@@ -449,34 +449,34 @@ export default {
 .grafik1 {
     position: relative;
     z-index: 5;
-    width: 212px;
+    width: 222px;
     height: 0px;
-    left: 22px;
+    left: 17px;
     top: -89px;
 }
 .grafik2 {
     position: relative;
     z-index: 5;
-    width: 261px;
+    width: 343px;
     height: 0px;
-    left: -5px;
-    top: -34px;
+    left: -48px;
+    top: -46px;
 }
 .grafik3 {
     position: relative;
     z-index: 5;
-    width: 279px;
+    width: 366px;
     height: 0px;
-    left: -14px;
-    top: -118px;
+    left: -60px;
+    top: -155px;
 }
 .grafik4 {
     position: relative;
     z-index: 5;
-    width: 450px;
+    width: 658px;
     height: 0px;
-    left: -117px;
-    top: -48px;
+    left: -213px;
+    top: -61px;
 }
 .dreieck1 {
     position: relative;
@@ -484,7 +484,7 @@ export default {
     width: 89px;
     height: 0px;
     left: 90px;
-    top: 21px;
+    top: 32px;
 }
 .dreieck2 {
     position: relative;
@@ -492,7 +492,7 @@ export default {
     width: 89px;
     height: 0px;
     left: 89px;
-    top: 105px;
+    top: 141px;
 }
 .dreieck3 {
     position: relative;
@@ -500,7 +500,7 @@ export default {
     width: 89px;
     height: 0px;
     left: 89px;
-    top: 32px;
+    top: 44px;
 }
 .dreieck4 {
     position: relative;
@@ -508,7 +508,7 @@ export default {
     width: 89px;
     height: 0px;
     left: 90px;
-    top: 212px;
+    top: 296px;
 }
 }
 @media screen and (min-width: 992px) {
@@ -526,52 +526,36 @@ export default {
 .grafik1 {
     position: relative;
     z-index: 5;
-    width: 186px;
+    width: 204px;
     height: 0px;
-    left: 57px;
-    top: -78px;
+    left: 46px;
+    top: -89px;
 }
 .grafik2 {
     position: relative;
     z-index: 5;
-    width: 300px;
+    width: 261px;
     height: 0px;
-    left: 41px;
-    top: -29px;
+    left: 16px;
+    top: -34px;
 }
 .grafik3 {
     position: relative;
     z-index: 5;
-    width: 221px;
+    width: 277px;
     height: 0px;
-    left: 37px;
-    top: -94px;
+    left: 7px;
+    top: -118px;
 }
 .grafik4 {
     position: relative;
     z-index: 5;
-    width: 500;
+    width: 524px;
     height: 0px;
-    left: -53px;
-    top: -36px;
+    left: -123px;
+    top: -48px;
 }
 .dreieck1 {
-    position: relative;
-    z-index: 5;
-    width: 89px;
-    height: 0px;
-    left: 111px;
-    top: 16px;
-}
-.dreieck2 {
-    position: relative;
-    z-index: 5;
-    width: 89px;
-    height: 0px;
-    left: 109px;
-    top: 81px;
-}
-.dreieck3 {
     position: relative;
     z-index: 5;
     width: 89px;
@@ -579,13 +563,29 @@ export default {
     left: 109px;
     top: 20px;
 }
+.dreieck2 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 109px;
+    top: 105px;
+}
+.dreieck3 {
+    position: relative;
+    z-index: 5;
+    width: 89px;
+    height: 0px;
+    left: 109px;
+    top: 32px;
+}
 .dreieck4 {
     position: relative;
     z-index: 5;
     width: 89px;
     height: 0px;
     left: 109px;
-    top: 177px;
+    top: 237px;
 }
 }
 @media screen and (min-width: 1200px) {
@@ -638,10 +638,10 @@ export default {
 .grafik1 {
     position: relative;
     z-index: 5;
-    width: 186px;
+    width: 204px;
     height: 0px;
-    left: 57px;
-    top: -78px;
+    left: 48px;
+    top: -89px;
 }
 .grafik2 {
         position: relative;
@@ -649,23 +649,23 @@ export default {
     width: 270px;
     height: 0px;
     left: 11px;
-    top: -29px;
+    top: -34px;
 }
 .grafik3 {
     position: relative;
     z-index: 5;
-    width: 221px;
+    width: 276px;
     height: 0px;
-    left: 37px;
-    top: -94px;
+    left: 7px;
+    top: -118px;
 }
 .grafik4 {
     position: relative;
     z-index: 5;
-    width: 389px;
+    width: 521px;
     height: 0px;
-    left: -53px;
-    top: -36px;
+    left: -122px;
+    top: -47px;
 }
 .dreieck1 {
     position: relative;
@@ -673,7 +673,7 @@ export default {
     width: 89px;
     height: 0px;
     left: 111px;
-    top: 16px;
+    top: 21px;
 }
 .dreieck2 {
     position: relative;
@@ -681,7 +681,7 @@ export default {
     width: 89px;
     height: 0px;
     left: 109px;
-    top: 81px;
+    top: 105px;
 }
 .dreieck3 {
     position: relative;
@@ -689,7 +689,7 @@ export default {
     width: 89px;
     height: 0px;
     left: 109px;
-    top: 20px;
+    top: 32px;
 }
 .dreieck4 {
     position: relative;
@@ -697,7 +697,7 @@ export default {
     width: 89px;
     height: 0px;
     left: 109px;
-    top: 177px;
+    top: 236px;
 }
 }
 @media screen and (min-width: 1300px) {
@@ -726,31 +726,31 @@ export default {
     width: 145px;
     height: 0px;
     left: 136px;
-    top: -54px;
+    top: -64px;
 }
 .grafik2 {
     position: relative;
     z-index: 5;
-    width: 171px;
+    width: 202px;
     height: 0px;
-    left: 123px;
+    left: 106px;
     top: -28px;
 }
 .grafik3 {
     position: relative;
     z-index: 5;
-    width: 167px;
+    width: 213px;
     height: 0px;
-    left: 126px;
-    top: -68px;
+    left: 102px;
+    top: -93px;
 }
 .grafik4 {
     position: relative;
     z-index: 5;
-    width: 288px;
+    width: 413px;
     height: 0px;
-    left: 63px;
-    top: -29px;
+    left: -3px;
+    top: -34px;
 }
 .dreieck1 {
     position: relative;
@@ -766,7 +766,7 @@ export default {
     width: 89px;
     height: 0px;
     left: 169px;
-    top: 57px;
+    top: 81px;
 }
 .dreieck3 {
     position: relative;
@@ -774,7 +774,7 @@ export default {
     width: 89px;
     height: 0px;
     left: 170px;
-    top: 16px;
+    top: 21px;
 }
 .dreieck4 {
     position: relative;
@@ -782,7 +782,7 @@ export default {
     width: 89px;
     height: 0px;
     left: 171px;
-    top: 128px;
+    top: 189px;
 }
 }
 @media screen and (min-width: 1920px) {
@@ -811,7 +811,7 @@ export default {
     width: 132px;
     height: 0px;
     left: 143px;
-    top: -41px;
+    top: -53px;
 }
 .grafik2 {
     position: relative;
@@ -819,7 +819,7 @@ export default {
     width: 170px;
     height: 0px;
     left: 122px;
-    top: -28px;
+    top: -30px;
 }
 .grafik3 {
     position: relative;
@@ -832,9 +832,9 @@ export default {
 .grafik4 {
     position: relative;
     z-index: 5;
-    width: 285px;
+    width: 290px;
     height: 0px;
-    left: 65px;
+    left: 62px;
     top: -29px;
 }
 .dreieck1 {
@@ -850,16 +850,16 @@ export default {
     z-index: 5;
     width: 89px;
     height: 0px;
-    left: 169px;
-    top: 47px;
+    left: 167px;
+    top: 46px;
 }
 .dreieck3 {
     position: relative;
     z-index: 5;
     width: 89px;
     height: 0px;
-    left: 167px;
-    top: 20px;
+    left: 168px;
+    top: 17px;
 }
 .dreieck4 {
     position: relative;
@@ -867,7 +867,7 @@ export default {
     width: 89px;
     height: 0px;
     left: 171px;
-    top: 119px;
+    top: 129px;
 }
 }
 </style>
