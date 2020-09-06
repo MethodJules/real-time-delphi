@@ -24,13 +24,12 @@
             <div class="icon"> <v-img src="../assets/rez_hintergrund.png" height="100" width="100"/></div>
 
         </v-col>
-        <v-col cols="8">
+        <v-col cols="7">
             <Highlightable @share="onShare" @highlight="onHighlight" id="1_Page2">
                 <div>
-            <p>Showdown
+            <p>Showdown</p>
                <br />
-               Die Autorin ist mir bekannt und ich habe schon viele ihrer Bücher gelesen. Darunter die Reihen „Rock Kiss“ und „Age of Trinity“.
-            </p>
+             {{text}}
                 </div>
             </Highlightable>
         </v-col>
@@ -47,11 +46,10 @@
             <div class="icon"> <v-img src="../assets/rez_erscheinung.png" height="100" width="100"/></div>
 
         </v-col>
-        <v-col cols="8">
+        <v-col cols="7">
             <Highlightable @share="onShare" @highlight="onHighlight" id="2_Page2">
                 <div>
-            <p>Das Cover gefällt mir hier sehr gut. Also legte ich los zu lesen….
-            </p>
+            {{text1}}
                 </div>
             </Highlightable>
         </v-col>
@@ -68,11 +66,10 @@
             <div class="icon"> <v-img src="../assets/rez_details.png" height="100" width="100"/></div>
 
         </v-col>
-        <v-col cols="8">
+        <v-col cols="7">
             <Highlightable @share="onShare" @highlight="onHighlight" id="3_Page2">
                 <div>
-            <p>Erzengel Raphael und seine Gildejägerin Elena hier nun schon zum 12ten mal in einer tollen Story vereint. Gemeinsame Kämpfe – alles verändert sich.
-            </p>
+            {{text2}}
                 </div>
             </Highlightable>
         </v-col>
@@ -89,11 +86,10 @@
             <div class="icon"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
 
         </v-col>
-        <v-col cols="8">
+        <v-col cols="7">
             <Highlightable @share="onShare" @highlight="onHighlight" id="4_Page2">
                 <div>
-            <p>Ich mag alles an diesem Buch – die spürbare Romantik, die Liebe zwischen den beiden und die Fantasy der Autorin begeistert mich immer wieder.
-            </p>
+            {{text3}}
                 </div>
             </Highlightable>
         </v-col>
@@ -110,11 +106,10 @@
             <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
 
         </v-col>
-        <v-col cols="8">
+        <v-col cols="7">
             <Highlightable @share="onShare" @highlight="onHighlight" id="5_Page2">
                 <div>
-            <p>Habe nicht alle Bände der Reihe gelesen und somit hatte ich am Beginn kurz Schwierigkeiten wieder in die Story rein zu finden was aber nach ein paar Seiten schon der Fall war.
-            </p>
+            {{text4}}
                 </div>
             </Highlightable>
         </v-col>
@@ -131,11 +126,10 @@
             <div class="icon"> <v-img src="../assets/rez_sprachstil.png" height="100" width="100"/></div>
 
         </v-col>
-        <v-col cols="8">
+        <v-col cols="7">
             <Highlightable @share="onShare" @highlight="onHighlight" id="6_Page2">
                 <div>
-            <p>Nalini Singh hat mich auch hier wieder überzeugt und ihr Schreibstil ist flüssig. Ab und an war es mir aber doch etwas zu anstrengend zu lesen und ich hab das Buch kurz unterbrochen. Es ist nichts für mal zwischendurch. Man muss dabei bleiben um in die Story wirklich abtauchen zu können.
-            </p>
+            {{text5}}
                 </div>
             </Highlightable>
         </v-col>
@@ -152,17 +146,16 @@
             <div class="icon"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
 
         </v-col>
-        <v-col cols="8">
+        <v-col cols="7">
             <Highlightable @share="onShare" @highlight="onHighlight" id="7_Page2">
-                <div>
-            <p>Fazit: Spannender 12. Teil der Reihe.
-            </p>
+             <div>
+            {{text6}}
                 </div>
             </Highlightable>
         </v-col>
     </v-row>
         <br>
-        <div class="legend" align="right">
+      <div class="legend" align="right">
         <v-row  align="center">
             <v-col cols="12">
             <b>Legende:</b>
@@ -185,7 +178,21 @@ import Stopwatch from '@/components/Stopwatch'
 export default {
     data() {
         return {
-            text: 'Der Tiger jagt das Zebra.',
+          text: 'Die Autorin ist mir bekannt und ich habe schon viele ihrer Bücher gelesen. \
+            Darunter die Reihen „Rock Kiss“ und „Age of Trinity“.',
+            text1:'Das Cover gefällt mir hier sehr gut. Also legte ich los zu lesen…. ',
+            text2:'Erzengel Raphael und seine Gildejägerin Elena hier nun schon zum 12ten mal \
+            in einer tollen Story vereint. Gemeinsame Kämpfe – alles verändert sich. ',
+            text3:'Ich mag alles an diesem Buch – die spürbare Romantik, \
+            die Liebe zwischen den beiden und die Fantasy der Autorin begeistert mich immer wieder. ',
+            text4:'Habe nicht alle Bände der Reihe gelesen und somit hatte ich am \
+            Beginn kurz Schwierigkeiten wieder in die Story rein zu finden \
+            was aber nach ein paar Seiten schon der Fall war. ',
+            text5:'Nalini Singh hat mich auch hier wieder überzeugt und ihr Schreibstil ist flüssig. \
+            Ab und an war es mir aber doch etwas zu anstrengend zu lesen und ich hab das Buch \
+            kurz unterbrochen. Es ist nichts für mal zwischendurch. \
+            Man muss dabei bleiben um in die Story wirklich abtauchen zu können.  ',
+            text6:'Fazit: Spannender 12. Teil der Reihe. ',
             highlight: []
         }
     },

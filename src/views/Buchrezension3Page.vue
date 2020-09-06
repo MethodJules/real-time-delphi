@@ -26,14 +26,15 @@
             <div class="icon3"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
             
         </v-col>
-        <v-col cols="8">
+        <v-col cols="7">
             <Highlightable @share="onShare" @highlight="onHighlight" id="1_Page3">
-                <div>
-            <p>Wow Wow Wow
-               <br />
-               ... wie sehr ich diese Reihe liebe und auch bei Band 12 wurde ich nicht enttäuscht.
-            </p>
+                
+             <div>
+                    {{text}}
+                    <br/>
+                    {{text0_1}}
                 </div>
+                
             </Highlightable>
         </v-col>
     </v-row>
@@ -57,13 +58,14 @@
             <div class="icon3"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
            
         </v-col>
-        <v-col cols="8">
+        <v-col cols="7">
             <Highlightable @share="onShare" @highlight="onHighlight" id="2_Page3">
                 <div>
-            <p>Nalini Singh schreibt so kompakt und fesselnd, dass ich das Buch kaum aus der Hand legen wollte. Ihr Schreibstil ist zwar flüssig, aber insgesamt ist die Story durchweg keine leichte Kost. Man kann diese Serie und vor allem diesen Band nicht einfach mal zwischendurch lesen, denn dafür ist der komplette rote Faden von Teil 1 an zu kompakt und zu vielfältig.
-               Die Autorin schreibt auch so detailgetreu, dass ich mir alle Geschehnisse richtig gut vorstellen konnte.
-            </p>
+                    {{text1}}
+                    <br/>
+                    {{text1_2}}
                 </div>
+                
             </Highlightable>
         </v-col>
     </v-row>
@@ -82,11 +84,11 @@
             <div class="icon"> <v-img src="../assets/rez_verstand.png" height="100" width="100"/></div>
            
         </v-col>
-        <v-col cols="8">
+        <v-col cols="7">
             <Highlightable @share="onShare" @highlight="onHighlight"  id="3_Page3">
-                <div>
-            <p>Zuerst denkt man, dass alles viel zu viel ist, zu viel was am Anfang auf einen einprasselt, aber zum Ende hin fügt sich wie immer alles zusammen und es wird verständlich.
-            </p>
+              
+               <div>
+                    {{text2}}
                 </div>
             </Highlightable>
         </v-col>
@@ -108,13 +110,14 @@
             <div class="icon3"> <v-img src="../assets/rez_verstand.png" height="100" width="100"/></div>
             
         </v-col>
-        <v-col cols="8">
+        <v-col cols="7">
             <Highlightable @share="onShare" @highlight="onHighlight" id="4_Page3">
                 <div>
-            <p>Ein paar kleine Episoden waren mir zu lang, aber Seiten weiter blättern war überhaupt nicht möglich, da einem sonst u.a. die spritzigen wortgewandten Dialoge entgangen wären.
-               Leider ist nicht immer gleich zu erkennen aus welcher Sicht wir alle Geschehnisse erleben. Der Wechsel von Elena zu Raphael geschieht teilweise im nächsten Satz, nicht mal Kapitel- oder Absatzweise.
-               Aber das ist meiner Meinung nach wirklich nur ein i-Tüpfelchen, was die Story leichter lesen lassen würde.
-            </p>
+            {{text3}}
+            <br/>
+            {{text3_1}}
+            <br/>
+            {{text3_2}}
                 </div>
             </Highlightable>
         </v-col>
@@ -134,11 +137,10 @@
             <div class="icon"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
             
         </v-col>
-        <v-col cols="8">
+        <v-col cols="7">
             <Highlightable @share="onShare" @highlight="onHighlight" id="5_Page3">
                 <div>
-            <p>Dieser Teil war wieder einmal atemberaubend, spannend, wortgewandt, vielfältig, fesselnd, überraschend und auch gruselig.
-            </p>
+            {{text4}}
                 </div>
             </Highlightable>
         </v-col>
@@ -155,12 +157,12 @@
             <div class="icon"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
 
         </v-col>
-        <v-col cols="8">
+        <v-col cols="7">
             <Highlightable @share="onShare" @highlight="onHighlight" id="6_Page3">
                 <div>
-            <p>Ich denke wirklich, dass diejenigen, die bisher die Reihe schon begonnen haben, unbedingt weiterlesen müssen und diejenigen, an denen diese Serie vorbei gegangen ist, sollten unbedingt mit dem Lesen von „Engelskuss“ anfangen.
-               Für mich eine Reihe, die von den so unterschiedlichen, aber auch absolut stimmigen Charakteren lebt.
-            </p>
+            {{text5}}
+            <br/>
+            {{text5_1}}
                 </div>
             </Highlightable>
         </v-col>
@@ -171,6 +173,7 @@
         <v-row  align="center">
             <v-col cols="12">
             <b>Legende:</b>
+            
             <div class="icon2"> <v-img src="../assets/rez_emotion.png" height="100" width="100"/></div>
             <div class="icon2"> <v-img src="../assets/rez_bezug.png" height="100" width="100"/></div>
             <div class="icon2"> <v-img src="../assets/rez_verstand.png" height="100" width="100"/></div>
@@ -188,7 +191,31 @@ import Stopwatch from '@/components/Stopwatch'
 export default {
     data() {
         return {
-            text: 'Der Tiger jagt das Zebra.',
+            text: 'Wow Wow Wow ... ',
+            text0_1:'wie sehr ich diese Reihe liebe und auch bei Band 12 wurde ich nicht enttäuscht.',
+            text1: 'Nalini Singh schreibt so kompakt und fesselnd, dass ich das Buch kaum aus der Hand legen wollte. \
+            Ihr Schreibstil ist zwar flüssig, aber insgesamt ist die Story durchweg keine leichte Kost. \
+            Man kann diese Serie und vor allem diesen Band nicht einfach mal zwischendurch lesen, \
+            denn dafür ist der komplette rote Faden von Teil 1 an zu kompakt und zu vielfältig.',
+            text1_2:'Die Autorin schreibt auch so detailgetreu, dass ich mir alle Geschehnisse richtig gut vorstellen konnte.',
+            text2: 'Zuerst denkt man, dass alles viel zu viel ist, zu viel was am Anfang auf einen einprasselt, \
+            aber zum Ende hin fügt sich wie immer alles zusammen und es wird verständlich.',
+            text3: 'Ein paar kleine Episoden waren mir zu lang, \
+            aber Seiten weiter blättern war überhaupt nicht möglich, \
+            da einem sonst u.a. die spritzigen wortgewandten Dialoge entgangen wären.',
+            text3_1:'Leider ist nicht immer gleich zu erkennen aus welcher Sicht wir alle Geschehnisse erleben. \
+            Der Wechsel von Elena zu Raphael geschieht teilweise im nächsten Satz, \
+            nicht mal Kapitel- oder Absatzweise.',
+            text3_2:'Aber das ist meiner Meinung nach wirklich nur ein i-Tüpfelchen, \
+            was die Story leichter lesen lassen würde. ',
+            text4: 'Dieser Teil war wieder einmal atemberaubend, spannend, \
+            wortgewandt, vielfältig, fesselnd, überraschend und auch gruselig. ',
+            text5: 'Ich denke wirklich, dass diejenigen, \
+            die bisher die Reihe schon begonnen haben, unbedingt weiterlesen müssen und diejenigen, \
+            an denen diese Serie vorbei gegangen ist, sollten unbedingt mit dem Lesen von „Engelskuss“ \
+            anfangen.',
+            text5_1:'Für mich eine Reihe, die von den so unterschiedlichen, \
+            aber auch absolut stimmigen Charakteren lebt.',
             highlight: []
         }
     },
