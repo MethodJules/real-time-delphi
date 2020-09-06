@@ -15,9 +15,21 @@
     <br>
 
   </div>
-        <h1>Produktbeschreibung: Buch "Gilde der Jäger - Engelskrieg"</h1>
-        <p>Unten sehen Sie die Produktinformationen des Händlers. Bitte lesen Sie diese aufmerksam durch.</p>
-        <br /><b>Gilde der Jäger – Engelskrieg</b>
+        <h1>Buchbeschreibung zu „Gilde der Jäger - Engelskrieg"</h1>
+        <p>Unten sehen Sie die Buchinformation eines Händlers. Bitte lesen Sie diese aufmerksam durch.</p>
+
+        <v-row class="rezension" align="center">
+        <v-col cols="3">
+            
+           
+            <v-img :src="require(`@/assets/${node.img_src}`)"  width="248" height="360"/>
+           
+            
+        </v-col>
+        <v-col cols="8">
+            
+                <div>
+            <p><br /><b>Gilde der Jäger – Engelskrieg</b>
         <br />Von Nalini Singh
         <br>
         <br /><b>Inhaltsangabe zu "Gilde der Jäger - Engelskrieg"</b>
@@ -28,19 +40,26 @@
         <br />"Nalini Singhs GILDE-DER-JÄGER-Serie überwältigt mit Schönheit und Sinnlichkeit!" HEROES AND HEARTBREAKERS
         Band 12 der GILDE DER JÄGER von SPIEGEL-Bestseller-Autorin Nalini Singh
 
+            </p>
+                </div>
+        </v-col>
+    </v-row>
+        
         <div v-for="question in node.questions" :key="question.question">
-          <v-img :src="require(`@/assets/${node.img_src}`)"  width="250" height="360"/>
+          
             <SelectQuestion :question="question.question" :answers="question.answeroptions" />
         </div>
 
-        <div v-if="Math.random() < 0.3">
-          <Stopwatch to="/buchrezensionPageUnderline" needTimer="true" />
+        
+        <div v-if="Math.random() < 0.33">
+         <Stopwatch to="/buchrezensionPageUnderline" needTimer="true" />
+          </div>
+        <div v-else-if="Math.random() > 0.67">
+       <Stopwatch to="/buchrezension" needTimer="true"/>
         </div>
-        <div v-else-if="Math.random() > 0.7">
-          <Stopwatch to="/buchrezension" needTimer="true"/>
+        <div v-else> <Stopwatch to="/buchrezensionPageRaw" needTimer="true"/>
         </div>
-          <div v-else> <Stopwatch to="/buchrezensionPageRaw" needTimer="true" />
-        </div>
+        
 
     </v-container>
 </template>

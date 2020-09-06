@@ -15,8 +15,14 @@
     <br>
 
   </div>
-<h1>Vielen Dank für Ihre Teilnahme an der Veranstaltung</h1>
+<h1>Vielen Dank für Ihre Teilnahme am Online-Experiment</h1>
 <br />
-<h3>Sollten Sie frühzeitig fertig geworden sein, warten Sie bitte bis zum Ende der Veranstaltung</h3>
+<h3></h3>
+
 </v-container>
+
 </template>
+<script>
+  export default {
+  }
+</script>

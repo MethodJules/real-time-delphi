@@ -15,7 +15,7 @@
     <br>
 
   </div>
-    <h1>Buchrezension 4 zum Buch "Gilde der Jäger - Engelskrieg"</h1>
+    <h1>Buchrezension 4 zum Buch „Gilde der Jäger - Engelskrieg"</h1>
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
     <mobile-menu v-if="$mq === 'mobile'">
     <v-row >
@@ -169,28 +169,34 @@
             </Highlightable>
         </v-col>
     </v-row>
-        <v-row>
-    Legende:<div><span class="red">Emotionale Konsequenzen </span></div>
-    <div><span class="green">Bezug zu anderen Büchern</span></div>
-    <div><span class="yellow">Inhaltliche Details</span></div>
-   <div><span class="blue">Sprachstil und Erzählperspektive</span></div>
-    </v-row>
+    <div align="right">
+        <v-row  align="center">
+            <v-col cols="7">
+            <b>Legende:</b>
+            <div class="icon2"> <v-img src="../assets/Emotional.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Bezug.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Sprachziel.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Verständlichkeit.png" height="35"/></div>
+            </v-col>
+        </v-row>  
+        </div>
+    
     <Stopwatch to="/buchrezensionPage5Underline" needTimer="true" />
     </laptop-menu>
 
 
 <Desktop-menu v-if="$mq === 'desktop'">
     <v-row >
-        <v-col>
+        <v-col cols ="10">
             <Highlightable @share="onShare" @highlight="onHighlight" id="1_under4">
                 <div class="gelb">
-                    {{text11_Desktop}}
+                    {{text11_Laptop}}
                     <div class="topGrün">
-                    {{text12_Desktop}}<br>{{text13_Desktop}}<br> 
+                    {{text12_Laptop}}<br>{{text13_Laptop}}<br> 
                 </div></div>
             </Highlightable>
             <div class="topGrün">
-            {{blank_Desktop}}
+            {{blank_Laptop}}
             </div>
         </v-col>
     </v-row>
@@ -222,12 +228,18 @@
             </Highlightable>
         </v-col>
     </v-row>
-        <v-row>
-    Legende:<div><span class="red">Emotionale Konsequenzen </span></div>
-    <div><span class="green">Bezug zu anderen Büchern</span></div>
-    <div><span class="yellow">Inhaltliche Details</span></div>
-   <div><span class="blue">Sprachstil und Erzählperspektive</span></div>
-    </v-row>
+     <div align="right">
+        <v-row  align="center">
+            <v-col cols="8">
+            <b>Legende:</b>
+            <div class="icon2"> <v-img src="../assets/Emotional.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Bezug.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Sprachziel.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Inhalt.png" height="35"/></div>
+            </v-col>
+        </v-row>  
+        </div>
+     
     <Stopwatch to="/buchrezensionPage5Underline" needTimer="true" />
     </desktop-menu>
 
@@ -285,11 +297,12 @@ export default {
             text11_Laptop:'Dieses Buch endet mehr oder weniger mit einem großen Knall vielen Veränderungen und Verlusten, aber auch,',
             text12_Laptop:'Neuanfängen. Die Reihe könnte mit diesem Buch, durchaus auch enden, was ich nicht hoffe, aber es können auch durchaus',
             text13_Laptop:' auch wieder neue Stränge gesponnen werden. Es bleibt also interessant abzuwarten, ob und wenn wie es weitergeht.         ',                                                                                      
-            
+            text14_Laptop:'',
+
             text11_Desktop:'Dieses Buch endet mehr oder weniger mit einem großen Knall vielen Veränderungen und Verlusten, aber auch Neuanfängen. Die Reihe könnte mit diesem Buch,',
             text12_Desktop:'durchaus auch enden, was ich nicht hoffe, aber es können auch durchaus auch wieder neue Stränge gesponnen werden. Es bleibt also interessant abzuwarten,',
             text13_Desktop:'ob und wenn wie es weitergeht.                                                                                                                                                                                                                                    ',                                                                                      
-
+            
 
             text: 'Dieses Buch endet mehr oder weniger mit einem großen Knall, vielen Veränderungen und Verlusten, aber auch Neuanfängen. Die Reihe könnte mit diesem Buch, durchaus auch enden, was ich nicht hoffe, aber es können auch durchaus auch wieder neue Stränge gesponnen werden. \
             Es bleibt also interessant abzuwarten, ob und wenn wie es weitergeht.',
@@ -299,8 +312,7 @@ export default {
             Das kam gefühlt in jedem Kapitel mind. 3x vor und es nervte auf Dauer. \
             Man liest das Buch ja und dann weiß man Bescheid, \
             da muss ich ja nicht bei jedem Satz erinnert werden, so vergesslich bin ich dann doch nicht. ',
-            text3: 'Und was mich noch störte, ist diese schnelle Genesung und Stärke bei Elena, gerade noch kann sie nicht alleine stehen und dann sieht sie sich im größten Kampf aller Zeiten mittendrin als starke Kämpferin, der Sprung war mir zu groß, das hätte man bestimmt anders lösen können. \
-            Sonst aber wie gewohnt ein gutes Buch, eine tolle Geschichte, die halt diesmal einige Schwächen hatte.',
+            text3: 'Und was mich noch störte, ist diese schnelle Genesung und Stärke bei Elena, gerade noch kann sie nicht alleine stehen und dann sieht sie sich im größten Kampf aller Zeiten mittendrin als starke Kämpferin, der Sprung war mir zu groß, das hätte man bestimmt anders lösen können. Sonst aber wie gewohnt ein gutes Buch, eine tolle Geschichte, die halt diesmal einige Schwächen hatte.',
            blank_Handy: '                                     ',
            blank_Tablet: '                                                                                                        ',
             blank_Laptop: '                                                                                                                                                                                                                         ',
@@ -340,6 +352,13 @@ export default {
 }
 </script>
 <style scoped>
+.icon2 {
+    width: 125px;
+    height: 100px;
+    justify-content: center;
+    margin: 5px;
+    float: right;
+}
 .topGrün{
   text-decoration: overline;
   text-decoration-color: green;   

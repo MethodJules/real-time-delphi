@@ -15,7 +15,7 @@
     <br>
 
   </div>
-    <h1>Buchrezension 3 zum Buch "Gilde der Jäger - Engelskrieg"</h1>
+    <h1>Buchrezension 3 zum Buch „Gilde der Jäger - Engelskrieg"</h1>
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
    
    
@@ -284,7 +284,7 @@
         </v-col>
     </v-row>
         <v-row>
-        <v-col cols="10">
+        <v-col cols="7">
             <Highlightable @share="onShare" @highlight="onHighlight" id="6_under3">
                 <div class="grün">
                     {{text5}}
@@ -292,6 +292,17 @@
             </Highlightable>
         </v-col>
     </v-row>
+    <div class="legend" align="right">
+        <v-row  align="center">
+            <v-col cols="7">
+            <b>Legende:</b>
+            <div class="icon2"> <v-img src="../assets/Emotional.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Bezug.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Sprachziel.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Inhalt.png" height="35"/></div>
+            </v-col>
+        </v-row>  
+        </div>
       <v-row>
           
        Legende:<div><span class="red">Emotionale Konsequenzen </span></div>
@@ -305,22 +316,33 @@
    <!-- User nutzt Desktop -->
    <desktop-menu v-if="$mq === 'desktop'">
     <v-row>
-        <v-col>
+        <v-col cols = "9">
+            <Highlightable @share="onShare" @highlight="onHighlight" id="1_under3">
+                    <div class="rot">
+                   {{text0LaptopAbs}}<br>
+                    <div class="topGrün">
+                    {{text01_LaptopAbs}}<br>
+                    </div>
+                </div> 
+            </Highlightable>
+            <div class="topGrün">
+            {{blank_Laptop0}}
+            </div>
+
+
             <Highlightable @share="onShare" @highlight="onHighlight" id="1_under3">
                 <div class="rot">
-                    {{text0_Laptop}}
-                    <div class="topGrün">
                     {{text01_Laptop}}
-                    </div>
+                   
                 </div>  
             </Highlightable>
             <div class="topGrün">
-            {{blank_Laptop}}
+            {{blank_Laptop0}}
             </div>
         </v-col>
     </v-row>
     <v-row>
-        <v-col>
+        <v-col cols = "9">
             <Highlightable @share="onShare" @highlight="onHighlight" id="2_under3">
                 <div class="blau">
                     {{text11_Laptop}}
@@ -332,10 +354,13 @@
             <div class="topGrün">
             {{blank_Laptop2}}
             </div>
+
+            
+            
         </v-col>
     </v-row>
     <v-row>
-        <v-col>
+        <v-col cols = "8">
             <Highlightable @share="onShare" @highlight="onHighlight"  id="3_under3">
                 <div class="rosa">
                     {{text2}}
@@ -344,7 +369,7 @@
         </v-col>
     </v-row>
     <v-row >
-        <v-col >
+        <v-col cols = "10">
             <Highlightable @share="onShare" @highlight="onHighlight" id="4_under3">
            
                 <div class="blau">
@@ -360,7 +385,7 @@
         </v-col>
     </v-row>
     <v-row >
-        <v-col >
+        <v-col cols = "9">
             <Highlightable @share="onShare" @highlight="onHighlight" id="5_under3">
                 <div class="rot">
                     {{text4}}
@@ -369,21 +394,28 @@
         </v-col>
     </v-row>
         <v-row>
-        <v-col cols="10">
+        <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight" id="6_under3">
                 <div class="grün">
                     {{text5}}
+                    <br/>
+                    {{text5_1}}
                 </div>
             </Highlightable>
         </v-col>
     </v-row>
-      <v-row>
-          
-       Legende:<div><span class="red">Emotionale Konsequenzen </span></div>
-    <div><span class="green">Bezug zu anderen Büchern</span></div>
-    <div><span class="blue">Sprachstil und Erzählperspektive</span></div>
-    <div><span class="pink lighten-1">Verständlichkeit</span></div>
-    </v-row>
+
+    <div align="right">
+        <v-row  align="center">
+            <v-col cols="9">
+            <b>Legende:</b>
+            <div class="icon2"> <v-img src="../assets/Emotional.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Bezug.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Sprachziel.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Verständlichkeit.png" height="35"/></div>
+            </v-col>
+        </v-row>  
+        </div>
     <Stopwatch to="/buchrezensionPage4Underline" needTimer="true" />
     </desktop-menu>
 
@@ -417,9 +449,11 @@ export default {
             
             text0_Tablet:'Wow Wow Wow ... wie sehr ich diese Reihe liebe',
             text_Tablet:'und auch bei Band 12  wurde ich nicht enttäuscht.',
+            text0LaptopAbs:'Wow Wow Wow ... ', 
+            text01_LaptopAbs:'wie sehr ich diese Reihe liebe und auch bei Band 12  wurde ich nicht enttäuscht.',
             
-            text0_Laptop: 'Wow Wow Wow ...                                                                                                              ',
-            text01_Laptop:'wie sehr ich diese Reihe liebe und auch bei Band 12  wurde ich nicht enttäuscht.',
+            text0_Laptop: '                                                                                                              ',
+            text01_Laptop:' Wow Wow Wow ...   wie sehr ich diese Reihe liebe und auch bei Band 12  wurde ich nicht enttäuscht.',
             
             
             text11_Handy:'Nalini Singh      ',
@@ -547,10 +581,12 @@ export default {
             
             
             text4: 'Dieser Teil war wieder einmal atemberaubend, spannend, wortgewandt, vielfältig, fesselnd, überraschend und auch gruselig. ',
-            text5: 'Ich denke wirklich, dass diejenigen, die bisher die Reihe schon begonnen haben, unbedingt weiterlesen müssen und diejenigen, an denen diese Serie vorbei gegangen ist, sollten unbedingt mit dem Lesen von „Engelskuss“ anfangen. Für mich eine Reihe, die von den so unterschiedlichen, aber auch absolut stimmigen Charakteren lebt.',
+            text5: 'Ich denke wirklich, dass diejenigen, die bisher die Reihe schon begonnen haben, unbedingt weiterlesen müssen und diejenigen, an denen diese Serie vorbei gegangen ist, sollten unbedingt mit dem Lesen von „Engelskuss“ anfangen.',
+            text5_1:'Für mich eine Reihe, die von den so unterschiedlichen, aber auch absolut stimmigen Charakteren lebt.',
             blank_Handy: '                            ',
             blank_Tablet:'                                                                                         ',
             blank_Laptop:'                                                                                                                                              ',
+            blank_Laptop0:'                                                                                                                                                                                    ',
             blank_Laptop2:'                                                                                                                                                                                                                  ',
             
             highlight: []
@@ -588,10 +624,24 @@ export default {
 }
 </script>
 <style scoped>
+.icon2 {
+    width: 125px;
+    height: 100px;
+    justify-content: center;
+    margin: 5px;
+    float: right;
+}
 .topGrün{
   text-decoration: overline;
   text-decoration-color: green;   
   white-space: break-spaces; 
+}
+.topGrünrot{
+  text-decoration: overline;
+  text-decoration-color: green;   
+  white-space: break-spaces; 
+  text-decoration: underline;
+   text-decoration-color: red;
 }
 .rot {
     text-decoration: underline;

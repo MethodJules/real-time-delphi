@@ -15,44 +15,41 @@
     <br>
 
   </div>
-    <h1>Buchrezension 4 zum Buch "Gilde der Jäger - Engelskrieg"</h1>
+    <h1>Buchrezension 4 zum Buch „Gilde der Jäger - Engelskrieg"</h1>
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
-    <v-row class="rezension" align="center">
-        <v-col cols="8">
+   
+        <v-col cols="7">
             <Highlightable @share="onShare" @highlight="onHighlight" id="1_raw4">
                 <div>
             {{text}}
                 </div>
             </Highlightable>
         </v-col>
-    </v-row>
-    <v-row class="rezension" align="center">
-        <v-col cols="8">
+    
+        <v-col cols="7">
             <Highlightable @share="onShare" @highlight="onHighlight" id="2_raw4">
                 <div>
             {{text1}}
                 </div>
             </Highlightable>
         </v-col>
-    </v-row>
-    <v-row class="rezension" align="center">
-        <v-col cols="8">
+    
+        <v-col cols="7">
             <Highlightable @share="onShare" @highlight="onHighlight" id="3_raw4">
                 <div>
             {{text2}}
                 </div>
             </Highlightable>
         </v-col>
-    </v-row>
-    <v-row class="rezension" align="center">
-        <v-col cols="8">
+    
+        <v-col cols="7">
             <Highlightable @share="onShare" @highlight="onHighlight" id="4_raw4">
                 <div>
             {{text3}}
                 </div>
             </Highlightable>
         </v-col>
-    </v-row>
+    
     <Stopwatch to="/buchrezensionPage5Raw" needTimer="true" />
 </v-container>
 </template>

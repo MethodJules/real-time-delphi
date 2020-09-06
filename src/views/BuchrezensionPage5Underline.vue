@@ -15,9 +15,9 @@
     <br>
 
   </div>
-    <h1>Buchrezension 5 zum Buch "Gilde der Jäger - Engelskrieg"</h1>
+    <h1>Buchrezension 5 zum Buch „Gilde der Jäger - Engelskrieg"</h1>
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
-    <Mobile-menu v-if="$mq === 'mobile'">
+    <mobile-menu v-if="$mq === 'mobile'">
     <v-row>
         <v-col>
             <Highlightable @share="onShare" @highlight="onHighlight" id="1_under5">
@@ -87,7 +87,7 @@
 
     <laptop-menu v-if="$mq === 'laptop'">
     <v-row>
-        <v-col>
+        <v-col cols = "8">
             <Highlightable @share="onShare" @highlight="onHighlight" id="1_under5">
                 <div class="rot">
                     {{text}}
@@ -96,7 +96,7 @@
         </v-col>
     </v-row>
     <v-row>
-        <v-col>
+        <v-col cols = "8">
             <Highlightable @share="onShare" @highlight="onHighlight" id="2_under5">
                 <div class="blau">
                     {{text11_Laptop}}
@@ -121,7 +121,7 @@
 
     <desktop-menu v-if="$mq === 'desktop'">
     <v-row>
-        <v-col>
+        <v-col cols = "8">
             <Highlightable @share="onShare" @highlight="onHighlight" id="1_under5">
                 <div class="rot">
                     {{text}}
@@ -133,22 +133,27 @@
         <v-col>
             <Highlightable @share="onShare" @highlight="onHighlight" id="2_under5">
                 <div class="blau">
-                    {{text11_Desktop}}
+                    {{text11_Laptop}}
                     <div class="topGrün">
-                        {{text12_Desktop}}<br>{{text13_Desktop}}<br>
+                        {{text12_Laptop}}<br>{{text13_Laptop}}<br>
                 </div></div>
             </Highlightable>
             <div class="topGrün">
-            {{blank_Desktop}}
+            {{blank_Laptop}}
             </div>
         </v-col>
     </v-row>
-        <v-row>
-    Legende:<div><span class="red">Emotionale Konsequenzen </span></div>
-    <div><span class="green">Bezug zu anderen Büchern</span></div>
-    <div><span class="blue">Sprachstil und Erzählperspektive</span></div>
-    </v-row>
-
+     <div align="right">
+        <v-row  align="center">
+            <v-col cols="8">
+            <b>Legende:</b>
+            <div class="icon2"> <v-img src="../assets/Emotional.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Bezug.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Sprachziel.png" height="35" width="125"/></div>
+            
+            </v-col>
+        </v-row>  
+        </div>
     <Stopwatch to="/fragenpage" needTimer="true" />
     </desktop-menu>
 </v-container>
@@ -190,9 +195,9 @@ export default {
             text16_Tablet:'abzuwarten, ob und wenn wie es weitergeht.',
 
 
-            text11_Laptop:'Daran erkennt man, wie gut der Schreibstil ist, wenn man in die Geschichte eintauchen kann, als ob man persönlich ',
-            text12_Laptop:'dabei ist. Ich hoffe auf eine schnellere Veröffentlichung des nächsten Buches, wie bisher durchaus auch wieder neue',
-            text13_Laptop:'Stränge gesponnen werden. Es bleibt also interessant abzuwarten, ob und wenn wie es weitergeht.                                 ',
+            text11_Laptop:'Daran erkennt man, wie gut der Schreibstil ist, wenn man in die Geschichte eintauchen kann, als ob man  ',
+            text12_Laptop:'persönlich dabei ist. Ich hoffe auf eine schnellere Veröffentlichung des nächsten Buches, wie bisher durchaus  ',
+            text13_Laptop:'auch wieder neue Stränge gesponnen werden. Es bleibt also interessant abzuwarten, ob und wenn wie es weitergeht.',
           
              text11_Desktop:'Daran erkennt man, wie gut der Schreibstil ist, wenn man in die Geschichte eintauchen kann, als ob man persönlich dabei ist.',
             text12_Desktop:'Ich hoffe auf eine schnellere Veröffentlichung des nächsten Buches, wie bisher durchaus auch wieder neue Stränge gesponnen werden.  .',
@@ -243,6 +248,13 @@ export default {
 }
 </script>
 <style scoped>
+.icon2 {
+    width: 125px;
+    height: 100px;
+    justify-content: center;
+    margin: 5px;
+    float: right;
+}
 .topGrün{
   text-decoration: overline;
   text-decoration-color: green;   
