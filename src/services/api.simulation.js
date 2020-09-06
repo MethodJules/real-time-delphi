@@ -4,27 +4,24 @@ export default {
             nid: 1,
             question_type: 'begruessung',
             title: 'Begleitbogen – Hinweise zur Durchführung',
-            html: '<p>Der vorliegende Befragungbogen bezieht sich auf den Besuch von Online-Verkaufsplattformen, auf denen man sich über \
+            html: '<p>Das vorliegende Online-Experiment bezieht sich auf den Besuch von Online-Verkaufsplattformen, auf denen man sich über \
             Produkte (wie z. B. Bücher) informieren und diese käuflich erwerben kann. \
-            Uns interessiert Ihre ehrliche, persönliche Meinung. Die Befragung findet anonym statt, \
+            Uns interessiert Ihre ehrliche, persönliche Meinung. Das Online-Experiment findet anonym statt, \
             es werden keine persönlichen Angaben verarbeitet. \
-            Einzelne Fragebögen können nicht auf einzelne Personen zurückgeführt werden.</p> \
-            <p> Der Befragungbogen umfasst drei Bereiche</p> \
+            Einzelne Online-Experimente können nicht auf einzelne Personen zurückgeführt werden.</p> \
+            <p> Das Online-Experiment umfasst drei Bereiche:</p> \
                         <ol> \
-                            <li>Pre-Fragebogen</li> \
+                            <li>Pre-Befragung</li> \
                             <li>Simulation Einkauf auf einer Online-Verkaufsplattform</li> \
-                            <li>Post-Fragebogen</li> \
+                            <li>Post-Befragung</li> \
                         </ol> \
             <p>Bitte lesen Sie sich alle Anweisungen und Aussagen aufmerksam durch. Nehmen Sie sich ausreichend Zeit, \
              um die Aufgaben überlegt zu bearbeiten. Wenn Ihnen einmal die Entscheidung schwerfällt, überlegen Sie welche Lösung noch am ehesten zutrifft. '
         },
         {
             nid: 2,
-            title: 'Datenschutz',
-            html: '<p>Uns interessiert Ihre ehrliche, persönliche Meinung. Die Befragung findet anonym statt, es werden keine persönlichen Angaben verarbeitet. \
-            Einzelne Fragebögen können nicht auf einzelne Personen zurückgeführt werden. \
-            Um die Zusammengehörigkeit der Seiten des Befragungsbogens identifizieren zu können \
-            und zugleich Ihre Anonymität zu schützen, ist zunächst eine ID herzuleiten. Die ID setzt sich aus den nachfolgenden Antworten zusammen."</p>',
+            title: '',
+            html: '<p>Bitte füllen Sie die folgenden Angaben entsprechend aus. Dies hilft uns zur Erstellung Ihrer eigenen ID."</p>',
             questions: [
                 {
                     question: 'Bitte geben Sie Ihren Geburtsmonat ein.',
@@ -103,7 +100,7 @@ export default {
                 {
                     question: 'Welchen Beruf üben Sie momentan aus?',
                     question_type: 'text',
-                    label: 'Studiengang'
+                    label: 'Beruf'
                 },
                 {
                     question: 'Wie lange nutzen Sie schon internetfähige Endgeräte (wie Tablet, Smartphone, Laptop, Desktop-PC)?',
