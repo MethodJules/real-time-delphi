@@ -136,7 +136,13 @@ export default {
         var code = this.geburtsmonat + this.buchstabe_familienname + this.zahl + this.zweiter_buchstabe
         return code
       }
-    }
+    },
+     watch: {
+         selection: function (val) {
+             alert(val);
+                alert("Test");
+            }
+        }
     
 }
 </script>

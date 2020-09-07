@@ -2,16 +2,13 @@
     <v-container>
         <div :id="questionId">
         <v-col>
-            <v-form ref="form"
-             v-model="valid1"
-             >
+
             <p>{{question}}</p>
             <v-radio-group v-model="selection">
                 <v-radio v-for="answer in answers" :key="answer.label" :label="answer.label"
                 required
                 :rules="[v => !!v || 'You must agree to continue!']"/>
             </v-radio-group>
-            </v-form>
         </v-col>
         </div>
     </v-container>
@@ -50,8 +47,8 @@ export default {
     },
     watch: {
         selection: function(val){
-
             this.writeData(val);
+            this.$emit("update", val);
         }
     }
 }

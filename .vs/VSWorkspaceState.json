@@ -4,8 +4,9 @@
     "\\public",
     "\\src",
     "\\src\\components",
+    "\\src\\store",
     "\\src\\views"
   ],
-  "SelectedNode": "\\src\\views\\About.vue",
+  "SelectedNode": "\\src\\views\\DatenschutzPage.vue",
   "PreviewInSolutionExplorer": false
 }
