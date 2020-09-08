@@ -15,9 +15,21 @@
     <br>
 
   </div>
-        <h1>Produktbeschreibung: Buch "Gilde der Jäger - Engelskrieg"</h1>
-        <p>Unten sehen Sie die Produktinformationen des Händlers. Bitte lesen Sie diese aufmerksam durch.</p>
-        <br /><b>Gilde der Jäger – Engelskrieg</b>
+        <h1>Buchbeschreibung zu „Gilde der Jäger - Engelskrieg"</h1>
+        <p>Unten sehen Sie die Buchinformation eines Händlers. Bitte lesen Sie diese aufmerksam durch.</p>
+
+        <v-row class="rezension" align="center">
+        <v-col cols="3">
+            
+           
+            <v-img :src="require(`@/assets/${node.img_src}`)"  width="248" height="360"/>
+           
+            
+        </v-col>
+        <v-col cols="8">
+            
+                <div>
+            <p><br /><b>Gilde der Jäger – Engelskrieg</b>
         <br />Von Nalini Singh
         <br>
         <br /><b>Inhaltsangabe zu "Gilde der Jäger - Engelskrieg"</b>

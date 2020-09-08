@@ -16,7 +16,7 @@
     <br>
 
   </div>
-    <h1>Buchrezension 5 zum Buch "Gilde der Jäger - Engelskrieg"</h1>
+    <h1>Buchrezension 5 zum Buch „Gilde der Jäger - Engelskrieg"</h1>
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
     <v-row class="rezension" align="center">
         <v-col cols="4">

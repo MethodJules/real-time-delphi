@@ -15,10 +15,10 @@
     <br>
 
   </div>
-    <h1>Buchrezension 2 zum Buch "Gilde der Jäger - Engelskrieg"</h1>
+    <h1>Buchrezension 2 zum Buch „Gilde der Jäger - Engelskrieg"</h1>
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
-    <v-row class="rezension" align="center">
-        <v-col cols="8">
+    <v-row>
+        <v-col cols="7">
             <Highlightable @share="onShare" @highlight="onHighlight" id="1_under2">
                 <div>
             <p>Showdown
@@ -31,8 +31,8 @@
             </Highlightable>
         </v-col>
     </v-row>
-    <v-row class="rezension" align="center">
-        <v-col cols="8">
+    <v-row>
+        <v-col cols="7">
             <Highlightable @share="onShare" @highlight="onHighlight" id="2_under2">
                 <div class="grau">
             {{text1}}
@@ -40,7 +40,7 @@
             </Highlightable>
         </v-col>
     </v-row>
-    <v-row class="rezension" align="center">
+    <v-row>
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight" id="3_under2">
                 <div class="gelb">
@@ -49,7 +49,7 @@
             </Highlightable>
         </v-col>
     </v-row>
-    <v-row class="rezension" align="center">
+    <v-row>
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight" id="4_under2">
                 <div class="rot">
@@ -58,7 +58,7 @@
             </Highlightable>
         </v-col>
     </v-row>
-    <v-row class="rezension" align="center">
+    <v-row>
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight" id="5_under2">
                 <div class="grün">
@@ -67,7 +67,7 @@
             </Highlightable>
         </v-col>
     </v-row>
-        <v-row class="rezension" align="center">
+        <v-row>
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight" id="6_under2">
                 <div class="blau">
@@ -76,8 +76,8 @@
             </Highlightable>
         </v-col>
     </v-row>
-        <v-row class="rezension" align="center">
-        <v-col cols="8">
+        <v-row >
+        <v-col cols="7">
             <Highlightable @share="onShare" @highlight="onHighlight" id="7_under2">
                 <div class="rot">
                     {{text6}}
@@ -85,14 +85,30 @@
             </Highlightable>
         </v-col>
     </v-row>
-    <v-row>
-       Legende:<div><span class="red">Emotionale Konsequenzen </span></div>
-    <div><span class="green">Bezug zu anderen Büchern</span></div>
-    <div><span class="yellow">Inhaltliche Details</span></div>
-    <div><span class="blue">Sprachstil und Erzählperspektive</span></div>
-    <div><span class="grey">Hintergrund zur eigenen Person</span></div>
-    <div><span class="purple">Hintergrund zur eigenen Person</span></div>
-    </v-row>
+    <div class="legend" align="right">
+        <v-row  align="center">
+            <v-col cols="7">
+            <b>Legende:</b>
+            <div class="icon2"> <v-img src="../assets/Emotional.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Bezug.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Sprachziel.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Inhalt.png" height="35"/></div>
+            </v-col>
+        </v-row>  
+        </div>
+<div class="legend" align="right">
+        <v-row  align="center">
+            <v-col cols="7">
+                <div class="icon2"></div>
+            <div class="icon2"></div>
+             
+            <div class="icon2"> <v-img src="../assets/Hintergrund2.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Hintergrund.png" height="35" width="125"/></div>
+            
+            </v-col>
+        </v-row>  
+        </div>
+       
     <Stopwatch to="/buchrezensionPage3Underline" needTimer="true" />
 </v-container>
 </template>
@@ -152,6 +168,13 @@ export default {
 }
 </script>
 <style scoped>
+.icon2 {
+    width: 125px;
+    height: 10px;
+    justify-content: center;
+    margin: 5px;
+    float: right;
+}
 .grau {
 text-decoration: underline;
   -webkit-text-decoration-color: grey;

@@ -15,26 +15,25 @@
     <br>
 
   </div>
-    <h1>Buchrezension 5 zum Buch "Gilde der Jäger - Engelskrieg"</h1>
+    <h1>Buchrezension 5 zum Buch „Gilde der Jäger - Engelskrieg"</h1>
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
-    <v-row class="rezension" align="center">
-        <v-col cols="8">
+    
+        <v-col cols="7">
             <Highlightable @share="onShare" @highlight="onHighlight" id="1_raw5">
                 <div>
                     {{text}}
                 </div>
             </Highlightable>
         </v-col>
-    </v-row>
-    <v-row class="rezension" align="center">
-        <v-col cols="8">
+    
+        <v-col cols="7">
             <Highlightable @share="onShare" @highlight="onHighlight" id="2_raw5">
                 <div>
                     {{text1}}
                 </div>
             </Highlightable>
         </v-col>
-    </v-row>
+    
 
     <Stopwatch to="/fragenpage" needTimer="true" />
 </v-container>
