@@ -3,7 +3,7 @@
     <v-app>
       <v-content>
         <v-container>
-          <h1>Virtuelles Experiment von Rez@Kultur</h1>
+          <h1>Online-Experiment zu Rezensionen</h1>
         </v-container>
         <router-view />
       </v-content>
