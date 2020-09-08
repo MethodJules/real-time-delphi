@@ -5,7 +5,7 @@
              v-model="valid2"
              >
             <p>{{question}}</p>
-            <v-text-field :label="label" v-model="answer" @change="saveAnswer" 
+            <v-text-field :label="label" v-model="answer" @change="saveAnswer"
             :rules="numberRules"
                  required/>
             </v-form>
@@ -36,6 +36,7 @@ export default {
         saveAnswer() {
             console.log(this.answer)
             this.$store.dispatch('answers/addAnswer', { question: this.question, answer: this.answer  })
+            this.$emit("update", this.answer);
         }
     }
 }

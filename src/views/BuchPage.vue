@@ -27,19 +27,22 @@
         <br>
         <br />"Nalini Singhs GILDE-DER-JÄGER-Serie überwältigt mit Schönheit und Sinnlichkeit!" HEROES AND HEARTBREAKERS
         Band 12 der GILDE DER JÄGER von SPIEGEL-Bestseller-Autorin Nalini Singh
+        <v-form ref="form">
+          <div v-for="question in node.questions" :key="question.question">
+            <v-img :src="require(`@/assets/${node.img_src}`)"  width="250" height="360"/>
+              <SelectQuestion @update="update" :question="question.question" :answers="question.answeroptions" />
+          </div>
+        </v-form>
 
-        <div v-for="question in node.questions" :key="question.question">
-          <v-img :src="require(`@/assets/${node.img_src}`)"  width="250" height="360"/>
-            <SelectQuestion :question="question.question" :answers="question.answeroptions" />
-        </div>
-
-        <div v-if="Math.random() < 0.3">
-          <Stopwatch to="/buchrezensionPageUnderline" needTimer="true" />
-        </div>
-        <div v-else-if="Math.random() > 0.7">
-          <Stopwatch to="/buchrezension" needTimer="true"/>
-        </div>
-          <div v-else> <Stopwatch to="/buchrezensionPageRaw" needTimer="true" />
+        <div v-show="isValid">
+          <div v-if="Math.random() < 0.3">
+            <Stopwatch to="/buchrezensionPageUnderline" needTimer="true" />
+          </div>
+          <div v-else-if="Math.random() > 0.7">
+            <Stopwatch to="/buchrezension" needTimer="true"/>
+          </div>
+            <div v-else> <Stopwatch to="/buchrezensionPageRaw" needTimer="true" />
+          </div>
         </div>
 
     </v-container>
@@ -57,12 +60,26 @@ export default {
     },
     data() {
         return {
+            isValid: false,
             buch_gelesen: 0,
             node: APIService.get(3)
         }
     },
     props: {
      buch_cover: String
+    },
+    methods: {
+      update() {
+            console.log('Validation: ' + this.isValid);
+            this.isValid = true;
+            var childs = this.$refs.form.$children;
+            for (let child of childs) {
+                if (child.selection === "" || child.answer === "") {
+                    this.isValid = false;
+                }
+            }
+            //this.validate();
+        }
     }
 }
 </script>

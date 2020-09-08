@@ -26,7 +26,7 @@ export default {
         }
     },
     props: {
-        
+
         questionId: Number,
         question: String,
         answers: Array,
@@ -52,6 +52,7 @@ export default {
         selection: function(val){
 
             this.writeData(val);
+            this.$emit("update", val);
         }
     }
 }

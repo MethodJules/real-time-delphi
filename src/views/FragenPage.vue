@@ -17,22 +17,27 @@
   </div>
         <h2>{{node.title}}</h2>
         <div><span v-html="node.html"></span></div>
-        <div v-for="question in node.questions" :key="question.question">
-            <div v-if="question.question_type == 'select'">
-                <SelectQuestion :question="question.question" :answers="question.answeroptions" />
+        <v-form ref="form">
+            <div v-for="question in node.questions" :key="question.question">
+                <div v-if="question.question_type == 'select'">
+                    <SelectQuestion @update="update" :question="question.question" :answers="question.answeroptions" />
+                </div>
             </div>
-        </div>
+        </v-form>
 
-        <v-btn to="/fragen2page">Weiter</v-btn>
+        <Stopwatch v-show="isValid" needTimer="true" to="/fragen2page">Weiter</Stopwatch>
     </v-container>
 </template>
 
 <script>
 import APIService from '@/services/api.service'
 import SelectQuestion from '@/components/SelectQuestion'
+import Stopwatch from '@/components/Stopwatch'
+
 export default {
     components: {
         SelectQuestion,
+        Stopwatch
     },
     data() {
         return {
@@ -43,14 +48,21 @@ export default {
             teil3_5: 0,
             teil3_6: 0,
             teil3_7: 0,
-
-
-
-
-            node: APIService.get(4)
-
-
-
+            node: APIService.get(4),
+            isValid: false,
+        }
+    },
+    methods: {
+        update() {
+            console.log('Validation: ' + this.isValid);
+            this.isValid = true;
+            var childs = this.$refs.form.$children;
+            for (let child of childs) {
+                if (child.selection === "" || child.answer === "") {
+                    this.isValid = false;
+                }
+            }
+            //this.validate();
         }
     }
 }
