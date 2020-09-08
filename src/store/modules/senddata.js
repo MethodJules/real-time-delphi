@@ -20,7 +20,7 @@ const actions = {
 
             var config = {
                 method: 'post',
-                url: 'http://localhost:8080/web/jsonapi/node/answer',
+                url: 'http://147.172.96.68/real-time-delphi/drupal_backend/docroot/web/jsonapi/node/answer',
                 headers: {
                   'Accept': 'application/vnd.api+json',
                   'Content-Type': 'application/vnd.api+json',
@@ -53,7 +53,7 @@ const actions = {
 
           var config = {
             method: 'post',
-            url: 'http://localhost:8080/web/jsonapi/node/highlight',
+            url: 'http://147.172.96.68/real-time-delphi/drupal_backend/docroot/web/jsonapi/node/highlight',
             headers: {
               'Accept': 'application/vnd.api+json',
               'Content-Type': 'application/vnd.api+json',
