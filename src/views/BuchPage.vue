@@ -20,28 +20,31 @@
 
         <v-row class="rezension" align="center">
         <v-col cols="3">
-            
-           
+
+
             <v-img :src="require(`@/assets/${node.img_src}`)"  width="248" height="360"/>
-           
-            
+
+
         </v-col>
         <v-col cols="8">
-            
-                <div>
+
+        <div>
             <p><br /><b>Gilde der Jäger – Engelskrieg</b>
-        <br />Von Nalini Singh
-        <br>
-        <br /><b>Inhaltsangabe zu "Gilde der Jäger - Engelskrieg"</b>
-        <br />"Ich verschlinge die GILDE-DER-JÄGER-Bücher. Sie sind perfekt!"  - SYLVIA DAY
-        <br>
-        <br />Die Welt der Engel, Jäger und Vampire steht vor dem Abgrund. Eine neue Gefahr hat sich erhoben und bedroht alles, was ist. Gildejägerin Elena Deveraux, der erste Mensch, der zu einem Engel wurde, und ihr Gefährte, der Erzengel Raphael, Herrscher von New York, haben sich unwiderruflich verändert und niemand weiß, wie sich diese Entwicklung auswirken wird. Nie war es so gefährlich, unsterblich zu sein ...
-        <br>
-        <br />"Nalini Singhs GILDE-DER-JÄGER-Serie überwältigt mit Schönheit und Sinnlichkeit!" HEROES AND HEARTBREAKERS
-        Band 12 der GILDE DER JÄGER von SPIEGEL-Bestseller-Autorin Nalini Singh
+            <br />Von Nalini Singh
+            <br>
+            <br /><b>Inhaltsangabe zu "Gilde der Jäger - Engelskrieg"</b>
+            <br />"Ich verschlinge die GILDE-DER-JÄGER-Bücher. Sie sind perfekt!"  - SYLVIA DAY
+            <br>
+            <br />Die Welt der Engel, Jäger und Vampire steht vor dem Abgrund. Eine neue Gefahr hat sich erhoben und bedroht alles, was ist. Gildejägerin Elena Deveraux, der erste Mensch, der zu einem Engel wurde, und ihr Gefährte, der Erzengel Raphael, Herrscher von New York, haben sich unwiderruflich verändert und niemand weiß, wie sich diese Entwicklung auswirken wird. Nie war es so gefährlich, unsterblich zu sein ...
+            <br>
+            <br />"Nalini Singhs GILDE-DER-JÄGER-Serie überwältigt mit Schönheit und Sinnlichkeit!" HEROES AND HEARTBREAKERS
+            Band 12 der GILDE DER JÄGER von SPIEGEL-Bestseller-Autorin Nalini Singh</p>
+        </div>
+        </v-col>
+        </v-row>
         <v-form ref="form">
           <div v-for="question in node.questions" :key="question.question">
-            <v-img :src="require(`@/assets/${node.img_src}`)"  width="250" height="360"/>
+            <!-- <v-img :src="require(`@/assets/${node.img_src}`)"  width="250" height="360"/> -->
               <SelectQuestion @update="update" :question="question.question" :answers="question.answeroptions" />
           </div>
         </v-form>
