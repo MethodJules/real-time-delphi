@@ -317,18 +317,7 @@
    <desktop-menu v-if="$mq === 'desktop'">
     <v-row>
         <v-col cols = "9">
-            <Highlightable @share="onShare" @highlight="onHighlight" id="1_under3">
-                    <div class="rot">
-                   {{text0LaptopAbs}}<br>
-                    <div class="topGrün">
-                    {{text01_LaptopAbs}}<br>
-                    </div>
-                </div> 
-            </Highlightable>
-            <div class="topGrün">
-            {{blank_Laptop0}}
-            </div>
-
+            
 
             <Highlightable @share="onShare" @highlight="onHighlight" id="1_under3">
                 <div class="rot">
@@ -571,16 +560,16 @@ export default {
             text312_Tablet:'leichter lesen lassen würde                                   ',
 
 
-            text31_Laptop:'Ein paar kleine Episoden waren mir zu lang, aber Seiten weiter blättern war überhaupt nicht möglich, da einem sonst u.a. die      ',
-            text32_Laptop:'spritzigen wortgewandten Dialoge entgangen wären. Leider ist nicht immer gleich zu erkennen aus welcher Sicht wir alle     ',
-            text33_Laptop:'Geschehnisse erleben. Der Wechsel von Elena zu Raphael geschieht teilweise im nächsten Satz, nicht mal Kapitel- oder    ',
-            text34_Laptop:'Absatzweise. Aber das ist meiner Meinung nach wirklich nur ein i-Tüpfelchen, was die Story leichter lesen lassen würde.   ',
+            text31_Laptop:'Ein paar kleine Episoden waren mir zu lang, aber Seiten weiter blättern war überhaupt nicht möglich, da einem sonst u.a.',
+            text32_Laptop:'die spritzigen wortgewandten Dialoge entgangen wären. Leider ist nicht immer gleich zu erkennen aus welcher Sicht wir',
+            text33_Laptop:'alle Geschehnisse erleben. Der Wechsel von Elena zu Raphael geschieht teilweise im nächsten Satz, nicht mal Kapitel-oder',
+            text34_Laptop:'Absatzweise. Aber das ist meiner Meinung nach wirklich nur ein i-Tüpfelchen, was die Story leichter lesen lassen würde.',
 
 
            text3:'Ein paar kleine Episoden waren mir zu lang, aber Seiten weiter blättern war überhaupt nicht möglich, da einem sonst u.a. die spritzigen wortgewandten Dialoge entgangen wären. Leider ist nicht immer gleich zu erkennen aus welcher Sicht wir alle Geschehnisse erleben. Der Wechsel von Elena zu Raphael geschieht teilweise im nächsten Satz, nicht mal Kapitel- oder Absatzweise. Aber das ist meiner Meinung nach wirklich nur ein i-Tüpfelchen, was die Story leichter lesen lassen würde. ',
             
             
-            text4: 'Dieser Teil war wieder einmal atemberaubend, spannend, wortgewandt, vielfältig, fesselnd, überraschend und auch gruselig. ',
+            text4:'Dieser Teil war wieder einmal atemberaubend, spannend, wortgewandt, vielfältig, fesselnd, überraschend und auch gruselig.',
             text5: 'Ich denke wirklich, dass diejenigen, die bisher die Reihe schon begonnen haben, unbedingt weiterlesen müssen und diejenigen, an denen diese Serie vorbei gegangen ist, sollten unbedingt mit dem Lesen von „Engelskuss“ anfangen.',
             text5_1:'Für mich eine Reihe, die von den so unterschiedlichen, aber auch absolut stimmigen Charakteren lebt.',
             blank_Handy: '                            ',

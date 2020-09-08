@@ -130,12 +130,12 @@
         </v-col>
     </v-row>
     <v-row>
-        <v-col>
+        <v-col cols="9">
             <Highlightable @share="onShare" @highlight="onHighlight" id="2_under5">
                 <div class="blau">
                     {{text11_Laptop}}
                     <div class="topGrün">
-                        {{text12_Laptop}}<br>{{text13_Laptop}}<br>
+                        {{text12_Laptop}}<br>{{text13_Laptop}}<br>{{text14_Laptop}}<br>
                 </div></div>
             </Highlightable>
             <div class="topGrün">
@@ -195,10 +195,11 @@ export default {
             text16_Tablet:'abzuwarten, ob und wenn wie es weitergeht.',
 
 
-            text11_Laptop:'Daran erkennt man, wie gut der Schreibstil ist, wenn man in die Geschichte eintauchen kann, als ob man  ',
-            text12_Laptop:'persönlich dabei ist. Ich hoffe auf eine schnellere Veröffentlichung des nächsten Buches, wie bisher durchaus  ',
-            text13_Laptop:'auch wieder neue Stränge gesponnen werden. Es bleibt also interessant abzuwarten, ob und wenn wie es weitergeht.',
-          
+            text11_Laptop:'Daran erkennt man, wie gut der Schreibstil ist, wenn man in die Geschichte eintauchen,',
+            text12_Laptop:'kann als ob man persönlich dabei ist. Ich hoffe auf eine schnellere Veröffentlichung ',
+            text13_Laptop:'des nächsten Buches, wie bisher durchaus auch wieder neue Stränge gesponnen .',
+            text14_Laptop:'werden. Es bleibt also interessant abzuwarten, ob und wenn wie es weitergeht.',
+
              text11_Desktop:'Daran erkennt man, wie gut der Schreibstil ist, wenn man in die Geschichte eintauchen kann, als ob man persönlich dabei ist.',
             text12_Desktop:'Ich hoffe auf eine schnellere Veröffentlichung des nächsten Buches, wie bisher durchaus auch wieder neue Stränge gesponnen werden.  .',
             text13_Desktop:'Es bleibt also interessant abzuwarten, ob und wenn wie es weitergeht.                                                                                                                                 ',
@@ -213,7 +214,7 @@ export default {
             Ich hoffe auf eine schnellere Veröffentlichung des nächsten Buches, wie bisher.',
              blank_Handy:'',
              blank_Tablet:'',
-             blank_Laptop:'                                                                                                                                                                                                               ',
+             blank_Laptop:'                                                                                                                                          ',
             blank_Desktop:'                         ',
                     }
     },

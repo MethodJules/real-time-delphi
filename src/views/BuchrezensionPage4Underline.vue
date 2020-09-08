@@ -187,12 +187,12 @@
 
 <Desktop-menu v-if="$mq === 'desktop'">
     <v-row >
-        <v-col cols ="10">
+        <v-col cols ="7">
             <Highlightable @share="onShare" @highlight="onHighlight" id="1_under4">
                 <div class="gelb">
                     {{text11_Laptop}}
                     <div class="topGrün">
-                    {{text12_Laptop}}<br>{{text13_Laptop}}<br> 
+                    {{text12_Laptop}}<br>{{text13_Laptop}}<br>{{text14_Laptop}}<br> 
                 </div></div>
             </Highlightable>
             <div class="topGrün">
@@ -294,10 +294,10 @@ export default {
             text16_Tablet:'bleibt also interessant abzuwarten, ob und wenn wie es       ',
             text17_Tablet:'weitergeht.                                                                                      ',
 
-            text11_Laptop:'Dieses Buch endet mehr oder weniger mit einem großen Knall vielen Veränderungen und Verlusten, aber auch,',
-            text12_Laptop:'Neuanfängen. Die Reihe könnte mit diesem Buch, durchaus auch enden, was ich nicht hoffe, aber es können auch durchaus',
-            text13_Laptop:' auch wieder neue Stränge gesponnen werden. Es bleibt also interessant abzuwarten, ob und wenn wie es weitergeht.         ',                                                                                      
-            text14_Laptop:'',
+            text11_Laptop:'Dieses Buch endet mehr oder weniger mit einem großen Knall vielen Veränderungen und ',
+            text12_Laptop:'Verlusten, aber auch, Neuanfängen. Die Reihe könnte mit diesem Buch, durchaus auch,',
+            text13_Laptop:'enden was ich nicht hoffe, aber es können auch durchaus auch wieder neue Stränge',                                                                                      
+            text14_Laptop:'gesponnen werden. Es bleibt also interessant abzu-warten, ob und wenn wie es weitergeht.',
 
             text11_Desktop:'Dieses Buch endet mehr oder weniger mit einem großen Knall vielen Veränderungen und Verlusten, aber auch Neuanfängen. Die Reihe könnte mit diesem Buch,',
             text12_Desktop:'durchaus auch enden, was ich nicht hoffe, aber es können auch durchaus auch wieder neue Stränge gesponnen werden. Es bleibt also interessant abzuwarten,',
@@ -315,7 +315,7 @@ export default {
             text3: 'Und was mich noch störte, ist diese schnelle Genesung und Stärke bei Elena, gerade noch kann sie nicht alleine stehen und dann sieht sie sich im größten Kampf aller Zeiten mittendrin als starke Kämpferin, der Sprung war mir zu groß, das hätte man bestimmt anders lösen können. Sonst aber wie gewohnt ein gutes Buch, eine tolle Geschichte, die halt diesmal einige Schwächen hatte.',
            blank_Handy: '                                     ',
            blank_Tablet: '                                                                                                        ',
-            blank_Laptop: '                                                                                                                                                                                                                         ',
+            blank_Laptop: '                                                                                                                                                                ',
             blank_Desktop:'                                                                                                                                                                                                                                                                                           ',
         highlight: []
         }
