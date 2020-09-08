@@ -16,13 +16,9 @@
 
   </div>
         <div id="datenschutz">
-            <h2>Datenschutz</h2>
-            <p>Uns interessiert Ihre ehrliche, persönliche Meinung. Die Befragung findet anonym statt,
-                es werden keine persönlichen Angaben verarbeitet.
-                Einzelne Fragebögen können nicht auf einzelne Personen zurückgeführt werden.
-                Um die Zusammengehörigkeit der Seiten des Befragungsbogens identifizieren zu können
-                und zugleich Ihre Anonymität zu schützen, ist zunächst eine ID herzuleiten.
-                Die ID setzt sich aus den nachfolgenden Antworten zusammen.</p>
+            
+            <p>Bitte füllen Sie die folgenden Angaben entsprechend aus. Dies hilft uns zur Erstellung Ihrer eigenen ID.</p>
+                <p><strong>Hinweis: Alle Fragen müssen beantwortet werden!</strong></p>
 
             <v-form ref="form"
              v-model="valid"
@@ -72,12 +68,13 @@
               </v-col>
             </v-container>
             </v-form>
+            <p><strong>Hinweis: Alle Fragen müssen beantwortet werden!</strong></p>
            <!-- <v-btn :disabled="!valid" color="success" @click="validate"> -->
             <Stopwatch v-show="valid && codeCommit" to="/hintergrund" needTimer="true" />
           <!-- </v-btn> -->
+         
 
-
-        </div>
+     </div>
 
     </v-container>
 </template>
@@ -108,7 +105,7 @@ export default {
           ],
           numberRules: [
           v => !!v || ' Geben Sie eine Zahl an.',
-          v => /[0-9]/.test(v)  || 'Zahö(0-9)',
+          v => /[0-9]/.test(v)  || 'Zahl(0-9)',
            ],
             node: APIService.get(1),
             geburtsmonat: '',

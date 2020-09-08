@@ -17,6 +17,7 @@
   </div>
         <h2>{{node.title}}</h2>
         <div><span v-html="node.html"></span></div>
+        <p><strong>Hinweis: Alle Fragen müssen beantwortet werden!</strong></p>
         <v-form ref="form">
             <div v-for="question in node.questions" :key="question.question">
                 <div v-if="question.question_type == 'select'">
@@ -30,7 +31,8 @@
                 </div>
             </div>
         </v-form>
-            <Stopwatch v-show="isValid" to="/buch" needTimer="true" />
+        <p><strong>Hinweis: Alle Fragen müssen beantwortet werden!</strong></p>
+            <Stopwatch v-show="isValid" to="/simulation" needTimer="true" />
     </v-container>
 </template>
 

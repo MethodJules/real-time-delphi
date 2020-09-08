@@ -8,8 +8,8 @@
     >
       <template v-slot="">
           
-      <v-progress-linear value="27"></v-progress-linear>
-        <strong>27%</strong>
+      <v-progress-linear value="23"></v-progress-linear>
+        <strong>23%</strong>
       </template>
     </v-progress-linear>
 
@@ -38,7 +38,7 @@ Buchrezensionen:<br /><br />
 1. Lesen Sie zunächst die Produktbeschreibung zum Buch aufmerksam durch.<br /><br />
 2. Markieren Sie schnellstmöglich in den Buchrezensionen die relevanten Textstellen,
 also die Textstellen, in denen der <strong>Sprachstil und/oder die Erzählperspektive</strong>
-angesprochen werden, markieren Sie die Textstellen mit der Maus und wählen Sie Highlight aus. 
+angesprochen werden, <strong>markieren</strong> Sie die <strong>Textstellen</strong> mit der Maus und wählen Sie <strong>„Highlight"</strong> aus.<br/>(Bei falscher markierung, markieren Sie die Textstelle und wählen Sie <strong>„Highlight"</strong> nochmals aus.) 
                 </div>
         </v-col>
     </v-row>

@@ -48,7 +48,7 @@
               <SelectQuestion @update="update" :question="question.question" :answers="question.answeroptions" />
           </div>
         </v-form>
-
+<p><strong>Hinweis: Die Frage muss beantwortet werden!</strong></p>
         <div v-show="isValid">
           <div v-if="Math.random() < 0.3">
             <Stopwatch to="/buchrezensionPageUnderline" needTimer="true" />
