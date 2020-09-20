@@ -20,7 +20,7 @@ export default {
             valid2: true,
             numberRules: [
           v => !!v || ' Geben Sie eine Zahl an.',
-          v => /[0-9]/.test(v)  || 'Zahl(0-9)',
+          v => /^[0-9]+$/.test(v)  || 'Zahl(0-9)',
            ],
             answer: '',
         }

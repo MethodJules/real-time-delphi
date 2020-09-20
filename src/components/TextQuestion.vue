@@ -21,7 +21,7 @@ export default {
             valid3: true,
             letterRules:[
           v => !!v || ' Geben Sie einen Buchstaben an.',
-          v => /[a-z]/.test(v)|| /[A-Z]/.test(v)  || 'Geben Sie genau ein Buchstaben ein  ',
+          v => /^\b[^\d\W]+\b$/.test(v)||  'Geben Sie genau ein Buchstaben ein  ',
           ],
             answer: ''
         }
