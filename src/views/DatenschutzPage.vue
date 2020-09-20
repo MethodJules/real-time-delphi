@@ -94,18 +94,18 @@ export default {
           valid: true,
           nameRules:[
           v => !!v || ' Geben Sie einen Monat ein.',
-          v => /Januar/.test(v)|| /Februar/.test(v)|| /März/.test(v)|| /April/.test(v)
-          || /Mai/.test(v)|| /Juni/.test(v)|| /Juli/.test(v)|| /August/.test(v)
-          || /September/.test(v)|| /Oktober/.test(v)|| /November/.test(v)|| /Dezember/.test(v)  || 'Januar-Dezember',
+          v => /^Januar$/.test(v)|| /^Februar$/.test(v)|| /^März$/.test(v)|| /^April$/.test(v)
+          || /^Mai$/.test(v)|| /^Juni$/.test(v)|| /^Juli$/.test(v)|| /^August$/.test(v)
+          || /^September$/.test(v)|| /^Oktober$/.test(v)|| /^November$/.test(v)|| /^Dezember$/.test(v)  || 'Januar-Dezember',
 
           ],
           letterRules:[
           v => !!v || ' Geben Sie einen Buchstaben an.',
-          v => /[a-z]/.test(v)|| /[A-Z]/.test(v)  || 'Geben Sie genau ein Buchstaben ein  ',
+          v => /^\b[a-z]\b$/.test(v)  || 'Geben Sie genau ein Buchstaben ein  ',
           ],
           numberRules: [
           v => !!v || ' Geben Sie eine Zahl an.',
-          v => /[0-9]/.test(v)  || 'Zahl(0-9)',
+          v => /^\b[0-9]\b$/.test(v)    ||'Zahl(0-9)',
            ],
             node: APIService.get(1),
             geburtsmonat: '',
