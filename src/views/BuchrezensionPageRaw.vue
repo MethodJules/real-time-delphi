@@ -24,15 +24,13 @@
 
 
         <v-col cols="8">
-            <Highlightable @share="onShare" @highlight="onHighlight" id="1_raw1">
-
+            <Highlightable @share="onShare" @highlight="onHighlight" id="1_raw1">          
+                    <p>
+                        Der Abschluss der Kaskade?
+                        <br />
+                    </p>
                     <div>
-            <p>Der Abschluss der Kaskade?
-               <br />
-            </p>
-            <div>
-            {{text}}
-                </div>
+                        {{text}}
                     </div>
             </Highlightable>
         </v-col>

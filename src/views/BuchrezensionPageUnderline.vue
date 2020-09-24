@@ -26,14 +26,14 @@
         <v-col cols="8">
             <Highlightable @share="onShare" @highlight="onHighlight" id="1_under1">
 
-                    <div>
+                  
             <p>Der Abschluss der Kaskade?
                <br />
             </p>
             <div class="rot">
             {{text}}
                 </div>
-                    </div>
+                
             </Highlightable>
         </v-col>
 

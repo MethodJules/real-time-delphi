@@ -4,9 +4,8 @@
     "\\public",
     "\\src",
     "\\src\\components",
-    "\\src\\store",
     "\\src\\views"
   ],
-  "SelectedNode": "\\src\\views\\DatenschutzPage.vue",
+  "SelectedNode": "\\src\\views\\BuchrezensionPageRaw.vue",
   "PreviewInSolutionExplorer": false
 }

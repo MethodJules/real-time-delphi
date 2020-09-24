@@ -2,9 +2,8 @@
 <template>
     <div @mouseover="hover = true" @mouseleave="hover=false" class="highlight">
         <div v-show="showMenu" class="menu" :style="{ left: `${x}px`, top: `${y}px`}" @mousedown.prevent="">
-            <!-- <span class="item" @mousedown.prevent="handleAction('highlight')">Share</span> -->
-            <span class="item" @mousedown.prevent="highlight()">Highlight</span> <!-- You can add more buttons here -->
-
+            <span v-show="possibleHighlight" class="item" @mousedown.prevent="highlight()">Highlight</span> <!-- You can add more buttons here -->
+            <span v-show="possibleDelete" class="item" @mousedown.prevent="deselect()">Deselect</span>
         </div><!-- The insterted text should be displayed here -->
         <br />
         <div class="highlightContent">
@@ -25,7 +24,9 @@
                 showMenu: false,
                 selectedText: '',
                 text: '',
-                hover: false
+                hover: false,
+                possibleHighlight: true,
+                possibleDelete: false,
 
             }
         },
@@ -77,15 +78,10 @@
                     return
                 }
 
-                /*
-                if (!startNode.isSameNode(this.highlightableEl) || !startNode.isSameNode(endNode)) {
-                    this.showMenu = false
-                    return
-                }    // Get the x, y, and width of the selection
-                */
-
                 if (this.hover) {
 
+                    this.possibleDelete = false;
+                    this.possibleHighlight = true;
 
                     if (startNode.parentNode.parentNode.parentNode.classList.contains("highlight")) {
                         var starthighlight = startNode.parentNode.parentNode.parentNode.classList[1];
@@ -98,7 +94,7 @@
                     } else {
                         endhighlight = endNode.parentNode.parentNode.classList[1];
                     }
-
+        
                     if (starthighlight !== endhighlight) {
                         this.showMenu = false
                         return
@@ -119,13 +115,44 @@
                     if (!width) {
                         this.showMenu = false
                         return
-                    }    // Finally, if the selection is valid,    // set the position of the menu element,    // set selectedText to content of the selection    // then, show the menu
+                    }
+                    // Finally, if the selection is valid,    // set the position of the menu element,    // set selectedText to content of the selection    // then, show the menu
+
+
+                    if (startNode.classList.contains("highlightText")) {
+                        this.possibleDelete = true;
+                    }
+
+                    if (endNode.classList.contains("highlightText")) {
+                        this.possibleDelete = true;
+                    }
+
+     
+                    var myFocusNodeValue = window.getSelection().focusNode.nodeValue;
+                    var myAnchorNodeValue = window.getSelection().anchorNode.nodeValue;
+
+                    if (myAnchorNodeValue == myFocusNodeValue) {
+
+                        if (startNode.classList.contains("highlightText")) {
+                            this.possibleHighlight = false;
+                        }
+
+                    } else {   
+                        if (startNode.parentNode.innerHTML.includes('class="highlightText"')) {
+                            this.possibleDelete = true;
+                        }
+                        else if (startNode.parentNode.parentNode.innerHTML.includes('class="highlightText"')) {
+                            this.possibleDelete = true;
+                        }    
+                        
+                    }
 
                     this.x = (x - highlightPosition.x) + (width / 2)
 
                     this.y = (y - 10) - highlightPosition.y;
 
                     this.showMenu = true
+
                 } else {
                     this.showMenu = false;
                 }
@@ -138,6 +165,144 @@
 
                 this.$emit(action, this.selection)
             },
+
+            deselect() {
+                var selection = window.getSelection();               
+                const selectionRange = selection.getRangeAt(0)
+
+                var myAnchorNodeValue = window.getSelection().anchorNode.nodeValue;
+
+                var myAnchorOffset = window.getSelection().anchorOffset
+                var myFocusOffset = window.getSelection().focusOffset
+                var myFocusNodeValue = window.getSelection().focusNode.nodeValue;
+                var startFront = true;
+
+                if (myAnchorNodeValue == myFocusNodeValue) {
+                    var text = myAnchorNodeValue.slice(myAnchorOffset, myFocusOffset);
+                    var text2 = myAnchorNodeValue.slice(myFocusOffset, myAnchorOffset);
+
+                    var newText = text.replaceAll(" ", "");
+
+                    var newText2 = text2.replaceAll(" ", "");
+
+                    var newSelectedText = selection.toString().replaceAll(" ", "");
+
+                    if (newText == newSelectedText) {
+                        startFront = true;
+                    } else if (newText2 == newSelectedText) {
+                        startFront = false;
+                    }
+
+                } else {
+                    var position = selection.anchorNode.compareDocumentPosition(selection.focusNode);
+                    if (position & Node.DOCUMENT_POSITION_FOLLOWING) {
+                        startFront = true;
+                    } else if (position & Node.DOCUMENT_POSITION_PRECEDING) {
+                        startFront = false;
+                    }
+                }
+
+                if (startFront) {
+                
+                    var myFocusNodeLength = window.getSelection().focusNode.nodeValue.length;
+
+                    if (window.getSelection().anchorNode.parentElement.className == "highlightText") {
+                        window.getSelection().anchorNode.nodeValue = myAnchorNodeValue.slice(0, myAnchorOffset) + "[Delete]" + myAnchorNodeValue.slice(myAnchorOffset);
+                    } else {
+                        window.getSelection().anchorNode.nodeValue = myAnchorNodeValue + "[delete]";
+                    }
+
+                    myFocusNodeValue = window.getSelection().focusNode.nodeValue;
+
+                    if (window.getSelection().focusNode.nodeValue.length - myFocusNodeLength > 0) {
+                        myFocusOffset += window.getSelection().focusNode.nodeValue.length - myFocusNodeLength;
+                    }
+
+                    if (window.getSelection().focusNode.parentElement.className == "highlightText") {
+                        window.getSelection().focusNode.nodeValue = myFocusNodeValue.slice(0, myFocusOffset) + "[/Delete]" + myFocusNodeValue.slice(myFocusOffset);
+                    } else {
+                        window.getSelection().focusNode.nodeValue = "[deleteStart]" + myFocusNodeValue;
+                    }
+
+                    if (window.getSelection().anchorNode.parentElement.className == "highlightText" && window.getSelection().focusNode.parentElement.className == "highlightText") {
+                        if (window.getSelection().anchorNode.parentElement != window.getSelection().focusNode.parentElement) {
+
+                            window.getSelection().anchorNode.nodeValue = myAnchorNodeValue.slice(0, myAnchorOffset) + "[Delete]" + myAnchorNodeValue.slice(myAnchorOffset) + "[deleteSpan]";
+                            window.getSelection().focusNode.nodeValue = "[deleteStartSpan]" + myFocusNodeValue.slice(0, myFocusOffset) + "[/Delete]" + myFocusNodeValue.slice(myFocusOffset);
+
+                        }
+                 }
+
+                } else {
+                    // noch überarbeitenm
+                    var myAnchorNodeLength = window.getSelection().anchorNode.nodeValue.length;
+
+                    if (window.getSelection().focusNode.parentElement.className == "highlightText") {
+                        window.getSelection().focusNode.nodeValue = myFocusNodeValue.slice(0, myFocusOffset) + "[Delete]" + myFocusNodeValue.slice(myFocusOffset);
+                    } else {
+                        window.getSelection().focusNode.nodeValue = myFocusNodeValue + "[delete]";
+                    }
+                    console.log(window.getSelection().focusNode.nodeValue);
+
+                    myAnchorNodeValue = window.getSelection().anchorNode.nodeValue;
+
+                    if (window.getSelection().anchorNode.nodeValue.length - myAnchorNodeLength > 0) {
+                        myAnchorOffset += window.getSelection().anchorNode.nodeValue.length - myAnchorNodeLength;
+                    }
+
+                    if (window.getSelection().anchorNode.parentElement.className == "highlightText") {
+                        window.getSelection().anchorNode.nodeValue = myAnchorNodeValue.slice(0, myAnchorOffset) + "[/Delete]" + myAnchorNodeValue.slice(myAnchorOffset);
+                    } else {
+                        window.getSelection().anchorNode.nodeValue = "[deleteStart]" + myAnchorNodeValue;
+                    }
+
+                    if (window.getSelection().focusNode.parentElement.className == "highlightText" && window.getSelection().anchorNode.parentElement.className == "highlightText") {
+                        if (window.getSelection().anchorNode.parentElement != window.getSelection().focusNode.parentElement) {
+
+                            window.getSelection().focusNode.nodeValue = myFocusNodeValue.slice(0, myFocusOffset) + "[Delete]" + myFocusNodeValue.slice(myFocusOffset) + "[deleteSpan]";
+                            window.getSelection().anchorNode.nodeValue = "[deleteStartSpan]" + myAnchorNodeValue.slice(0, myAnchorOffset) + "[/Delete]" + myAnchorNodeValue.slice(myAnchorOffset);
+
+                        }
+                    }
+
+                }
+                console.log(document.getElementsByClassName("highlightContent")[0].innerHTML);
+
+                var hightlightLength = document.getElementsByClassName("highlightContent").length;
+
+                if (selectionRange.commonAncestorContainer.className != "highlightContent") {
+
+                    for (var i = 0; i < hightlightLength; i++) {
+                        var newClassName = document.getElementsByClassName("highlightContent")[i].innerHTML.replace('[/Delete]', '<span class="highlightText">').replace('[Delete]', '</span>')
+                            .replace('[delete]<span class="highlightText">', '').replace('</span>[deleteStart]', '').replace('[deleteSpan]</span>', '').replace('<span class="highlightText">[deleteStartSpan]', '');
+
+                       document.getElementsByClassName("highlightContent")[i].innerHTML = newClassName;
+                    }
+
+                    this.showMenu = false;
+                    this.possibleDelete = false;
+                    this.possibleHighlight = true;
+
+                } else {
+             
+                    var innerText = "[Startdiv]" + selectionRange.commonAncestorContainer.lastChild.innerText;
+
+                    selectionRange.commonAncestorContainer.lastChild.innerText = innerText;
+
+                    for (var j = 0; j < hightlightLength; j++) {
+
+                        var newClassName2 = document.getElementsByClassName("highlightContent")[j].innerHTML.replace('[/Delete]', '<span class="highlightText">').replace('[Delete]', '</span>').replace('[delete]<span class="highlightText">', '').replace('</span>[deleteStart]', '').replace('[Startdiv]', '<span class="highlightText">');
+
+                        document.getElementsByClassName("highlightContent")[j].innerHTML = newClassName2;
+
+                    }
+                    this.showMenu = false;
+                    this.possibleDelete = false;
+                    this.possibleHighlight = true;
+                }
+              
+            },
+
 
             highlight() {
 
@@ -161,9 +326,15 @@
                     var text = myAnchorNodeValue.slice(myAnchorOffset, myFocusOffset);
                     var text2 = myAnchorNodeValue.slice(myFocusOffset, myAnchorOffset);
 
-                    if (text == selection.toString()) {
+                    var newText = text.replaceAll(" ", "");
+          
+                    var newText2 = text2.replaceAll(" ", "");
+
+                    var newSelectedText = selection.toString().replaceAll(" ", "");
+     
+                    if (newText == newSelectedText ) {
                         startFront = true;
-                    } else if (text2 == selection.toString()) {
+                    } else if (newText2 == newSelectedText) {
                         startFront = false;
                     }
 
@@ -222,6 +393,7 @@
                     }
 
                 }
+                console.log(document.getElementsByClassName("highlightContent")[0].innerHTML);
 
                 var hightlightLength = document.getElementsByClassName("highlightContent").length;
 
@@ -234,7 +406,8 @@
                     }
 
                     this.showMenu = false;
-
+                    this.possibleDelete = false;
+                    this.possibleHighlight = true;
 
                 } else {
 
@@ -250,6 +423,8 @@
 
                     }
                     this.showMenu = false;
+                    this.possibleDelete = false;
+                    this.possibleHighlight = true;
                 }
 
 
