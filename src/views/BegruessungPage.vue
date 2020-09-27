@@ -1,7 +1,7 @@
 <template>
 <v-container>
       <div>
-
+        
     <v-progress-linear
       color="blue-grey"
       height="25"
@@ -21,21 +21,13 @@
 </v-container>
 </template>
 <script>
-//import store from '@/store.js';
+
 import APIService from '@/services/api.service'
 import Stopwatch from '@/components/Stopwatch'
-//import { mapState } from 'vuex'
 export default {
-    /*
-    computed: mapState({
-        nodes: state => state.begruessung.data
-    }),
-    created() {
-        this.$store.dispatch('begruessung/getDataFromDrupal')
-    },
-    */
    components: {
      Stopwatch
+
    },
    data() {
      return {

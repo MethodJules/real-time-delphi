@@ -42,6 +42,17 @@
 import Highlightable from '@/components/Highlightable';
 import Stopwatch from '@/components/Stopwatch'
 export default {
+    beforeRouteLeave(to, from, next) {
+    if (to.path ==='/fragenpage' ){
+      return next()
+    }
+      else if (confirm('Um das Experiment nicht zu verfälschen, bleiben Sie bitte auf der Seite.')) {
+        return next(false)
+      }
+      else{
+        return next(false)
+      }
+    },
     data() {
         return {
             text: 'Eigentlich schreibe ich bei Serien keine Rezension mehr, \

@@ -24,5 +24,13 @@
 </template>
 <script>
   export default {
+    beforeRouteLeave(to, from, next) {
+      if (confirm('Bitte schließen Sie die Seite')) {
+        return next(false)
+      }
+      else{
+        return next(false)
+      }
+    },
   }
 </script>

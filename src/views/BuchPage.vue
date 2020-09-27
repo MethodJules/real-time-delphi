@@ -69,6 +69,23 @@ import SelectQuestion from '@/components/SelectQuestion'
 import Stopwatch from '@/components/Stopwatch'
 
 export default {
+  beforeRouteLeave(to, from, next) {
+    if (to.path ==='/buchrezensionPageUnderline' ){
+      return next()
+    }
+    else if (to.path ==='/buchrezension' ) {
+        return next()
+      }
+      else if (to.path ==='/buchrezensionPageRaw' ) {
+        return next()
+      }
+      else if (confirm('Um das Experiment nicht zu verfälschen, bleiben Sie bitte auf der Seite.')) {
+        return next(false)
+      }
+      else{
+        return next(false)
+      }
+    },
     components: {
         SelectQuestion,
         Stopwatch
