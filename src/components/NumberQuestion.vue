@@ -19,8 +19,8 @@ export default {
         return {
             valid2: true,
             numberRules: [
-          v => !!v || ' Geben Sie eine Zahl an.',
-          v => /^[0-9]+$/.test(v)  || 'Zahl(0-9)',
+          v => !!v || ' Geben Sie Ihr Alter ein .',
+          v => /^[1-9]\d{0,1}(?:,\d{1,2})?$/.test(v)  || 'Zahl(1-99)',
            ],
             answer: '',
         }
