@@ -234,7 +234,6 @@
                  }
 
                 } else {
-                    // noch überarbeitenm
                     var myAnchorNodeLength = window.getSelection().anchorNode.nodeValue.length;
 
                     if (window.getSelection().focusNode.parentElement.className == "highlightText") {
@@ -257,12 +256,15 @@
                     }
 
                     if (window.getSelection().focusNode.parentElement.className == "highlightText" && window.getSelection().anchorNode.parentElement.className == "highlightText") {
-                        if (window.getSelection().anchorNode.parentElement != window.getSelection().focusNode.parentElement) {
-
+                        if (window.getSelection().anchorNode.parentElement != window.getSelection().focusNode.parentElement) {        
                             window.getSelection().focusNode.nodeValue = myFocusNodeValue.slice(0, myFocusOffset) + "[Delete]" + myFocusNodeValue.slice(myFocusOffset) + "[deleteSpan]";
                             window.getSelection().anchorNode.nodeValue = "[deleteStartSpan]" + myAnchorNodeValue.slice(0, myAnchorOffset) + "[/Delete]" + myAnchorNodeValue.slice(myAnchorOffset);
 
                         }
+
+
+
+                        
                     }
 
                 }
@@ -273,7 +275,7 @@
                 if (selectionRange.commonAncestorContainer.className != "highlightContent") {
 
                     for (var i = 0; i < hightlightLength; i++) {
-                        var newClassName = document.getElementsByClassName("highlightContent")[i].innerHTML.replace('[/Delete]', '<span class="highlightText">').replace('[Delete]', '</span>')
+                        var newClassName = document.getElementsByClassName("highlightContent")[i].innerHTML.replace('[/Delete]</span>', '').replace('<span class="highlightText">[Delete]', ''). replace('[/Delete]', '<span class="highlightText">').replace('[Delete]', '</span>')
                             .replace('[delete]<span class="highlightText">', '').replace('</span>[deleteStart]', '').replace('[deleteSpan]</span>', '').replace('<span class="highlightText">[deleteStartSpan]', '');
 
                        document.getElementsByClassName("highlightContent")[i].innerHTML = newClassName;
@@ -283,15 +285,16 @@
                     this.possibleDelete = false;
                     this.possibleHighlight = true;
 
-                } else {
-             
-                    var innerText = "[Startdiv]" + selectionRange.commonAncestorContainer.lastChild.innerText;
+                } else {      
+                    alert("Test");
+               //     var innerText = "[Enddiv]" + selectionRange.commonAncestorContainer.lastChild.innerHTML;
 
-                    selectionRange.commonAncestorContainer.lastChild.innerText = innerText;
+                //    selectionRange.commonAncestorContainer.lastChild.innerHTML = innerText;
 
                     for (var j = 0; j < hightlightLength; j++) {
 
-                        var newClassName2 = document.getElementsByClassName("highlightContent")[j].innerHTML.replace('[/Delete]', '<span class="highlightText">').replace('[Delete]', '</span>').replace('[delete]<span class="highlightText">', '').replace('</span>[deleteStart]', '').replace('[Startdiv]', '<span class="highlightText">');
+                        var newClassName2 = document.getElementsByClassName("highlightContent")[j].innerHTML.replace('[/Delete]</span>', '').replace('<span class="highlightText">[Delete]', '').replace('[/Delete]', '<span class="highlightText">').replace('[Delete]', '</span>').replace('[delete]<span class="highlightText">', '')
+                            .replace('</span>[deleteStart]', '').replace('[deleteSpan]</span>', '').replace('[deleteSpan]<br data-v-ae0e2b74="" data-v-49f8f50e=""></span>', '').replace('<span class="highlightText">[deleteStartSpan]', '');
 
                         document.getElementsByClassName("highlightContent")[j].innerHTML = newClassName2;
 
@@ -300,17 +303,13 @@
                     this.possibleDelete = false;
                     this.possibleHighlight = true;
                 }
-              
+                this.updateStore(this.id);
             },
 
 
             highlight() {
 
                 var selection = window.getSelection();
-
-                console.log(this.id)
-                this.$store.dispatch('highlight/addHighlight', {text: selection.toString(), id: this.id});
-
 
                 const selectionRange = selection.getRangeAt(0)
 
@@ -410,14 +409,17 @@
                     this.possibleHighlight = true;
 
                 } else {
+                    alert("Test");
+                    var innerText = "[Startdiv]" + selectionRange.commonAncestorContainer.lastChild.innerHTML;
 
-                    var innerText = "[Startdiv]" + selectionRange.commonAncestorContainer.lastChild.innerText;
+                    selectionRange.commonAncestorContainer.lastChild.innerHTML = innerText;
 
-                    selectionRange.commonAncestorContainer.lastChild.innerText = innerText;
+                    console.log(document.getElementsByClassName("highlightContent")[0].innerHTML);
 
                     for (var j = 0; j < hightlightLength; j++) {
 
-                        var newClassName2 = document.getElementsByClassName("highlightContent")[j].innerHTML.replace('[Highlight]', '<span class="highlightText">').replace('[/Highlight]', '</span>').replace('[delete]</span>', '').replace('<span class="highlightText">[deleteStart]', '').replace('[Startdiv]', '<span class="highlightText">');
+                        var newClassName2 = document.getElementsByClassName("highlightContent")[j].innerHTML.replace('[Highlight]', '<span class="highlightText">').replace('[/Highlight]', '</span>').replace('[delete]</span>', '').replace('<span class="highlightText">[deleteStart]', '')
+                            .replace('[Startdiv]', '<span class="highlightText">').replace('[delete]', '');
 
                         document.getElementsByClassName("highlightContent")[j].innerHTML = newClassName2;
 
@@ -428,11 +430,30 @@
                 }
 
 
+                this.updateStore();
+                
+                // this.$store.dispatch('highlight/addHighlight', { text: selection.toString(), id: this.id });
 
+            },
+            updateStore() {
+                var hightlightLength = this.$vnode.elm.getElementsByClassName("highlightText").length;
+                var highlightArray = [];
+
+                for (var j = 0; j < hightlightLength; j++) {
+                    var highlightElement = this.$vnode.elm.getElementsByClassName("highlightText")[j].innerHTML;
+
+                    highlightArray.push(highlightElement);
+                   
+
+                }
+
+
+                this.$store.dispatch('highlight/addHighlight', { text: highlightArray, id: this.id });
 
             }
-
         },
+
+     
     }
 </script>
 

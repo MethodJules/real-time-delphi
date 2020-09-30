@@ -4,8 +4,11 @@
     "\\public",
     "\\src",
     "\\src\\components",
+    "\\src\\router",
+    "\\src\\store",
+    "\\src\\store\\modules",
     "\\src\\views"
   ],
-  "SelectedNode": "\\src\\views\\BuchrezensionPageRaw.vue",
+  "SelectedNode": "\\src\\store\\modules\\senddata.js",
   "PreviewInSolutionExplorer": false
 }
