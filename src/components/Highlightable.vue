@@ -94,7 +94,7 @@
                     } else {
                         endhighlight = endNode.parentNode.parentNode.classList[1];
                     }
-        
+
                     if (starthighlight !== endhighlight) {
                         this.showMenu = false
                         return
@@ -118,7 +118,6 @@
                     }
                     // Finally, if the selection is valid,    // set the position of the menu element,    // set selectedText to content of the selection    // then, show the menu
 
-
                     if (startNode.classList.contains("highlightText")) {
                         this.possibleDelete = true;
                     }
@@ -127,25 +126,23 @@
                         this.possibleDelete = true;
                     }
 
-     
+
                     var myFocusNodeValue = window.getSelection().focusNode.nodeValue;
                     var myAnchorNodeValue = window.getSelection().anchorNode.nodeValue;
 
                     if (myAnchorNodeValue == myFocusNodeValue) {
-
                         if (startNode.classList.contains("highlightText")) {
                             this.possibleHighlight = false;
                         }
 
-                    } else {   
+                    } else {
+  
                         if (startNode.parentNode.innerHTML.includes('class="highlightText"')) {
                             this.possibleDelete = true;
                         }
-                        else if (startNode.parentNode.parentNode.innerHTML.includes('class="highlightText"')) {
-                            this.possibleDelete = true;
-                        }    
-                        
-                    }
+                   
+
+                    } 
 
                     this.x = (x - highlightPosition.x) + (width / 2)
 
@@ -261,10 +258,7 @@
                             window.getSelection().anchorNode.nodeValue = "[deleteStartSpan]" + myAnchorNodeValue.slice(0, myAnchorOffset) + "[/Delete]" + myAnchorNodeValue.slice(myAnchorOffset);
 
                         }
-
-
-
-                        
+                      
                     }
 
                 }
@@ -276,7 +270,7 @@
 
                     for (var i = 0; i < hightlightLength; i++) {
                         var newClassName = document.getElementsByClassName("highlightContent")[i].innerHTML.replace('[/Delete]</span>', '').replace('<span class="highlightText">[Delete]', ''). replace('[/Delete]', '<span class="highlightText">').replace('[Delete]', '</span>')
-                            .replace('[delete]<span class="highlightText">', '').replace('</span>[deleteStart]', '').replace('[deleteSpan]</span>', '').replace('<span class="highlightText">[deleteStartSpan]', '');
+                            .replace('[delete]<span class="highlightText">', '').replace('</span>[deleteStart]', '').replace('[deleteSpan]</span>', '').replace('[deleteSpan]<br data-v-ae0e2b74="" data-v-49f8f50e=""></span>', '').replace('<span class="highlightText">[deleteStartSpan]', '');
 
                        document.getElementsByClassName("highlightContent")[i].innerHTML = newClassName;
                     }
@@ -286,10 +280,6 @@
                     this.possibleHighlight = true;
 
                 } else {      
-                    alert("Test");
-               //     var innerText = "[Enddiv]" + selectionRange.commonAncestorContainer.lastChild.innerHTML;
-
-                //    selectionRange.commonAncestorContainer.lastChild.innerHTML = innerText;
 
                     for (var j = 0; j < hightlightLength; j++) {
 
@@ -409,7 +399,7 @@
                     this.possibleHighlight = true;
 
                 } else {
-                    alert("Test");
+  
                     var innerText = "[Startdiv]" + selectionRange.commonAncestorContainer.lastChild.innerHTML;
 
                     selectionRange.commonAncestorContainer.lastChild.innerHTML = innerText;

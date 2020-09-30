@@ -14,7 +14,8 @@ const actions = {
 const mutations = {
     pushhighlight(state, highlight_data) {
         console.log(highlight_data);
-        
+
+        var idExist = false;
         var stateLength = state.highlights.length;        
         
         if (stateLength == 0) {
@@ -24,12 +25,12 @@ const mutations = {
                 if (state.highlights[i].id == highlight_data.id) {
                     state.highlights.splice(i, 1);
                     state.highlights.push(highlight_data);
-                } else {
-                    state.highlights.push(highlight_data);
-                }
-                
+                    idExist = true;
+                }           
             }
-
+            if (idExist == false) {
+                state.highlights.push(highlight_data);
+            }
         }
         
         console.log(state.highlights);
