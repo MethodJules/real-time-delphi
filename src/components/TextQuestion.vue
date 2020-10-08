@@ -5,10 +5,7 @@
              v-model="valid3"
              >
             <p>{{question}}</p>
-            <v-text-field :label="label" v-model="answer" @change="saveAnswer"
-            :rules="letterRules"
-                  required
-                />
+            <v-text-field class="required" :label="label" v-model="answer" @change="saveAnswer" :rules="letterRules" required/>
             </v-form>
         </v-col>
     </v-container>
@@ -42,3 +39,8 @@ export default {
     }
 }
 </script>
+<style scoped>
+.required label::after {
+    content: "*";
+}
+</style>
