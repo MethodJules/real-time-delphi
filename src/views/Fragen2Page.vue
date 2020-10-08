@@ -34,6 +34,17 @@
 import APIService from '@/services/api.service'
 import SelectQuestion from '@/components/SelectQuestion'
 export default {
+    beforeRouteLeave(to, from, next) {
+    if (to.path ==='/endpage' ){
+      return next()
+    }
+      else if (confirm('Um das Experiment nicht zu verfälschen, bleiben Sie bitte auf der Seite.')) {
+        return next(false)
+      }
+      else{
+        return next(false)
+      }
+    },
     components: {
         SelectQuestion,
     },

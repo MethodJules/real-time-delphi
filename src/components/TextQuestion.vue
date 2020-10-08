@@ -17,8 +17,10 @@ export default {
         return {
             valid3: true,
             letterRules:[
-          v => !!v || ' Geben Sie einen Buchstaben an.',
-          v => /[a-z]/.test(v)|| /[A-Z]/.test(v)  || 'Geben Sie genau ein Buchstaben ein  ',
+          v => !!v || ' Geben Sie Ihren Beruf an .',
+           v => /^\b[^\d\W]+\b$/.test(v) ||/ä/.test(v)  ||/Ä/.test(v)  ||/ö/.test(v)  ||/Ö/.test(v)  ||/ü/.test(v)
+             ||/Ü/.test(v)  ||/ß/.test(v)||'Geben Sie Ihren Beruf ein  ',
+         
           ],
             answer: ''
         }

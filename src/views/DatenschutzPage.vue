@@ -1,4 +1,5 @@
 <template>
+
     <v-container>
 
    <div>
@@ -39,7 +40,7 @@
                 <p>Bitte geben Sie den 3. Buchstaben des Familiennamens ein.</p>
                 <v-text-field label="3. Buchstabe" v-model="buchstabe_familienname"
                 :rules="letterRules"
-                 required />
+                 required/>
               </v-col>
             </v-container>
             <v-container>
@@ -47,7 +48,7 @@
                 <p>Bitte geben Sie eine beliebige Zahl von 0-9 ein.</p>
                 <v-text-field label="Zahl (0-9)" v-model="zahl"
                 :rules="numberRules"
-                 required />
+                 required/>
               </v-col>
             </v-container>
             <v-container>
@@ -84,6 +85,17 @@ import Stopwatch from '@/components/Stopwatch'
 //import NumberQuestion from '@/components/NumberQuestion'
 //import Question from '@/components/Question';
 export default {
+  beforeRouteLeave(to, from, next) {
+    if (to.path ==='/hintergrund' ){
+      return next()
+    }
+      else if (confirm('Um das Experiment nicht zu verfälschen, bleiben Sie bitte auf der Seite.')) {
+        return next(false)
+      }
+      else{
+        return next(false)
+      }
+    },
     components: {
         //Question
         //NumberQuestion
@@ -94,18 +106,22 @@ export default {
           valid: true,
           nameRules:[
           v => !!v || ' Geben Sie einen Monat ein.',
-          v => /Januar/.test(v)|| /Februar/.test(v)|| /März/.test(v)|| /April/.test(v)
-          || /Mai/.test(v)|| /Juni/.test(v)|| /Juli/.test(v)|| /August/.test(v)
-          || /September/.test(v)|| /Oktober/.test(v)|| /November/.test(v)|| /Dezember/.test(v)  || 'Januar-Dezember',
+          v => /^Januar$/.test(v) || /^Februar$/.test(v)|| /^März$/.test(v)|| /^April$/.test(v)
+          || /^Mai$/.test(v)|| /^Juni$/.test(v)|| /^Juli$/.test(v)|| /^August$/.test(v)
+          || /^September$/.test(v)|| /^Oktober$/.test(v)|| /^November$/.test(v)|| /^Dezember$/.test(v) || 'Januar-Dezember',
 
           ],
           letterRules:[
           v => !!v || ' Geben Sie einen Buchstaben an.',
-          v => /[a-z]/.test(v)|| /[A-Z]/.test(v)  || 'Geben Sie genau ein Buchstaben ein  ',
+          v => /\b^[a-z]$\b/.test(v) || /\b^[A-Z]$\b/.test(v)  ||/^ä$/.test(v)  ||
+          /^Ä$/.test(v)  ||/^ö$/.test(v)  ||/^Ö$/.test(v)  ||/^ü$/.test(v)  ||/^Ü$/.test(v)  ||
+          /^ß$/.test(v)  ||'Geben Sie genau ein Buchstaben ein  ',
           ],
           numberRules: [
           v => !!v || ' Geben Sie eine Zahl an.',
-          v => /[0-9]/.test(v)  || 'Zahl(0-9)',
+          v => /^0$/.test(v)  || /^1$/.test(v)  || /^2$/.test(v)  || /^3$/.test(v)  || /^4$/.test(v)  || 
+          /^5$/.test(v)  || /^6$/.test(v)  || /^7$/.test(v)  || /^8$/.test(v)  || 
+          /^9$/.test(v)  || 'Zahl(0-9)',
            ],
             node: APIService.get(1),
             geburtsmonat: '',
@@ -118,6 +134,7 @@ export default {
 
     },
     methods: {
+      
       validate () {
         this.$refs.form.validate()
       },
@@ -135,9 +152,11 @@ export default {
         var code = this.geburtsmonat + this.buchstabe_familienname + this.zahl + this.zweiter_buchstabe + '_' + hash;
         return code;
       }
-    }
+    },
+ 
 
 }
+
 </script>
 <style scoped>
 .code {

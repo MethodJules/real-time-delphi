@@ -263,6 +263,17 @@ Vue.use(VueMq, {
   }
 })
 export default {
+    beforeRouteLeave(to, from, next) {
+    if (to.path ==='/buchrezensionPage5Underline' ){
+      return next()
+    }
+      else if (confirm('Um das Experiment nicht zu verfälschen, bleiben Sie bitte auf der Seite.')) {
+        return next(false)
+      }
+      else{
+        return next(false)
+      }
+    },
     data() {
         return {
             text11_Handy:'Dieses Buch endet    ',
