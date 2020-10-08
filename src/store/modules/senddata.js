@@ -71,6 +71,13 @@ const actions = {
           });
         })
 
+        let k = 1;
+
+        rootState.stopwatch.stopwatches.forEach(element => {
+          console.log(element);
+          k = k + 1
+        })
+
 
         //console.log(rootState.highlight)
     }
