@@ -5,7 +5,8 @@
              v-model="valid3"
              >
             <p>{{question}}</p>
-            <v-text-field :label="label" v-model="answer" @change="saveAnswer" 
+            <!-- Fragen aus der API mit Antworttexten werden geladen-->
+            <v-text-field :label="label" v-model="answer" @change="saveAnswer"
             :rules="letterRules"
                   required
                 />
@@ -20,8 +21,11 @@ export default {
         return {
             valid3: true,
             letterRules:[
-          v => !!v || ' Geben Sie einen Buchstaben an.',
-          v => /[a-z]/.test(v)|| /[A-Z]/.test(v)  || 'Geben Sie genau ein Buchstaben ein  ',
+                //ReGex beschränkung
+          v => !!v || ' Geben Sie Ihren Beruf an .',
+           v => /^\b[^\d\W]+\b$/.test(v) ||/ä/.test(v)  ||/Ä/.test(v)  ||/ö/.test(v)  ||/Ö/.test(v)  ||/ü/.test(v)
+             ||/Ü/.test(v)  ||/ß/.test(v)||'Geben Sie Ihren Beruf ein  ',
+         
           ],
             answer: ''
         }
@@ -37,6 +41,7 @@ export default {
         saveAnswer() {
             console.log(this.answer)
             this.$store.dispatch('answers/addAnswer', { question: this.question, answer: this.answer  })
+            this.$emit("update", this.answer);
         }
     }
 }
