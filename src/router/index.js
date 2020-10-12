@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-//import BegruessungPage from '../views/BegruessungPage.vue'
+//Link zu den einzelnen Vue´s werden generiert.
 
 Vue.use(VueRouter)
 
@@ -140,7 +140,7 @@ Vue.use(VueRouter)
 ]
 
 const router = new VueRouter({
-  mode: 'hash',
+  mode: 'history',
   base: process.env.BASE_URL,
   routes
 })

@@ -1,7 +1,7 @@
 <template>
     <v-container>
               <div>
-
+<!-- Fortschritsbalken wird erstellt -->
     <v-progress-linear
       color="blue-grey"
       height="25"
@@ -15,6 +15,7 @@
     <br>
 
   </div>
+  <!-- Fragen werden aus der Api geladen und im Store gespeichert -->
         <h2>{{node.title}}</h2>
         <div><span v-html="node.html"></span></div>
         <p><strong>Hinweis: Alle Fragen müssen beantwortet werden!</strong></p>
@@ -32,6 +33,7 @@
             </div>
         </v-form>
         <p><strong>Hinweis: Alle Fragen müssen beantwortet werden!</strong></p>
+        <!-- Verlinkung und Timer wird aktiviert -->
             <Stopwatch v-show="isValid" to="/simulation" needTimer="true" />
     </v-container>
 </template>
@@ -42,7 +44,8 @@ import SelectQuestion from '@/components/SelectQuestion'
 import NumberQuestion from '@/components/NumberQuestion'
 import TextQuestion from '@/components/TextQuestion'
 import Stopwatch from '@/components/Stopwatch'
-export default {
+export default  //Popup falls der Nutzer zurück geht
+{
     beforeRouteLeave(to, from, next) {
     if (to.path ==='/simulation' ){
       return next()
@@ -80,7 +83,8 @@ export default {
             node: APIService.get(2)
         }
     },
-    methods: {
+    methods: // validierungs funktion
+    {
         validate() {
             console.log(this.$refs.form.$children);
             this.$refs.form.validate();

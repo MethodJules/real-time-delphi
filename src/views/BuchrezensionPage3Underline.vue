@@ -1,4 +1,5 @@
 <template>
+<!-- Für genaue Dokumentation siehe BuchrezensionPage.vue -->
 <v-container>
           <div>
 
@@ -116,12 +117,18 @@
             </Highlightable>
         </v-col>
     </v-row>
-      <v-row>
-       Legende:<div><span class="red">Emotionale Konsequenzen </span></div>
-    <div><span class="green">Bezug zu anderen Büchern</span></div>
-    <div><span class="blue">Sprachstil und Erzählperspektive</span></div>
-    <div><span class="pink lighten-1">Verständlichkeit</span></div>
-    </v-row>
+     <b>Legende:</b>
+     <div align="right">
+        <v-row  align="center">
+            <v-col cols="9">
+           
+            <div class="icon2"> <v-img src="../assets/Emotional.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Bezug.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Sprachziel.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Verständlichkeit.png" height="35"/></div>
+            </v-col>
+        </v-row>  
+        </div>
     <Stopwatch to="/buchrezensionPage4Underline" needTimer="true" />
     </mobile-menu>
 
@@ -148,15 +155,17 @@
             <Highlightable @share="onShare" @highlight="onHighlight" id="2_under3">
                 <div class="blau">
                     {{text11_Tablet}}
+                    
                     <div class="topGrün">
                         {{text12_Tablet}}<br>{{text13_Tablet}}<br>{{text14_Tablet}}<br>
                         {{text15_Tablet}}<br>{{text16_Tablet}}<br>{{text17_Tablet}}<br>{{text18_Tablet}}<br>
                         {{text19_Tablet}}<br>
                     </div>
+                   
                 </div>
             </Highlightable>
             <div class="topGrün">
-            {{blank_Tablet}}
+            {{blank_Tablet2}}
             </div>
         </v-col>
     </v-row>
@@ -205,13 +214,18 @@
             </Highlightable>
         </v-col>
     </v-row>
-      <v-row>
-          
-       Legende:<div><span class="red">Emotionale Konsequenzen </span></div>
-    <div><span class="green">Bezug zu anderen Büchern</span></div>
-    <div><span class="blue">Sprachstil und Erzählperspektive</span></div>
-    <div><span class="pink lighten-1">Verständlichkeit</span></div>
-    </v-row>
+    <b>Legende:</b>
+      <div align="right">
+        <v-row  align="center">
+            <v-col cols="10">
+            
+            <div class="icon2"> <v-img src="../assets/Emotional.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Bezug.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Sprachziel.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Verständlichkeit.png" height="35"/></div>
+            </v-col>
+        </v-row>  
+        </div>
     <Stopwatch to="/buchrezensionPage4Underline" needTimer="true" />
     </tablet-menu>
 
@@ -235,19 +249,23 @@
         </v-col>
     </v-row>
     <v-row>
+        
         <v-col>
             <Highlightable @share="onShare" @highlight="onHighlight" id="2_under3">
                 <div class="blau">
                     {{text11_Laptop}}
+                    
                     <div class="topGrün">
                         {{text12_Laptop}}<br>{{text13_Laptop}}<br>{{text14_Laptop}}<br>
                     </div>
+              
                 </div>
-            </Highlightable>
+           </Highlightable>
             <div class="topGrün">
             {{blank_Laptop2}}
             </div>
         </v-col>
+          
     </v-row>
     <v-row>
         <v-col>
@@ -292,24 +310,18 @@
             </Highlightable>
         </v-col>
     </v-row>
+    <b>Legende:</b>
     <div class="legend" align="right">
         <v-row  align="center">
-            <v-col cols="7">
-            <b>Legende:</b>
+           <v-col cols="10">
+            
             <div class="icon2"> <v-img src="../assets/Emotional.png" height="35" width="125"/></div>
             <div class="icon2"> <v-img src="../assets/Bezug.png" height="35" width="125"/></div>
             <div class="icon2"> <v-img src="../assets/Sprachziel.png" height="35" width="125"/></div>
-            <div class="icon2"> <v-img src="../assets/Inhalt.png" height="35"/></div>
+            <div class="icon2"> <v-img src="../assets/Verständlichkeit.png" height="35"/></div>
             </v-col>
         </v-row>  
         </div>
-      <v-row>
-          
-       Legende:<div><span class="red">Emotionale Konsequenzen </span></div>
-    <div><span class="green">Bezug zu anderen Büchern</span></div>
-    <div><span class="blue">Sprachstil und Erzählperspektive</span></div>
-    <div><span class="pink lighten-1">Verständlichkeit</span></div>
-    </v-row>
     <Stopwatch to="/buchrezensionPage4Underline" needTimer="true" />
     </laptop-menu>
 
@@ -586,7 +598,8 @@ export default {
             text5: 'Ich denke wirklich, dass diejenigen, die bisher die Reihe schon begonnen haben, unbedingt weiterlesen müssen und diejenigen, an denen diese Serie vorbei gegangen ist, sollten unbedingt mit dem Lesen von „Engelskuss“ anfangen.',
             text5_1:'Für mich eine Reihe, die von den so unterschiedlichen, aber auch absolut stimmigen Charakteren lebt.',
             blank_Handy: '                            ',
-            blank_Tablet:'                                                                                         ',
+            blank_Tablet2:'                                                                                                   ',
+            blank_Tablet:'                                                                                  ',
             blank_Laptop:'                                                                                                                                              ',
             blank_Laptop0:'                                                                                                                                                                                    ',
             blank_Laptop2:'                                                                                                                                                                                                                  ',
@@ -626,6 +639,7 @@ export default {
 }
 </script>
 <style scoped>
+
 .icon2 {
     width: 125px;
     height: 100px;
@@ -690,52 +704,25 @@ export default {
 }
 
 .rezension {
-    /* border: 1px solid black; */
     margin: 5px 0;
     background-color: lightgrey;
 }
 @media screen and (max-width: 576px) {
-.topGrün {
-    text-decoration: overline;
-  text-decoration-color: green;   
-  white-space: break-spaces;
+    .icon2 {
+    width: 125px;
+    height: 35px;
+    justify-content: center;
+    margin: 5px;
+    float: right;
 }
-.rot {
-    text-decoration: underline;
-  -webkit-text-decoration-color: red;
-  text-decoration-color: red;
-  white-space: break-spaces;
-
 }
-.grün {
-    text-decoration: underline;
-  -webkit-text-decoration-color: green;
-  text-decoration-color: green;
-  white-space: break-spaces;
-
-}
-.blau {
-    text-decoration: underline;
-  -webkit-text-decoration-color: blue;
-  text-decoration-color: blue;
-  white-space: break-spaces;
-
-}
-
-.gelb {
-    text-decoration: underline;
-  -webkit-text-decoration-color: yellow;
-  text-decoration-color: yellow;
-  white-space: break-spaces;
-
-}
-.rosa {
-    text-decoration: underline;
-  -webkit-text-decoration-color: rgb(197, 126, 138);
-  text-decoration-color: rgb(197, 126, 138)
-
-}
-
-
+@media screen and (min-width: 576px) {
+    .icon2 {
+    width: 125px;
+    height: 35px;
+    justify-content: center;
+    margin: 5px;
+    float: right;
+    }
 }
 </style>

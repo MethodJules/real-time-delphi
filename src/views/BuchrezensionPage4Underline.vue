@@ -1,4 +1,5 @@
 <template>
+<!-- Für genaue Dokumentation siehe BuchrezensionPage.vue -->
 <v-container>
           <div>
 
@@ -17,6 +18,7 @@
   </div>
     <h1>Buchrezension 4 zum Buch „Gilde der Jäger - Engelskrieg"</h1>
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
+    
     <mobile-menu v-if="$mq === 'mobile'">
     <v-row >
         <v-col>
@@ -64,12 +66,18 @@
             </Highlightable>
         </v-col>
     </v-row>
-        <v-row>
-    Legende:<div><span class="red">Emotionale Konsequenzen </span></div>
-    <div><span class="green">Bezug zu anderen Büchern</span></div>
-    <div><span class="yellow">Inhaltliche Details</span></div>
-   <div><span class="blue">Sprachstil und Erzählperspektive</span></div>
-    </v-row>
+    <b>Legende:</b>
+  <div align="right">
+        <v-row  align="center">
+            <v-col cols="8">
+            
+            <div class="icon2"> <v-img src="../assets/Emotional.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Bezug.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Sprachziel.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Inhalt.png" height="35"/></div>
+            </v-col>
+        </v-row>  
+        </div>
     <Stopwatch to="/buchrezensionPage5Underline" needTimer="true" />
     </mobile-menu>
 
@@ -117,12 +125,18 @@
             </Highlightable>
         </v-col>
     </v-row>
-        <v-row>
-    Legende:<div><span class="red">Emotionale Konsequenzen </span></div>
-    <div><span class="green">Bezug zu anderen Büchern</span></div>
-    <div><span class="yellow">Inhaltliche Details</span></div>
-   <div><span class="blue">Sprachstil und Erzählperspektive</span></div>
-    </v-row>
+     <b>Legende:</b>
+  <div align="right">
+        <v-row  align="center">
+            <v-col cols="10">
+            
+            <div class="icon2"> <v-img src="../assets/Emotional.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Bezug.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Sprachziel.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Inhalt.png" height="35"/></div>
+            </v-col>
+        </v-row>  
+        </div>
     <Stopwatch to="/buchrezensionPage5Underline" needTimer="true" />
     </tablet-menu>
 
@@ -169,18 +183,18 @@
             </Highlightable>
         </v-col>
     </v-row>
-    <div align="right">
+    <b>Legende:</b>
+  <div align="right">
         <v-row  align="center">
-            <v-col cols="7">
-            <b>Legende:</b>
+            <v-col cols="9">
+            
             <div class="icon2"> <v-img src="../assets/Emotional.png" height="35" width="125"/></div>
             <div class="icon2"> <v-img src="../assets/Bezug.png" height="35" width="125"/></div>
             <div class="icon2"> <v-img src="../assets/Sprachziel.png" height="35" width="125"/></div>
-            <div class="icon2"> <v-img src="../assets/Verständlichkeit.png" height="35"/></div>
+            <div class="icon2"> <v-img src="../assets/Inhalt.png" height="35"/></div>
             </v-col>
         </v-row>  
         </div>
-    
     <Stopwatch to="/buchrezensionPage5Underline" needTimer="true" />
     </laptop-menu>
 
@@ -419,6 +433,24 @@ export default {
     border: 1px solid black;
     margin: 5px 0;
     background-color: lightgrey;
+}
+@media screen and (max-width: 576px) {
+    .icon2 {
+    width: 125px;
+    height: 35px;
+    justify-content: center;
+    margin: 5px;
+    float: right;
+}
+}
+@media screen and (min-width: 576px) {
+    .icon2 {
+    width: 125px;
+    height: 35px;
+    justify-content: center;
+    margin: 5px;
+    float: right;
+    }
 }
 
 

@@ -6,6 +6,7 @@
       color="blue-grey"
       height="25"
     >
+    <!-- Fortschritsbalken wird erstellt -->
       <template v-slot="">
       <v-progress-linear value="91"></v-progress-linear>
         <strong>91%</strong>
@@ -15,6 +16,7 @@
     <br>
 
   </div>
+  <!-- Fragen werden aus der Api geladen und im Store gespeichert -->
         <h2>{{node.title}}</h2>
         <div><span v-html="node.html"></span></div>
         <p><strong>Hinweis: Alle Fragen müssen beantwortet werden!</strong></p>
@@ -26,6 +28,7 @@
             </div>
         </v-form>
 <p><strong>Hinweis: Alle Fragen müssen beantwortet werden!</strong></p>
+        <!-- Verlinkung und alle Daten werden zum Backend geschickt -->
         <v-btn v-show="isValid" to="/endpage" @click="sendData">Weiter</v-btn>
     </v-container>
 </template>
@@ -33,7 +36,8 @@
 <script>
 import APIService from '@/services/api.service'
 import SelectQuestion from '@/components/SelectQuestion'
-export default {
+export default //Popup falls der Nutzer zurück geht
+{
     beforeRouteLeave(to, from, next) {
     if (to.path ==='/endpage' ){
       return next()
@@ -60,11 +64,13 @@ export default {
             isValid: false
         }
     },
-    methods: {
+    methods: 
+    {//sendet Daten zum Backend
         sendData() {
             console.log('Sende Daten...')
             this.$store.dispatch('senddata/sendData')
         },
+        // validierungs funktion
         update() {
             console.log('Validation: ' + this.isValid);
             this.isValid = true;
@@ -74,7 +80,8 @@ export default {
                     this.isValid = false;
                 }
             }
-            //this.validate();
+          
+          
         }
     }
 }

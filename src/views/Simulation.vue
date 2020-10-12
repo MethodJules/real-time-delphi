@@ -1,7 +1,7 @@
 <template>
     <v-container>
   <div>
-
+<!-- Fortschritsbalken wird erstellt -->
     <v-progress-linear
       color="blue-grey"
       height="25"
@@ -45,7 +45,7 @@ angesprochen werden, <strong>markieren</strong> Sie die <strong>Textstellen</str
         
  
         
-        
+        <!-- Verlinkung und Timer wird aktiviert -->
          <Stopwatch to="/buch" needTimer="true" />
           
         
@@ -59,7 +59,8 @@ angesprochen werden, <strong>markieren</strong> Sie die <strong>Textstellen</str
 import APIService from '@/services/api.service'
 import Stopwatch from '@/components/Stopwatch'
 
-export default {
+export default //Popup falls der Nutzer zurück geht
+{
   beforeRouteLeave(to, from, next) {
     if (to.path ==='/buch' ){
       return next()

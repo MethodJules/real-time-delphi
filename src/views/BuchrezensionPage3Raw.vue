@@ -1,4 +1,5 @@
 <template>
+<!-- Für genaue Dokumentation siehe BuchrezensionPage.vue -->
 <v-container>
           <div>
 

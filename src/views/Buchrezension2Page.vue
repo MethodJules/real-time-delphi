@@ -18,6 +18,7 @@
   </div>
     <h1>Buchrezension 2 zum Buch „Gilde der Jäger - Engelskrieg"</h1>
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
+    <!-- Erstellung einzelner Textabschnitte mit dazugehörigem Symbol -->
     <v-row class="rezension" align="center">
         <v-col cols="4">
 
@@ -25,6 +26,7 @@
 
         </v-col>
         <v-col cols="7">
+            <!-- Highlighting funktion mit id zur speicherung -->
             <Highlightable @share="onShare" @highlight="onHighlight" id="1_Page2">
                 <div>
             <p>Showdown</p>
@@ -155,6 +157,7 @@
         </v-col>
     </v-row>
         <br>
+        <!-- Einfügen einer Legende -->
       <div class="legend" align="right">
         <v-row  align="center">
             <v-col cols="12">
@@ -168,14 +171,15 @@
         </v-col>
         </v-row>
         </div>
-
+<!-- Verlinkung und Timer wird aktiviert -->
     <Stopwatch to="/buchrezension3" needTimer="true" />
 </v-container>
 </template>
 <script>
 import Highlightable from '@/components/Highlightable'
 import Stopwatch from '@/components/Stopwatch'
-export default {
+export default //PopUp falls der User zurück geht
+{
     beforeRouteLeave(to, from, next) {
     if (to.path ==='/buchrezension3' ){
       return next()
@@ -211,7 +215,8 @@ export default {
         Highlightable,
         Stopwatch
     },
-    methods: {
+    methods: //highlighting funktionen
+    {
         onHighlight(text) {
             this.highlight.push(text);
         },
@@ -238,6 +243,8 @@ export default {
     }
 }
 </script>
+<!-- Media:Skalierung für verschiedene Endgeräte,
+Css eigenschaften -->
 <style scoped>
 .icon {
     width: 100px;

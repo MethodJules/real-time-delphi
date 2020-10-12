@@ -1,4 +1,5 @@
 <template>
+<!-- Für genaue Dokumentation siehe BuchrezensionPage.vue -->
 <v-container>
           <div>
 
@@ -18,6 +19,7 @@
   </div>
     <h1>Buchrezension 3 zum Buch „Gilde der Jäger - Engelskrieg"</h1>
     <p>Bitte markieren Sie schnellstmöglich die Textstellen im Rezensionstext, welchen den <b>Sprachstil und/oder die Erzählperspektive</b> thematisieren.</p>
+   
     <v-row class="rezension" align="center">
         <v-col cols="4">
             
@@ -27,6 +29,7 @@
             
         </v-col>
         <v-col cols="7">
+          
             <Highlightable @share="onShare" @highlight="onHighlight" id="1_Page3">
                 
              <div>
@@ -169,6 +172,7 @@
     </v-row>
 
         <br>
+        
         <div class="legend" align="right">
         <v-row  align="center">
             <v-col cols="12">
@@ -188,7 +192,8 @@
 <script>
 import Highlightable from '@/components/Highlightable';
 import Stopwatch from '@/components/Stopwatch'
-export default {
+export default 
+{
     beforeRouteLeave(to, from, next) {
     if (to.path ==='/buchrezension4' ){
       return next()

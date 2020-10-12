@@ -5,7 +5,11 @@
              v-model="valid3"
              >
             <p>{{question}}</p>
-            <v-text-field class="required" :label="label" v-model="answer" @change="saveAnswer" :rules="letterRules" required/>
+            <!-- Fragen aus der API mit Antworttexten werden geladen-->
+            <v-text-field :label="label" v-model="answer" @change="saveAnswer"
+            :rules="letterRules"
+                  required
+                />
             </v-form>
         </v-col>
     </v-container>
@@ -17,6 +21,7 @@ export default {
         return {
             valid3: true,
             letterRules:[
+                //ReGex beschränkung
           v => !!v || ' Geben Sie Ihren Beruf an .',
            v => /^\b[^\d\W]+\b$/.test(v) ||/ä/.test(v)  ||/Ä/.test(v)  ||/ö/.test(v)  ||/Ö/.test(v)  ||/ü/.test(v)
              ||/Ü/.test(v)  ||/ß/.test(v)||'Geben Sie Ihren Beruf ein  ',
@@ -41,8 +46,3 @@ export default {
     }
 }
 </script>
-<style scoped>
-.required label::after {
-    content: "*";
-}
-</style>

@@ -3,6 +3,7 @@
     <v-container>
 
    <div>
+      <!-- Fortschritsbalken wird erstellt -->
     <v-progress-linear
       color="blue-grey"
       height="25"
@@ -24,7 +25,7 @@
             <v-form ref="form"
              v-model="valid"
              >
-
+             <!-- Fragen werden erstellt und auf Regex geprüft-->
             <v-container>
               <v-col>
                 <p>Bitte geben Sie Ihren Geburtsmonat ein.</p>
@@ -70,9 +71,9 @@
             </v-container>
             </v-form>
             <p><strong>Hinweis: Alle Fragen müssen beantwortet werden!</strong></p>
-           <!-- <v-btn :disabled="!valid" color="success" @click="validate"> -->
+           <!-- Verlinkung und Timer wird aktiviert -->
             <Stopwatch v-show="valid && codeCommit" to="/hintergrund" needTimer="true" />
-          <!-- </v-btn> -->
+
          
 
      </div>
@@ -82,9 +83,8 @@
 <script>
 import APIService from '@/services/api.service'
 import Stopwatch from '@/components/Stopwatch'
-//import NumberQuestion from '@/components/NumberQuestion'
-//import Question from '@/components/Question';
-export default {
+export default //Popup falls der Nutzer zurück geht
+{
   beforeRouteLeave(to, from, next) {
     if (to.path ==='/hintergrund' ){
       return next()
@@ -97,11 +97,10 @@ export default {
       }
     },
     components: {
-        //Question
-        //NumberQuestion
         Stopwatch
     },
-    data() {
+    data() //Regex beschränkung
+    {
         return {
           valid: true,
           nameRules:[
@@ -133,7 +132,8 @@ export default {
         }
 
     },
-    methods: {
+    methods: //validierungs funktion
+    {
       
       validate () {
         this.$refs.form.validate()

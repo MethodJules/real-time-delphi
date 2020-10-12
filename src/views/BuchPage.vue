@@ -7,6 +7,7 @@
       height="25"
     >
       <template v-slot="">
+       <!-- Fortschritsbalken wird erstellt -->
       <v-progress-linear value="27"></v-progress-linear>
         <strong>27%</strong>
       </template>
@@ -21,7 +22,7 @@
         <v-row class="rezension" align="center">
         <v-col cols="3">
 
-
+            <!-- Bild wird geladen -->
             <v-img :src="require(`@/assets/${node.img_src}`)"  width="248" height="360"/>
 
 
@@ -43,19 +44,23 @@
         </v-col>
         </v-row>
         <v-form ref="form">
+          <!-- Frage wird aus der API gelade -->
           <div v-for="question in node.questions" :key="question.question">
-            <!-- <v-img :src="require(`@/assets/${node.img_src}`)"  width="250" height="360"/> -->
               <SelectQuestion @update="update" :question="question.question" :answers="question.answeroptions" />
           </div>
         </v-form>
-<p><strong>Hinweis: Die Frage muss beantwortet werden!</strong></p>
+        <p><strong>Hinweis: Die Frage muss beantwortet werden!</strong></p>
+        <!-- Eine Zufallszahl wird generiert und nach Wert wir eine andere Seite aufgerufen -->
         <div v-show="isValid">
           <div v-if="Math.random() < 0.3">
+            <!-- verlinkung zur nächsten Seite und Timer wird aktiviert -->
             <Stopwatch to="/buchrezensionPageUnderline" needTimer="true" />
           </div>
           <div v-else-if="Math.random() > 0.7">
+            <!-- verlinkung zur nächsten Seite und Timer wird aktiviert -->
             <Stopwatch to="/buchrezension" needTimer="true"/>
           </div>
+          <!-- verlinkung zur nächsten Seite und Timer wird aktiviert -->
             <div v-else> <Stopwatch to="/buchrezensionPageRaw" needTimer="true" />
           </div>
         </div>
@@ -68,7 +73,8 @@ import APIService from '@/services/api.service'
 import SelectQuestion from '@/components/SelectQuestion'
 import Stopwatch from '@/components/Stopwatch'
 
-export default {
+export default //PopUp falls der User versucht zurück zu gehen
+{
   beforeRouteLeave(to, from, next) {
     if (to.path ==='/buchrezensionPageUnderline' ){
       return next()
@@ -100,7 +106,8 @@ export default {
     props: {
      buch_cover: String
     },
-    methods: {
+    methods: //Validierung 
+    {
       update() {
             console.log('Validation: ' + this.isValid);
             this.isValid = true;

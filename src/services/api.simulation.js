@@ -1,6 +1,6 @@
 export default {
     survey: [
-        {
+        {//Text für begrüssungsPage
             nid: 1,
             question_type: 'begruessung',
             title: 'Begleitbogen – Hinweise zur Durchführung',
@@ -18,7 +18,7 @@ export default {
             <p>Bitte lesen Sie sich alle Anweisungen und Aussagen aufmerksam durch. Nehmen Sie sich ausreichend Zeit, \
              um die Aufgaben überlegt zu bearbeiten. Wenn Ihnen einmal die Entscheidung schwerfällt, überlegen Sie welche Lösung noch am ehesten zutrifft. '
         },
-        {
+        {//Text für DatenschutzPage
             nid: 2,
             title: '',
             html: '<p>Bitte füllen Sie die folgenden Angaben entsprechend aus. Dies hilft uns zur Erstellung Ihrer eigenen ID."</p>',
@@ -45,7 +45,7 @@ export default {
                 }
             ]
         },
-        {
+        {//Text für HintergrundPage
             nid: 6,
             title: 'Teil 1: Hintergrund zur Person',
             html: '<p>Die folgenden Fragen helfen uns dabei Hintergrundinformationen zu Ihrer Person zu erheben. \
@@ -254,7 +254,7 @@ export default {
             } 
             ]
         },
-        {
+        {//Text für BuchPage
             nid: 7,
             title: 'Teil 2: Simulation Einkauf einer Online-Verkaufsplattform',
             html: '<p>Bitte versetzten Sie sich in folgende Situation:</p><p>Sie möchten ein bestimmtes Buch online erwerben und besuchen \
@@ -278,7 +278,7 @@ export default {
             ]
             
         },
-        {
+        {//Text für FragenPage
         nid: 8,
         title: 'Teil 3: Fragen',
         html: 'Bitte beantworten Sie die folgenden Fragen.',
@@ -440,7 +440,7 @@ export default {
             },
         ]
     },
-    {
+    {//Text für Fragen2Page
         nid: 9,
         title: 'Teil 3: Fragen 2',
         html: 'Bitte beantworten Sie die folgenden Fragen.',

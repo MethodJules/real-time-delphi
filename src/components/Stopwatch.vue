@@ -1,35 +1,41 @@
 <template>
+<!-- Stopuhr  -->
         <v-btn :to="to" @click="callTimer()">Weiter</v-btn>
 </template>
 
 <script>
     export default {
         props: ['to', 'needTimer'],
-        data() {
+        data() //Format der Zeiteinstellung
+        {
             return {
                 formattedTime: '00:00:00',
                 currentTimer: 0,
             }
 
         },
-        created() {
+        created() //Erstellt einen Timer
+        {
             if (this.$props.needTimer == "true") {
                 this.tick();
             }
 
         },
-        beforeDestroy() {
+        beforeDestroy() //Löscht den Timer
+        {
             window.clearInterval(this.ticker);
 
         },
         methods: {
-            callTimer() {
+            callTimer() //Speichert die Zeit im Store
+            {
                 window.clearInterval(this.ticker);
                 if (this.$props.needTimer == "true") {
                     this.$store.dispatch('stopwatch/addStopwatch', this.formattedTime);
                 }
             },
-            tick() {
+            tick() 
+            {
                 this.ticker = setInterval(() => {
                     this.currentTimer++;
                     this.formattedTime = this.formatTime(this.currentTimer);

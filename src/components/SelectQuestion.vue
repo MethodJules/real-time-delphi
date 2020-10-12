@@ -6,6 +6,7 @@
              v-model="valid1"
              >
             <p>{{question}}</p>
+            <!-- Fragen aus der API mit Auswahl möglichkeiten werden geladen -->
             <v-radio-group v-model="selection">
                 <v-radio v-for="answer in answers" :key="answer.label" :label="answer.label"
                 required
@@ -32,7 +33,8 @@ export default {
         answers: Array,
 
     },
-    methods: {
+    methods: //Antworten werden im Store gespeichert
+    {
         logAnswer() {
             console.log(this.selection)
         },

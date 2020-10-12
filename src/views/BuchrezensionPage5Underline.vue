@@ -1,4 +1,5 @@
 <template>
+<!-- Für genaue Dokumentation siehe BuchrezensionPage.vue -->
 <v-container>
           <div>
 
@@ -38,14 +39,23 @@
                         {{text19_Handy}}<br>{{text110_Handy}}<br>{{text111_Handy}}<br>       
                 </div></div>
             </Highlightable>
+            <div class="topGrün">
+            {{blank_Handy}}
+            </div>
         </v-col>
     </v-row>
-        <v-row>
-    Legende:<div><span class="red">Emotionale Konsequenzen </span></div>
-    <div><span class="green">Bezug zu anderen Büchern</span></div>
-    <div><span class="blue">Sprachstil und Erzählperspektive</span></div>
-    </v-row>
-
+    <b>Legende:</b>
+       <div align="right">
+        <v-row  align="center">
+            <v-col cols="11">
+         
+            <div class="icon2"> <v-img src="../assets/Emotional.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Bezug.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Sprachziel.png" height="35" width="125"/></div>
+            
+            </v-col>
+        </v-row>  
+        </div>
     <Stopwatch to="/fragenpage" needTimer="true" />
     </mobile-menu>
 
@@ -67,7 +77,7 @@
                     {{text11_Tablet}}
                     <div class="topGrün">
                         {{text12_Tablet}}<br>{{text13_Tablet}}<br>{{text14_Tablet}}<br>
-                        {{text15_Tablet}}<br>{{text16_Tablet}}<br>{{text17_Tablet}}<br>      
+                        {{text15_Tablet}}<br>{{text16_Tablet}}<br>     
                 </div></div>
             </Highlightable>
             <div class="topGrün">
@@ -75,12 +85,18 @@
             </div>
         </v-col>
     </v-row>
-        <v-row>
-    Legende:<div><span class="red">Emotionale Konsequenzen </span></div>
-    <div><span class="green">Bezug zu anderen Büchern</span></div>
-    <div><span class="blue">Sprachstil und Erzählperspektive</span></div>
-    </v-row>
-
+    <b>Legende:</b>
+        <div align="right">
+        <v-row  align="center">
+            <v-col cols="11">
+            
+            <div class="icon2"> <v-img src="../assets/Emotional.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Bezug.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Sprachziel.png" height="35" width="125"/></div>
+            
+            </v-col>
+        </v-row>  
+        </div>
     <Stopwatch to="/fragenpage" needTimer="true" />
     </tablet-menu>
 
@@ -101,7 +117,7 @@
                 <div class="blau">
                     {{text11_Laptop}}
                     <div class="topGrün">
-                        {{text12_Laptop}}<br>{{text13_Laptop}}<br>  
+                        {{text12_Laptop}}<br>{{text13_Laptop}}<br> {{text14_Laptop}}<br>{{text15_Laptop}}<br>
                 </div></div>
             </Highlightable>
             <div class="topGrün">
@@ -109,12 +125,18 @@
             </div>
         </v-col>
     </v-row>
-        <v-row>
-    Legende:<div><span class="red">Emotionale Konsequenzen </span></div>
-    <div><span class="green">Bezug zu anderen Büchern</span></div>
-    <div><span class="blue">Sprachstil und Erzählperspektive</span></div>
-    </v-row>
-
+       <b>Legende:</b>
+       <div align="right">
+        <v-row  align="center">
+            <v-col cols="8">
+         
+            <div class="icon2"> <v-img src="../assets/Emotional.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Bezug.png" height="35" width="125"/></div>
+            <div class="icon2"> <v-img src="../assets/Sprachziel.png" height="35" width="125"/></div>
+            
+            </v-col>
+        </v-row>  
+        </div>
     <Stopwatch to="/fragenpage" needTimer="true" />
     </laptop-menu>
 
@@ -135,7 +157,7 @@
                 <div class="blau">
                     {{text11_Laptop}}
                     <div class="topGrün">
-                        {{text12_Laptop}}<br>{{text13_Laptop}}<br>{{text14_Laptop}}<br>
+                        {{text12_Laptop}}<br>{{text13_Laptop}}<br>{{text14_Laptop}}
                 </div></div>
             </Highlightable>
             <div class="topGrün">
@@ -143,10 +165,11 @@
             </div>
         </v-col>
     </v-row>
+    <b>Legende:</b>
      <div align="right">
         <v-row  align="center">
             <v-col cols="8">
-            <b>Legende:</b>
+            
             <div class="icon2"> <v-img src="../assets/Emotional.png" height="35" width="125"/></div>
             <div class="icon2"> <v-img src="../assets/Bezug.png" height="35" width="125"/></div>
             <div class="icon2"> <v-img src="../assets/Sprachziel.png" height="35" width="125"/></div>
@@ -196,20 +219,21 @@ export default {
             text18_Handy:'eine schnellere             ',
             text19_Handy:'Veröffentlichung des ',
             text110_Handy:'nächsten Buches,        ',
-            text111_Handy:'wie bisher.                     ',
+            text111_Handy:'wie bisher.                ',
 
             text11_Tablet:'Daran erkennt man, wie gut der Schreibstil ist, wenn man in',
             text12_Tablet:'die Geschichte eintauchen kann, als ob man persönlich ',
             text13_Tablet:'dabei ist. Ich hoffe auf eine schnellere Veröffentlichung',
             text14_Tablet:'des nächsten Buches, wie bisher durchaus auch wieder',
             text15_Tablet:'neue Stränge gesponnen werden. Es bleibt also interessant',
-            text16_Tablet:'abzuwarten, ob und wenn wie es weitergeht.',
+            text16_Tablet:'abzuwarten, ob und wenn wie es weitergeht.                            ',
 
 
-            text11_Laptop:'Daran erkennt man, wie gut der Schreibstil ist, wenn man in die Geschichte eintauchen,',
-            text12_Laptop:'kann als ob man persönlich dabei ist. Ich hoffe auf eine schnellere Veröffentlichung ',
-            text13_Laptop:'des nächsten Buches, wie bisher durchaus auch wieder neue Stränge gesponnen .',
-            text14_Laptop:'werden. Es bleibt also interessant abzuwarten, ob und wenn wie es weitergeht.',
+            text11_Laptop:'Daran erkennt man, wie gut der Schreibstil ist, wenn man in die Geschichte ',
+            text12_Laptop:'eintauchen,kann als ob man persönlich dabei ist. Ich hoffe auf eine schnellere  ',
+            text13_Laptop:'Veröffentlichung des nächsten Buches, wie bisher durchaus auch wieder neue .',
+            text14_Laptop:'Stränge gesponnen werden. Es bleibt also interessant abzuwarten, ob und wenn',
+            text15_Laptop:'wie es weitergeht.                                                                                                               ',
 
              text11_Desktop:'Daran erkennt man, wie gut der Schreibstil ist, wenn man in die Geschichte eintauchen kann, als ob man persönlich dabei ist.',
             text12_Desktop:'Ich hoffe auf eine schnellere Veröffentlichung des nächsten Buches, wie bisher durchaus auch wieder neue Stränge gesponnen werden.  .',
@@ -223,9 +247,9 @@ export default {
             text1: 'Daran erkennt man, wie gut der Schreibstil ist, wenn man in die Geschichte eintauchen kann, \
             als ob man persönlich dabei ist. \
             Ich hoffe auf eine schnellere Veröffentlichung des nächsten Buches, wie bisher.',
-             blank_Handy:'',
-             blank_Tablet:'',
-             blank_Laptop:'                                                                                                                                          ',
+             blank_Handy:'                                      ',
+             blank_Tablet:'                                                                                                         ',
+             blank_Laptop:'                                                                                                                                             ',
             blank_Desktop:'                         ',
                     }
     },
@@ -317,5 +341,23 @@ export default {
     border: 1px solid black;
     margin: 5px 0;
     background-color: lightgrey;
+}
+@media screen and (max-width: 576px) {
+    .icon2 {
+    width: 125px;
+    height: 35px;
+    justify-content: center;
+    margin: 5px;
+    float: right;
+}
+}
+@media screen and (min-width: 576px) {
+    .icon2 {
+    width: 125px;
+    height: 35px;
+    justify-content: center;
+    margin: 5px;
+    float: right;
+    }
 }
 </style>

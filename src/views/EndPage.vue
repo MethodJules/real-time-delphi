@@ -1,7 +1,7 @@
 <template>
 <v-container>
           <div>
-
+<!-- Fortschritsbalken wird erstellt -->
     <v-progress-linear
       color="blue-grey"
       height="25"
@@ -23,7 +23,8 @@
 
 </template>
 <script>
-  export default {
+  export default //Popup falls der Nutzer zurück geht
+  {
     beforeRouteLeave(to, from, next) {
       if (confirm('Bitte schließen Sie die Seite')) {
         return next(false)
