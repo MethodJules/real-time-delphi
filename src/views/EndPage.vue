@@ -33,5 +33,14 @@
         return next(false)
       }
     },
+    created() {
+      this.sendData()
+    },
+    methods: {
+      sendData() {
+            console.log('Sende Daten...')
+            this.$store.dispatch('senddata/sendData')
+        },
+    }
   }
 </script>
